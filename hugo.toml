@@ -1,0 +1,61 @@
+baseURL = 'https://joyroy.github.io/'
+languageCode = 'en-us'
+title = 'AI Tools & Tech Guides'
+theme = 'PaperMod'
+
+[params]
+  author = 'Joy Roy'
+  description = 'Practical guides on AI tools, coding, automation, and tech for students and beginners.'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  [params.homeInfoParams]
+    Title = "AI Tools & Tech Guides"
+    Content = "Practical guides on AI tools, coding, automation, and tech for students and beginners."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/joyroy"
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = '/categories/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 40
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
