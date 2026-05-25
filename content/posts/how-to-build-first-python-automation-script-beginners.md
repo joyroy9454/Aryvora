@@ -7,6 +7,10 @@ slug: how-to-build-first-python-automation-script-beginners
 tags: ["python", "automation", "beginners", "coding", "tutorial", "scripting"]
 categories: ["Coding Tutorials"]
 keywords: ["python automation for beginners", "first python script", "python automation tutorial", "beginner python projects"]
+cover:
+  image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop&q=80"
+  alt: "Python code on a dark screen showing programming syntax"
+  caption: "Photo by Unsplash"
 ---
 
 # How to Build Your First Python Automation Script (Step-by-Step Guide for Beginners)

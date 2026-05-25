@@ -7,6 +7,10 @@ slug: best-free-ai-tools-for-college-students-2026
 tags: ["ai-tools", "students", "productivity", "free-tools", "college", "chatgpt", "coding"]
 categories: ["AI Tools"]
 keywords: ["best free AI tools for students", "AI tools for college", "free AI writing tools", "AI productivity tools for students"]
+cover:
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=80"
+  alt: "AI tools dashboard showing various artificial intelligence applications on a computer screen"
+  caption: "Photo by Unsplash"
 ---
 
 # 15 Best Free AI Tools for College Students in 2026

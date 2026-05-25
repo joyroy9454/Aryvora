@@ -1,29 +1,48 @@
 ---
 title: "About"
-date: 2026-05-25
-draft: false
-description: "About AI Tools & Tech Guides — a blog about practical AI tools, coding, automation, and tech for students and beginners."
-slug: about
+description: "About AI Tools & Tech Guides — a blog dedicated to helping students and beginners master AI tools, coding, and tech productivity."
 ---
 
-# About
+# About AI Tools & Tech Guides
 
-**AI Tools & Tech Guides** is a blog dedicated to helping students, beginners, and tech enthusiasts make the most of AI and technology — without breaking the bank.
+Welcome! I'm **Joy Roy**, a BSc Data Science student and the creator of this blog.
 
-We publish practical, hands-on guides about:
+## Why This Blog Exists
 
-- **AI tools** that boost productivity and learning
-- **Coding tutorials** for beginners
-- **Automation** workflows that save time
-- **Tech how-tos** for everyday problems
-- **Budget-friendly** setups and recommendations
+As a student, I discovered something powerful: the best AI tools and tech resources are often free. You just need to know where to look and how to use them.
 
-Everything on this blog is written to be actionable. No fluff, no filler — just practical advice you can use today.
+Most tech blogs are written for experienced developers. This one is different. **AI Tools & Tech Guides** is built specifically for:
 
-## Who Runs This Blog
+- **Students** who want to supercharge their learning with AI
+- **Beginners** who are just starting their coding journey
+- **Anyone** looking for practical, free tools to solve real problems
 
-This blog is run by **Joy Roy**, a BSc Data Science student and tech enthusiast who believes in using AI to build things and solve real problems.
+## What You'll Find Here
 
-## Contact
+| Type | Examples |
+|------|----------|
+| **AI Tool Reviews** | Honest breakdowns of free AI tools for writing, coding, research, and productivity |
+| **Coding Tutorials** | Step-by-step Python guides for absolute beginners |
+| **Study Guides** | How to use AI to learn faster and more effectively |
+| **Automation** | Scripts and workflows that save you hours every week |
+| **Tech Tips** | Practical advice for making the most of free resources |
 
-Have a suggestion, question, or want to collaborate? Reach out via [GitHub](https://github.com/joyroy).
+## My Philosophy
+
+1. **Free first.** If a paid tool is better, I'll tell you. But most of the time, free tools are more than enough.
+2. **Practical over theoretical.** Every article includes actionable steps you can use today.
+3. **Beginner-friendly.** No jargon without explanation. No assumptions about prior knowledge.
+4. **Honest reviews.** I only recommend tools I've actually tested.
+
+## About the Tech
+
+This blog is built with **Hugo** (a fast static site generator) and hosted on **GitHub Pages** — completely free. The content is created with AI assistance and human-reviewed for quality and accuracy.
+
+## Connect
+
+- **GitHub:** [github.com/joyroy9454](https://github.com/joyroy9454)
+- **RSS Feed:** Subscribe via RSS to get notified of new articles
+
+---
+
+*Have a topic you'd like me to cover? Drop a suggestion in the comments of any article!*

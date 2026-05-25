@@ -7,6 +7,10 @@ slug: ai-tools-study-smarter-not-harder
 tags: ["ai-tools", "study-tips", "students", "productivity", "learning", "education"]
 categories: ["Student Productivity"]
 keywords: ["ai tools for studying", "study smarter with ai", "ai study tools for college", "best ai for students"]
+cover:
+  image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=630&fit=crop&q=80"
+  alt: "Student studying with laptop and books at a desk"
+  caption: "Photo by Unsplash"
 ---
 
 # 7 AI Tools That Actually Help You Study Smarter (Not Harder)

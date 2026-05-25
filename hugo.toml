@@ -1,11 +1,12 @@
-baseURL = 'https://joyroy.github.io/'
+baseURL = 'https://joyroy9454.github.io/ai-blog-factory/'
 languageCode = 'en-us'
 title = 'AI Tools & Tech Guides'
 theme = 'PaperMod'
+paginate = 9
 
 [params]
   author = 'Joy Roy'
-  description = 'Practical guides on AI tools, coding, automation, and tech for students and beginners.'
+  description = 'Practical guides on AI tools, coding, automation, and tech for students and beginners. Free tools, tutorials, and tips to work smarter.'
   defaultTheme = 'auto'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -22,14 +23,32 @@ theme = 'PaperMod'
   hideSummary = false
   showtoc = true
   tocopen = false
+  DateFormat = 'January 2, 2006'
 
+  # Cover image settings
+  [params.cover]
+    linkFullImages = true
+    responsiveImages = true
+
+  # Homepage info
   [params.homeInfoParams]
     Title = "AI Tools & Tech Guides"
-    Content = "Practical guides on AI tools, coding, automation, and tech for students and beginners."
+    Content = "Practical guides on AI tools, coding, automation, and tech for students and beginners. Learn to work smarter with free tools and tutorials."
 
+  # Social icons
   [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/joyroy"
+    name = 'github'
+    url = 'https://github.com/joyroy9454'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/ai-blog-factory/index.xml'
+
+  # Assets
+  [params.assets]
+    favicon = '/ai-blog-factory/favicon.ico'
+    favicon16x16 = '/ai-blog-factory/favicon-16x16.png'
+    favicon32x32 = '/ai-blog-factory/favicon-32x32.png'
+    apple_touch_icon = '/ai-blog-factory/apple-touch-icon.png'
 
 [menu]
   [[menu.main]]
@@ -59,3 +78,15 @@ theme = 'PaperMod'
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    codeFences = true
+    guessSyntax = true

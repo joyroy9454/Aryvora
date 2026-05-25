@@ -1,0 +1,109 @@
+{{- define "main" -}}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">AI Tools & Tech Guides</h1>
+    <p class="hero-subtitle">Practical guides on AI tools, coding, automation, and tech for students and beginners. Learn to work smarter with free tools and step-by-step tutorials.</p>
+    <div class="hero-cta">
+      <a href="/categories/" class="btn btn-primary">Browse Topics</a>
+      <a href="/about/" class="btn btn-secondary">About This Blog</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POSTS -->
+{{- $featured := first 3 (where .Site.RegularPages "Section" "posts") -}}
+{{- if $featured -}}
+<section class="featured-section">
+  <div class="container">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="post-grid">
+      {{- range $featured -}}
+      <article class="post-card">
+        {{- if .Params.cover -}}
+        <a href="{{ .RelPermalink }}" class="post-card-image-link">
+          <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
+        </a>
+        {{- else -}}
+        <a href="{{ .RelPermalink }}" class="post-card-image-link">
+          <div class="post-card-image post-card-image-placeholder">
+            <span>{{ .Title }}</span>
+          </div>
+        </a>
+        {{- end -}}
+        <div class="post-card-content">
+          <div class="post-card-meta">
+            {{- if .Params.categories -}}
+            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
+            {{- end -}}
+            <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          </div>
+          <h3 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="post-card-excerpt">{{ .Description }}</p>
+          <div class="post-card-footer">
+            <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
+            <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+          </div>
+        </div>
+      </article>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+{{- end -}}
+
+<!-- ALL POSTS -->
+{{- $allPages := after 3 (where .Site.RegularPages "Section" "posts") -}}
+{{- if $allPages -}}
+<section class="all-posts-section">
+  <div class="container">
+    <h2 class="section-title">More Articles</h2>
+    <div class="post-list">
+      {{- range $allPages -}}
+      <article class="post-list-item">
+        {{- if .Params.cover -}}
+        <a href="{{ .RelPermalink }}" class="post-list-image-link">
+          <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+        </a>
+        {{- end -}}
+        <div class="post-list-content">
+          <div class="post-list-meta">
+            {{- if .Params.categories -}}
+            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
+            {{- end -}}
+            <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          </div>
+          <h3 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="post-list-excerpt">{{ .Description }}</p>
+          <div class="post-list-footer">
+            <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
+            <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+          </div>
+        </div>
+      </article>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+{{- end -}}
+
+<!-- NEWSLETTER / CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Stay Updated</h2>
+      <p>New articles on AI tools, coding tutorials, and productivity tips published regularly. Bookmark this page and check back often!</p>
+      <div class="cta-tags">
+        <a href="/categories/ai-tools/" class="tag-chip">AI Tools</a>
+        <a href="/categories/coding-tutorials/" class="tag-chip">Coding Tutorials</a>
+        <a href="/categories/student-productivity/" class="tag-chip">Student Productivity</a>
+        <a href="/tags/python/" class="tag-chip">Python</a>
+        <a href="/tags/automation/" class="tag-chip">Automation</a>
+        <a href="/tags/beginners/" class="tag-chip">Beginners</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{- end -}}

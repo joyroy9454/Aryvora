@@ -1,0 +1,42 @@
+{{- define "main" -}}
+
+<header class="list-header">
+  <h1 class="list-title">{{ .Title }}</h1>
+  {{- if .Description -}}
+  <p class="list-description">{{ .Description }}</p>
+  {{- end -}}
+</header>
+
+{{- if .Content -}}
+<div class="list-content">
+  {{ .Content }}
+</div>
+{{- end -}}
+
+<div class="post-list">
+  {{- range .Pages -}}
+  <article class="post-list-item">
+    {{- if .Params.cover -}}
+    <a href="{{ .RelPermalink }}" class="post-list-image-link">
+      <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+    </a>
+    {{- end -}}
+    <div class="post-list-content">
+      <div class="post-list-meta">
+        {{- if .Params.categories -}}
+        <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
+        {{- end -}}
+        <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      </div>
+      <h3 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p class="post-list-excerpt">{{ .Description }}</p>
+      <div class="post-list-footer">
+        <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
+        <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+      </div>
+    </div>
+  </article>
+  {{- end -}}
+</div>
+
+{{- end -}}
