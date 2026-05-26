@@ -12,17 +12,6 @@
   bundle loads AFTER PaperMod's base stylesheet.
 */
 :root {
-  /* PaperMod variable overrides -- force dark theme */
-  --theme: #0d1117;
-  --entry: #1c2128;
-  --primary: #e6edf3;
-  --secondary: #8b949e;
-  --tertiary: #30363d;
-  --content: #e6edf3;
-  --code-block-bg: #161b22;
-  --code-bg: #1c2128;
-  --border: #30363d;
-
   /* Our custom variables */
   --bg-primary: #0d1117;
   --bg-secondary: #161b22;
@@ -61,10 +50,14 @@
 }
 
 /* ===== PAPERMOD THEME TOGGLE OVERRIDE ===== */
-/* Neutralize PaperMod's light/dark theme toggle so our dark theme always wins */
-:root[data-theme="light"],
-:root[data-theme="dark"],
-:root[data-theme="auto"] {
+/* Neutralize PaperMod's light/dark theme toggle.
+   We use html:root (higher specificity than :root[data-theme]) to force our values.
+   Since our CSS bundle loads AFTER PaperMod's, html:root wins over :root[data-theme]
+   when they conflict. The !important on color-scheme ensures dark scrollbar. */
+html:root,
+html:root[data-theme="light"],
+html:root[data-theme="dark"],
+html:root[data-theme="auto"] {
   --theme: #0d1117;
   --entry: #1c2128;
   --primary: #e6edf3;
