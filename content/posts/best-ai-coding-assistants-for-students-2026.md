@@ -4,7 +4,7 @@ description: "Discover the 10 best AI coding assistants for students in 2026. Co
 date: 2026-05-26
 draft: false
 cover:
-  image: "/images/ai-coding-cover.svg"
+  image: "https://joyroy9454.github.io/ai-blog-factory/images/ai-coding-cover.svg"
   alt: "AI Coding Assistants for Students 2026"
   caption: "Best AI Coding Assistants for Students in 2026"
 categories: ["AI Tools"]
