@@ -1,37 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a371f7;stop-opacity:1" />
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#a371f7"/>
     </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#58a6ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
+  
+  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1200" height="630" fill="rgba(88,166,255,0.03)"/>
   
-  <!-- Decorative circles -->
-  <circle cx="100" cy="100" r="200" fill="rgba(88,166,255,0.05)"/>
-  <circle cx="1100" cy="500" r="250" fill="rgba(163,113,247,0.05)"/>
+  <!-- Decorative grid -->
+  <line x1="0" y1="150" x2="1200" y2="150" stroke="#21262d" stroke-width="0.5" opacity="0.4"/>
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#21262d" stroke-width="0.5" opacity="0.4"/>
+  <line x1="0" y1="480" x2="1200" y2="480" stroke="#21262d" stroke-width="0.5" opacity="0.4"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.4"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.4"/>
   
-  <!-- Logo area -->
-  <rect x="80" y="80" width="60" height="60" rx="12" fill="url(#accent)"/>
-  <text x="110" y="122" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="bold" fill="white">AI</text>
+  <!-- Logo mark (neural network) -->
+  <circle cx="600" cy="250" r="60" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.5"/>
+  <circle cx="600" cy="250" r="20" fill="url(#g1)" opacity="0.1"/>
+  <circle cx="600" cy="250" r="8" fill="url(#g1)" filter="url(#glow)"/>
+  
+  <circle cx="500" cy="180" r="15" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.6"/>
+  <circle cx="500" cy="180" r="5" fill="url(#g1)" opacity="0.8"/>
+  
+  <circle cx="700" cy="180" r="15" fill="none" stroke="url(#g1)" stroke-width="2" opacity="0.6"/>
+  <circle cx="700" cy="180" r="5" fill="url(#g1)" opacity="0.8"/>
+  
+  <circle cx="500" cy="320" r="15" fill="none" stroke="url(#g2)" stroke-width="2" opacity="0.6"/>
+  <circle cx="500" cy="320" r="5" fill="url(#g2)" opacity="0.8"/>
+  
+  <circle cx="700" cy="320" r="15" fill="none" stroke="url(#g2)" stroke-width="2" opacity="0.6"/>
+  <circle cx="700" cy="320" r="5" fill="url(#g2)" opacity="0.8"/>
+  
+  <!-- Connection lines -->
+  <line x1="515" y1="180" x2="585" y2="250" stroke="url(#g1)" stroke-width="1.5" opacity="0.3"/>
+  <line x1="685" y1="180" x2="615" y2="250" stroke="url(#g1)" stroke-width="1.5" opacity="0.3"/>
+  <line x1="515" y1="320" x2="585" y2="250" stroke="url(#g2)" stroke-width="1.5" opacity="0.3"/>
+  <line x1="685" y1="320" x2="615" y2="250" stroke="url(#g2)" stroke-width="1.5" opacity="0.3"/>
   
   <!-- Title -->
-  <text x="600" y="260" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="800" fill="#e6edf3">AI Tools &amp; Tech Guides</text>
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="48" fill="#e6edf3" font-weight="800" letter-spacing="-1">AI Tools &amp; Tech Guides</text>
   
   <!-- Subtitle -->
-  <text x="600" y="320" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#8b949e">Practical guides on AI tools, coding, automation, and tech for students</text>
+  <text x="600" y="470" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#8b949e">Expert guides on AI tools, data science, coding, and automation</text>
   
-  <!-- Divider -->
-  <rect x="450" y="360" width="300" height="3" rx="1.5" fill="url(#accent)"/>
-  
-  <!-- Topics -->
-  <text x="600" y="410" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#6e7681">AI Tools • Coding Tutorials • Student Productivity • Automation</text>
+  <!-- Bottom line -->
+  <line x1="400" y1="520" x2="800" y2="520" stroke="url(#g1)" stroke-width="2" opacity="0.3"/>
   
   <!-- URL -->
-  <text x="600" y="520" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#58a6ff">joyroy9454.github.io/ai-blog-factory</text>
+  <text x="600" y="570" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#58a6ff" font-weight="600">joyroy9454.github.io/ai-blog-factory</text>
 </svg>

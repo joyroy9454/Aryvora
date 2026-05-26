@@ -4,16 +4,16 @@
 <section class="hero-section">
   <div class="hero-content">
     <div class="hero-logo">
-      <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Tools & Tech Guides" width="72" height="72">
+      <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Tools & Tech Guides" width="80" height="80">
     </div>
     <h1 class="hero-title">AI Tools & Tech Guides</h1>
-    <p class="hero-subtitle">Expert guides on AI tools, data science, coding, automation, and productivity for students and beginners. Learn to work smarter with free tools and step-by-step tutorials.</p>
+    <p class="hero-subtitle">Expert guides on AI tools, data science, coding, automation, and productivity — built for students and beginners who want to work smarter.</p>
     <div class="hero-cta">
       <a href="/categories/" class="btn btn-primary">→ Explore Articles</a>
       <a href="/about/" class="btn btn-secondary">About the Blog</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong> <span>Articles</span></div>
+      <div class="stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong> <span>In-Depth Guides</span></div>
       <div class="stat"><strong>20+</strong> <span>AI Tools Reviewed</span></div>
       <div class="stat"><strong>Free</strong> <span>Always</span></div>
     </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="post-grid">
       {{- range $i, $post := $featured -}}
-      <article class="post-card {{ if eq $i 0 }}post-card-featured{{ end }}">
+      <article class="post-card">
         {{- if .Params.cover -}}
         <a href="{{ .RelPermalink }}" class="post-card-image-link">
           <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
@@ -125,7 +125,7 @@
   <div class="container">
     <div class="cta-box">
       <h2>Stay Ahead with AI & Data Science</h2>
-      <p>New articles on AI tools, coding tutorials, data science guides, and productivity tips published regularly. Bookmark this page and check back often!</p>
+      <p>New articles on AI tools, coding tutorials, data science guides, and productivity tips published regularly.</p>
       <div class="cta-tags">
         <a href="/tags/ai-tools/" class="tag-chip">AI Tools</a>
         <a href="/tags/python/" class="tag-chip">Python</a>
@@ -133,8 +133,6 @@
         <a href="/tags/beginners/" class="tag-chip">Beginners</a>
         <a href="/tags/data-science/" class="tag-chip">Data Science</a>
         <a href="/tags/students/" class="tag-chip">Students</a>
-        <a href="/tags/machine-learning/" class="tag-chip">Machine Learning</a>
-        <a href="/tags/coding/" class="tag-chip">Coding</a>
       </div>
       <a href="/posts/" class="btn btn-primary" style="margin-top: 24px;">Browse All Articles</a>
     </div>

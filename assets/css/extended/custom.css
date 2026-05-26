@@ -140,7 +140,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== HERO SECTION ===== */
 .hero-section {
   background: var(--gradient-hero);
-  padding: 80px 24px 60px;
+  padding: 100px 24px 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -152,10 +152,20 @@ img { max-width: 100%; height: auto; display: block; }
   top: -50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(88, 166, 255, 0.08) 0%, transparent 70%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.06) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.15), transparent);
 }
 
 .hero-content {
