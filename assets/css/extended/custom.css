@@ -4,7 +4,26 @@
  */
 
 /* ===== CSS VARIABLES ===== */
+/*
+  Strategy: Override PaperMod's own CSS variables (--theme, --primary, etc.)
+  with our dark-theme values so PaperMod's structural rules (body, a, .post-entry, etc.)
+  all render in dark mode. Also set our custom variables for our own selectors.
+  Using !important on :root overrides PaperMod's :root[data-theme] because our
+  bundle loads AFTER PaperMod's base stylesheet.
+*/
 :root {
+  /* PaperMod variable overrides -- force dark theme */
+  --theme: #0d1117;
+  --entry: #1c2128;
+  --primary: #e6edf3;
+  --secondary: #8b949e;
+  --tertiary: #30363d;
+  --content: #e6edf3;
+  --code-block-bg: #161b22;
+  --code-bg: #1c2128;
+  --border: #30363d;
+
+  /* Our custom variables */
   --bg-primary: #0d1117;
   --bg-secondary: #161b22;
   --bg-card: #1c2128;
@@ -15,7 +34,6 @@
   --accent: #58a6ff;
   --accent-hover: #79c0ff;
   --accent-glow: rgba(88, 166, 255, 0.15);
-  --border: #30363d;
   --border-light: #21262d;
   --success: #3fb950;
   --warning: #d29922;
@@ -34,6 +52,29 @@
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --max-width: 1200px;
   --content-width: 740px;
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+}
+
+/* ===== PAPERMOD THEME TOGGLE OVERRIDE ===== */
+/* Neutralize PaperMod's light/dark theme toggle so our dark theme always wins */
+:root[data-theme="light"],
+:root[data-theme="dark"],
+:root[data-theme="auto"] {
+  --theme: #0d1117;
+  --entry: #1c2128;
+  --primary: #e6edf3;
+  --secondary: #8b949e;
+  --tertiary: #30363d;
+  --content: #e6edf3;
+  --code-block-bg: #161b22;
+  --code-bg: #1c2128;
+  --border: #30363d;
+  color-scheme: dark;
 }
 
 /* ===== RESET & BASE ===== */
