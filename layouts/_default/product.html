@@ -1,0 +1,145 @@
+{{ define "main" }}
+<article class="post-single product-page">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{ end }}
+    {{ partial "post_meta.html" . }}
+  </header>
+
+  <div class="post-content">
+    <div class="product-content">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <div class="product-cta">
+    <a href="/downloads/the-ai-student-playbook.pdf" class="btn-buy">Download Now — Free Preview</a>
+    <span class="guarantee">Full version: INR 349 • 7-day money-back guarantee</span>
+  </div>
+
+  <footer class="post-footer">
+    {{ partial "post_footer.html" . }}
+  </footer>
+</article>
+
+<style>
+.product-page {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.product-page .post-title {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.product-page .post-description {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+.product-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+  border-left: 3px solid #4f46e5;
+  padding-left: 0.8rem;
+}
+.product-content h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #e2e8f0;
+}
+.product-content p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+.product-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product-content th,
+.product-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.4);
+}
+.product-content th {
+  background: rgba(15, 23, 42, 0.8);
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.product-content tr:last-child td {
+  border-bottom: none;
+}
+.product-content ul, .product-content ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+.product-content li {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 0.4rem;
+}
+.product-cta {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  border-radius: 12px;
+}
+.btn-buy {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #4f46e5;
+  color: #fff !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+}
+.btn-buy:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+.guarantee {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.product-page del {
+  color: #64748b;
+}
+.product-page strong {
+  color: #e2e8f0;
+}
+@media (max-width: 768px) {
+  .product-page .post-title {
+    font-size: 1.8rem;
+  }
+  .product-content table {
+    font-size: 0.85rem;
+  }
+}
+</style>
+{{ end }}

@@ -1,13 +1,13 @@
 baseURL = 'https://joyroy9454.github.io/ai-blog-factory/'
 languageCode = 'en-us'
-title = 'AI Tools & Tech Guides'
+title = 'AI Blog Factory'
 theme = 'PaperMod'
 paginate = 9
 
 [params]
   author = 'Joy Roy'
-  description = 'Practical guides on AI tools, coding, automation, and tech for students and beginners. Free tools, tutorials, and tips to work smarter.'
-  defaultTheme = 'auto'
+  description = 'Premium digital guides and eBooks for students, creators, and tech learners. Built by Joy Roy.'
+  defaultTheme = 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -38,8 +38,8 @@ paginate = 9
 
   # Homepage info
   [params.homeInfoParams]
-    Title = "AI Tools & Tech Guides"
-    Content = "Practical guides on AI tools, coding, automation, and tech for students and beginners. Learn to work smarter with free tools and tutorials."
+    Title = 'AI Blog Factory'
+    Content = 'Digital guides for students, creators & tech learners. Premium eBooks, playbooks, and practical resources to help you study smarter, code faster, and build your future with AI.'
 
   # Social icons
   [[params.socialIcons]]
@@ -63,20 +63,25 @@ paginate = 9
     url = '/'
     weight = 10
   [[menu.main]]
+    identifier = 'products'
+    name = 'Products'
+    url = '/products/'
+    weight = 20
+  [[menu.main]]
     identifier = 'categories'
     name = 'Categories'
     url = '/categories/'
-    weight = 20
+    weight = 30
   [[menu.main]]
     identifier = 'tags'
     name = 'Tags'
     url = '/tags/'
-    weight = 30
+    weight = 40
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about/'
-    weight = 40
+    weight = 50
 
 [taxonomies]
   category = 'categories'

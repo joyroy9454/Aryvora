@@ -1,48 +1,38 @@
 ---
 title: "About"
-description: "About AI Tools & Tech Guides — a blog dedicated to helping students and beginners master AI tools, coding, and tech productivity."
+description: "About AI Blog Factory — premium digital guides and eBooks for students, creators, and tech learners."
 ---
 
-# About AI Tools & Tech Guides
+# About AI Blog Factory
 
-Welcome! I'm **Joy Roy**, a BSc Data Science student and the creator of this blog.
+**AI Blog Factory** creates premium digital guides, eBooks, and playbooks for students, creators, and tech learners.
 
-## Why This Blog Exists
+Founded by **Joy Roy**, a BSc Data Science student who built these systems while studying — not after graduating.
 
-As a student, I discovered something powerful: the best AI tools and tech resources are often free. You just need to know where to look and how to use them.
+## Our Mission
 
-Most tech blogs are written for experienced developers. This one is different. **AI Tools & Tech Guides** is built specifically for:
+Make practical AI knowledge accessible to anyone willing to put in the work. No fluff. No filler. Just systems that work.
 
-- **Students** who want to supercharge their learning with AI
-- **Beginners** who are just starting their coding journey
-- **Anyone** looking for practical, free tools to solve real problems
+## What We Create
 
-## What You'll Find Here
+- **Premium eBooks** — deep, practical guides on AI tools, productivity, and career building
+- **Workbooks & Exercises** — hands-on companions to every guide
+- **Prompt Libraries** — ready-to-use prompts for studying, coding, and creating
+- **Cheat Sheets & Checklists** — quick-reference tools for daily use
 
-| Type | Examples |
-|------|----------|
-| **AI Tool Reviews** | Honest breakdowns of free AI tools for writing, coding, research, and productivity |
-| **Coding Tutorials** | Step-by-step Python guides for absolute beginners |
-| **Study Guides** | How to use AI to learn faster and more effectively |
-| **Automation** | Scripts and workflows that save you hours every week |
-| **Tech Tips** | Practical advice for making the most of free resources |
+## Our Philosophy
 
-## My Philosophy
-
-1. **Free first.** If a paid tool is better, I'll tell you. But most of the time, free tools are more than enough.
-2. **Practical over theoretical.** Every article includes actionable steps you can use today.
-3. **Beginner-friendly.** No jargon without explanation. No assumptions about prior knowledge.
-4. **Honest reviews.** I only recommend tools I've actually tested.
-
-## About the Tech
-
-This blog is built with **Hugo** (a fast static site generator) and hosted on **GitHub Pages** — completely free. The content is created with AI assistance and human-reviewed for quality and accuracy.
+1. **Practical over theoretical.** Every product includes steps you can use today.
+2. **Beginner-friendly.** No jargon without explanation.
+3. **Honest.** We only recommend tools and methods we have actually tested.
+4. **Premium quality.** Every product is designed, edited, and polished before release.
 
 ## Connect
 
 - **GitHub:** [github.com/joyroy9454](https://github.com/joyroy9454)
-- **RSS Feed:** Subscribe via RSS to get notified of new articles
+- **Blog:** [joyroy9454.github.io/ai-blog-factory](https://joyroy9454.github.io/ai-blog-factory/)
+- **RSS Feed:** Subscribe via RSS for new product releases
 
 ---
 
-*Have a topic you'd like me to cover? Drop a suggestion in the comments of any article!*
+*Have a topic you'd like us to cover? Reach out via GitHub.*
