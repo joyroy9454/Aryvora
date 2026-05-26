@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a371f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="rgba(88,166,255,0.03)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="rgba(88,166,255,0.05)"/>
+  <circle cx="1100" cy="500" r="250" fill="rgba(163,113,247,0.05)"/>
+  
+  <!-- Logo area -->
+  <rect x="80" y="80" width="60" height="60" rx="12" fill="url(#accent)"/>
+  <text x="110" y="122" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="bold" fill="white">AI</text>
+  
+  <!-- Title -->
+  <text x="600" y="260" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="800" fill="#e6edf3">AI Tools &amp; Tech Guides</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="320" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#8b949e">Practical guides on AI tools, coding, automation, and tech for students</text>
+  
+  <!-- Divider -->
+  <rect x="450" y="360" width="300" height="3" rx="1.5" fill="url(#accent)"/>
+  
+  <!-- Topics -->
+  <text x="600" y="410" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#6e7681">AI Tools • Coding Tutorials • Student Productivity • Automation</text>
+  
+  <!-- URL -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#58a6ff">joyroy9454.github.io/ai-blog-factory</text>
+</svg>
