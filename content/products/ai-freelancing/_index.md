@@ -1,6 +1,6 @@
 ---
-title: "The Student Freelancer"
-description: "How Students Can Start Freelancing with AI Tools and Earn Their First Income Online"
+title: "THE STUDENT FREELANCER"
+description: "Start Freelancing with AI Tools and Earn Your First Income Online"
 date: 2026-05-26
 draft: false
 layout: product
@@ -8,9 +8,9 @@ categories: ["ebooks"]
 tags: ["ai", "freelancing", "ai", "students", "guide"]
 ---
 
-## The Student Freelancer
+## THE STUDENT FREELANCER
 
-**How Students Can Start Freelancing with AI Tools and Earn Their First Income Online**
+**Start Freelancing with AI Tools and Earn Your First Income Online**
 
 ---
 
@@ -18,96 +18,32 @@ tags: ["ai", "freelancing", "ai", "students", "guide"]
 
 | Included | Detail |
 |----------|--------|
-| **35-45 Page Premium PDF** | Dark-themed, professionally formatted, print-ready |
-| **Bonus Workbook** | Exercises to implement everything you learn |
-| **Quick Reference Cheat Sheet** | Print-ready one-page summary |
+| **22-Page Premium PDF** | Professionally formatted, print-ready |
+| **Workbook Exercises** | Hands-on practice for every chapter |
+| **Quick-Reference Cheat Sheet** | One printable page of key techniques |
 | **Lifetime Updates** | Free updates for all future editions |
-
----
-
-## Who This Is For
-
-This guide was built for:
-
-- **College students** who want practical AI workflows
-- **Beginner creators** building skills and income
-- **Self-learners** who feel overwhelmed by too many tools
-- **Career switchers** building their first portfolio
-- **Anyone** who wants to use AI deliberately, not randomly
 
 ---
 
 ## What's Inside
 
 ### Chapter 1: Why Freelancing Now
-The barriers to entry have never been lower. AI tools let one student deliver the work of three. This chapter maps the opportunity.
+AI tools let one student produce the work of three. Combined with global freelance platforms, this is the lowest-barrier income opportunity students have ever had.
 ### Chapter 2: Choosing Your Service
-Data analysis. Writing. Web scraping. Social media. Resume help. Content creation. Pick the one that matches your skills.
+Pick the service that matches existing skills. Do not learn something new unless the ROI is clear.
 ### Chapter 3: Platform Setup
-Fiverr, Upwork, Freelancer — which one works for students? Platform-by-platform breakdown with optimized profile templates.
-### Chapter 4: AI-Powered Delivery
-Same quality, half the time. Use AI for research, drafts, code, and design — you add the thinking, quality control, and client communication.
-### Chapter 5: Pricing Psychology
-Underpricing traps. Overpricing fears. The sweet spot for student freelancers and how to raise rates over time.
-### Chapter 6: First Client Playbook
-The fastest path from zero to first paid client. Includes pitch templates, cold outreach scripts, and the free-sample strategy.
-### Chapter 7: From One to Ten
-How to turn one happy client into a steady stream. Reviews, referrals, and repeat business.
-### Chapter 8: Quick-Start Toolkit
-Five ready-to-use gig descriptions, three cold outreach templates, one client onboarding checklist, pricing calculator.
-
-### Chapter 9 — Workbook & Exercises
-
-Hands-on exercises to cement every concept from the book.
-
-### Chapter 10 — Quick Reference Cheat Sheet
-
-One printable page with the most important prompts, frameworks, and action steps.
-
----
-
-## Topics Covered
-
-- Why freelancing works for students
-- Choosing your freelance service
-- Setting up profiles on freelance platforms
-- Using AI to deliver faster
-- Pricing for beginners
-- First client strategies
-- Scaling from first client to steady income
-
----
-
-## Frequently Asked Questions
-
-**Is this book only for STUDENT students?**
-
-No. While the examples are practical, the frameworks work for any student, creator, or beginner learner.
-
-**Do I need to pay for AI tools?**
-
-No. Everything in this book uses free tiers of popular AI tools.
-
-**I am a complete beginner. Will I understand it?**
-
-Yes. The book starts from zero concepts and builds progressively.
-
-**What is the refund policy?**
-
-Seven-day, no-questions-asked refund. If the book does not help, you get your money back.
-
-**How do I receive the book?**
-
-Instant PDF download after purchase. No waiting.
+Fiverr, Upwork, Freelancer — each has a different dynamic. Pick one to start. Do not spread thin.
+### Chapter 4: First Client Playbook
+The hardest client is the first one. This chapter gives you the exact process.
+### Chapter 5: Pricing and Packaging
+Do not charge by hour. Charge by deliverable. Clients buy outcomes, not time.
 
 ---
 
 ## Pricing
 
-**Launch Price: ~~INR 499~~ INR 349** (~$4.2)
+**Launch Price: INR 349** (~$4.2)
 
-Regular price will be INR 499. This launch discount is available for a limited time.
-
-**[→ Get Instant Access — INR 349](/downloads/ebook-04-ai-freelancing.pdf)**
+**[→ Get Instant Access ](/downloads/v2_ebook-04-ai-freelancing.pdf)**
 
 *7-day money-back guarantee. Instant PDF delivery.*
