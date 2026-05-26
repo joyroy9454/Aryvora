@@ -1,19 +1,20 @@
 {{- define "main" -}}
 
-<header class="list-header">
-  <h1 class="list-title">{{ .Title }}</h1>
+<header class="list-header" style="text-align:center; padding:40px 24px 20px;">
+  <h1 class="list-title" style="font-size:2rem; font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;">{{ .Title }}</h1>
   {{- if .Description -}}
-  <p class="list-description">{{ .Description }}</p>
+  <p class="list-description" style="color:var(--text-secondary); font-size:1.05rem; margin:0;">{{ .Description }}</p>
   {{- end -}}
+  <p style="color:var(--text-muted); font-size:0.9rem; margin:8px 0 0;">{{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}</p>
 </header>
 
 {{- if .Content -}}
-<div class="list-content">
+<div class="list-content" style="max-width:740px; margin:0 auto; padding:0 24px 32px;">
   {{ .Content }}
 </div>
 {{- end -}}
 
-<div class="post-list">
+<div class="post-list" style="max-width:900px; margin:0 auto; padding:0 24px 60px;">
   {{- range .Pages -}}
   <article class="post-list-item">
     {{- if .Params.cover -}}

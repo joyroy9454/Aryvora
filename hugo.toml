@@ -30,6 +30,12 @@ paginate = 9
     linkFullImages = true
     responsiveImages = true
 
+  # Default image for social sharing (homepage, etc.)
+  images = ["/images/og-default.svg"]
+
+  # Site logo
+  logo = "/images/logo.svg"
+
   # Homepage info
   [params.homeInfoParams]
     Title = "AI Tools & Tech Guides"
@@ -45,10 +51,10 @@ paginate = 9
 
   # Assets
   [params.assets]
-    favicon = '/ai-blog-factory/favicon.ico'
-    favicon16x16 = '/ai-blog-factory/favicon-16x16.png'
-    favicon32x32 = '/ai-blog-factory/favicon-32x32.png'
-    apple_touch_icon = '/ai-blog-factory/apple-touch-icon.png'
+    favicon = 'favicon.ico'
+    favicon16x16 = 'favicon-16x16.png'
+    favicon32x32 = 'favicon-32x32.png'
+    apple_touch_icon = 'apple-touch-icon.png'
 
 [menu]
   [[menu.main]]
