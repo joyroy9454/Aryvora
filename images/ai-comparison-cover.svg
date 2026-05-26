@@ -1,15 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
     </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a371f7"/>
+      <stop offset="100%" style="stop-color:#a371f7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
+  
+  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="0" y="0" width="1200" height="630" fill="rgba(0,0,0,0.15)"/>
-  <text x="600" y="240" text-anchor="middle" font-size="80" fill="white" opacity="0.9">⚡</text>
-  <text x="600" y="340" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="52" font-weight="bold" fill="white">ChatGPT vs Claude vs Gemini</text>
-  <text x="600" y="400" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="32" fill="rgba(255,255,255,0.85)">Which AI Wins in 2026?</text>
-  <rect x="450" y="440" width="300" height="4" rx="2" fill="rgba(255,255,255,0.5)"/>
-  <text x="600" y="500" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">AI Tools &amp; Tech Guides</text>
+  
+  <!-- Decorative grid -->
+  <line x1="0" y1="100" x2="1200" y2="100" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  <line x1="1000" y1="0" x2="1000" y2="630" stroke="#21262d" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="120" fill="#a371f7" opacity="0.03"/>
+  <circle cx="1100" cy="530" r="150" fill="#a371f7" opacity="0.03"/>
+  <circle cx="600" cy="315" r="200" fill="#a371f7" opacity="0.02"/>
+  
+  <!-- Tag -->
+  <rect x="80" y="140" width="200" height="32" rx="16" fill="#a371f7" opacity="0.15"/>
+  <text x="180" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#a371f7" font-weight="700" letter-spacing="2">AI COMPARED</text>
+  
+  <!-- Main title -->
+  <text x="80" y="260" font-family="system-ui, sans-serif" font-size="56" fill="#e6edf3" font-weight="800" letter-spacing="-1">ChatGPT vs Claude</text>
+  <text x="80" y="330" font-family="system-ui, sans-serif" font-size="56" fill="url(#accent)" font-weight="800" letter-spacing="-1">vs Gemini in 2026</text>
+  
+  <!-- Badge -->
+  <rect x="80" y="380" width="280" height="40" rx="20" fill="rgba(88,166,255,0.1)" stroke="rgba(88,166,255,0.25)" stroke-width="1"/>
+  <text x="220" y="407" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#8b949e" font-weight="600">Head-to-Head Analysis</text>
+  
+  <!-- Bottom accent line -->
+  <line x1="80" y1="480" x2="400" y2="480" stroke="url(#accent)" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Brand -->
+  <text x="80" y="530" font-family="system-ui, sans-serif" font-size="16" fill="#6e7681" font-weight="600" letter-spacing="1">AI TOOLS &amp; TECH GUIDES</text>
+  
+  <!-- Decorative element -->
+  <circle cx="1050" cy="200" r="8" fill="#a371f7" opacity="0.4"/>
+  <circle cx="1080" cy="240" r="5" fill="#a371f7" opacity="0.3"/>
+  <circle cx="1020" cy="250" r="6" fill="#a371f7" opacity="0.2"/>
+  <line x1="1050" y1="208" x2="1080" y2="235" stroke="#a371f7" stroke-width="1" opacity="0.2"/>
+  <line x1="1080" y1="245" x2="1026" y2="250" stroke="#a371f7" stroke-width="1" opacity="0.2"/>
 </svg>
