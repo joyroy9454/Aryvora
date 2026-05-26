@@ -1,25 +1,25 @@
 {{- define "main" -}}
 
-<header class="list-header" style="text-align:center; padding:40px 24px 20px;">
-  <h1 class="list-title" style="font-size:2rem; font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;">{{ .Title }}</h1>
+<header class="list-header">
+  <h1 class="list-title">{{ .Title }}</h1>
   {{- if .Description -}}
-  <p class="list-description" style="color:var(--text-secondary); font-size:1.05rem; margin:0;">{{ .Description }}</p>
+  <p class="list-description">{{ .Description }}</p>
   {{- end -}}
-  <p style="color:var(--text-muted); font-size:0.9rem; margin:8px 0 0;">{{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}</p>
+  <p class="list-count">{{ len .Pages }} article{{ if ne (len .Pages) 1 }}s{{ end }}</p>
 </header>
 
 {{- if .Content -}}
-<div class="list-content" style="max-width:740px; margin:0 auto; padding:0 24px 32px;">
+<div class="list-content">
   {{ .Content }}
 </div>
 {{- end -}}
 
-<div class="post-list" style="max-width:900px; margin:0 auto; padding:0 24px 60px;">
+<div class="post-list">
   {{- range .Pages -}}
   <article class="post-list-item">
     {{- if .Params.cover -}}
     <a href="{{ .RelPermalink }}" class="post-list-image-link">
-      <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+      <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
     </a>
     {{- end -}}
     <div class="post-list-content">
@@ -27,13 +27,13 @@
         {{- if .Params.categories -}}
         <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
         {{- end -}}
-        <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
       </div>
       <h3 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       <p class="post-list-excerpt">{{ .Description }}</p>
       <div class="post-list-footer">
         <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
-        <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+        <a href="{{ .RelPermalink }}" class="post-card-link">Read →</a>
       </div>
     </div>
   </article>

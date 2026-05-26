@@ -913,3 +913,123 @@ img { max-width: 100%; height: auto; display: block; }
   
   .share-buttons { flex-wrap: wrap; }
 }
+
+/* ===== HERO LOGO ===== */
+.hero-logo {
+  margin-bottom: 20px;
+}
+.hero-logo img {
+  border-radius: 16px;
+  box-shadow: 0 0 60px rgba(88, 166, 255, 0.15);
+}
+
+/* ===== HERO STATS ===== */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.hero-stats .stat {
+  text-align: center;
+}
+.hero-stats .stat strong {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.hero-stats .stat span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.section-header .section-title {
+  margin: 0;
+}
+.section-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.section-link:hover {
+  color: var(--accent-hover);
+}
+
+/* ===== CATEGORY GRID ===== */
+.categories-section {
+  padding: 20px 0 60px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.category-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.category-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.category-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+.category-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ===== LIST PAGE ===== */
+.list-header {
+  text-align: center;
+  padding: 60px 24px 20px;
+}
+.list-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+}
+.list-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+.list-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.list-content {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}

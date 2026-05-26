@@ -3,12 +3,19 @@
 <!-- HERO SECTION -->
 <section class="hero-section">
   <div class="hero-content">
-    <img src="/images/logo.svg" alt="AI Tools & Tech Guides" width="64" height="64" style="margin-bottom: 20px; border-radius: 14px;">
+    <div class="hero-logo">
+      <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Tools & Tech Guides" width="72" height="72">
+    </div>
     <h1 class="hero-title">AI Tools & Tech Guides</h1>
-    <p class="hero-subtitle">Practical guides on AI tools, coding, automation, and tech for students and beginners. Learn to work smarter with free tools and step-by-step tutorials.</p>
+    <p class="hero-subtitle">Expert guides on AI tools, data science, coding, automation, and productivity for students and beginners. Learn to work smarter with free tools and step-by-step tutorials.</p>
     <div class="hero-cta">
-      <a href="/categories/" class="btn btn-primary">Browse Topics</a>
-      <a href="/about/" class="btn btn-secondary">About This Blog</a>
+      <a href="/categories/" class="btn btn-primary">→ Explore Articles</a>
+      <a href="/about/" class="btn btn-secondary">About the Blog</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong> <span>Articles</span></div>
+      <div class="stat"><strong>20+</strong> <span>AI Tools Reviewed</span></div>
+      <div class="stat"><strong>Free</strong> <span>Always</span></div>
     </div>
   </div>
 </section>
@@ -18,19 +25,20 @@
 {{- if $featured -}}
 <section class="featured-section">
   <div class="container">
-    <h2 class="section-title">Latest Articles</h2>
+    <div class="section-header">
+      <h2 class="section-title">Latest Articles</h2>
+      <a href="/posts/" class="section-link">View all →</a>
+    </div>
     <div class="post-grid">
-      {{- range $featured -}}
-      <article class="post-card">
+      {{- range $i, $post := $featured -}}
+      <article class="post-card {{ if eq $i 0 }}post-card-featured{{ end }}">
         {{- if .Params.cover -}}
         <a href="{{ .RelPermalink }}" class="post-card-image-link">
-          <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
         </a>
         {{- else -}}
-        <a href="{{ .RelPermalink }}" class="post-card-image-link">
-          <div class="post-card-image post-card-image-placeholder">
-            <span>{{ .Title }}</span>
-          </div>
+        <a href="{{ .RelPermalink }}" class="post-card-image post-card-image-placeholder">
+          <span>{{ .Title }}</span>
         </a>
         {{- end -}}
         <div class="post-card-content">
@@ -38,16 +46,37 @@
             {{- if .Params.categories -}}
             <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
             {{- end -}}
-            <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
           </div>
           <h3 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="post-card-excerpt">{{ .Description }}</p>
           <div class="post-card-footer">
             <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
-            <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+            <a href="{{ .RelPermalink }}" class="post-card-link">Read →</a>
           </div>
         </div>
       </article>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+{{- end -}}
+
+<!-- CATEGORY BLOCKS -->
+{{- $categories := .Site.Taxonomies.categories -}}
+{{- if $categories -}}
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Browse by Topic</h2>
+    </div>
+    <div class="category-grid">
+      {{- range $name, $pages := $categories -}}
+      {{- $urlName := $name | urlize -}}
+      <a href="/categories/{{ $urlName }}/" class="category-card">
+        <span class="category-name">{{ $name }}</span>
+        <span class="category-count">{{ len $pages }} article{{ if ne (len $pages) 1 }}s{{ end }}</span>
+      </a>
       {{- end -}}
     </div>
   </div>
@@ -59,13 +88,15 @@
 {{- if $allPages -}}
 <section class="all-posts-section">
   <div class="container">
-    <h2 class="section-title">More Articles</h2>
+    <div class="section-header">
+      <h2 class="section-title">More Articles</h2>
+    </div>
     <div class="post-list">
       {{- range $allPages -}}
       <article class="post-list-item">
         {{- if .Params.cover -}}
         <a href="{{ .RelPermalink }}" class="post-list-image-link">
-          <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
         </a>
         {{- end -}}
         <div class="post-list-content">
@@ -73,13 +104,13 @@
             {{- if .Params.categories -}}
             <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
             {{- end -}}
-            <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
           </div>
           <h3 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="post-list-excerpt">{{ .Description }}</p>
           <div class="post-list-footer">
             <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
-            <a href="{{ .RelPermalink }}" class="post-card-link">Read More →</a>
+            <a href="{{ .RelPermalink }}" class="post-card-link">Read →</a>
           </div>
         </div>
       </article>
@@ -89,19 +120,23 @@
 </section>
 {{- end -}}
 
-<!-- NEWSLETTER / CTA -->
+<!-- CTA SECTION -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
-      <h2>Stay Updated</h2>
-      <p>New articles on AI tools, coding tutorials, and productivity tips published regularly. Bookmark this page and check back often!</p>
+      <h2>Stay Ahead with AI & Data Science</h2>
+      <p>New articles on AI tools, coding tutorials, data science guides, and productivity tips published regularly. Bookmark this page and check back often!</p>
       <div class="cta-tags">
-        <a href="/categories/ai-tools/" class="tag-chip">AI Tools</a>
+        <a href="/tags/ai-tools/" class="tag-chip">AI Tools</a>
         <a href="/tags/python/" class="tag-chip">Python</a>
         <a href="/tags/automation/" class="tag-chip">Automation</a>
         <a href="/tags/beginners/" class="tag-chip">Beginners</a>
+        <a href="/tags/data-science/" class="tag-chip">Data Science</a>
         <a href="/tags/students/" class="tag-chip">Students</a>
+        <a href="/tags/machine-learning/" class="tag-chip">Machine Learning</a>
+        <a href="/tags/coding/" class="tag-chip">Coding</a>
       </div>
+      <a href="/posts/" class="btn btn-primary" style="margin-top: 24px;">Browse All Articles</a>
     </div>
   </div>
 </section>
