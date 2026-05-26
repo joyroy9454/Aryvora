@@ -1,2 +1,80 @@
-<!-- Custom CSS for Media Blog Platform v1 -->
-<!-- CSS is loaded via assets/css/extended/custom.css and bundled by PaperMod -->
+<!-- Structured Data / Schema.org -->
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Blog Factory",
+  "url": "https://joyroy9454.github.io/ai-blog-factory/",
+  "description": "Premium digital guides, eBooks, and playbooks for students, creators, and tech learners.",
+  "publisher": {
+    "@type": "Person",
+    "name": "Joy Roy",
+    "url": "https://joyroy9454.github.io/ai-blog-factory/about/"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://joyroy9454.github.io/ai-blog-factory/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- end }}
+
+{{- if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "author": {
+    "@type": "Person",
+    "name": "Joy Roy",
+    "url": "https://joyroy9454.github.io/ai-blog-factory/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Blog Factory",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg"
+    }
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{- end }}
+
+{{- if and .IsPage (eq .Type "about") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "AI Blog Factory",
+  "description": "Premium digital guides and eBooks for students, creators, and tech learners.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Joy Roy",
+    "url": "https://joyroy9454.github.io/ai-blog-factory/about/",
+    "description": "BSc Data Science student, vibe coder, and founder of AI Blog Factory",
+    "sameAs": [
+      "https://github.com/joyroy9454"
+    ]
+  }
+}
+</script>
+{{- end }}
+
+<!-- Google Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">

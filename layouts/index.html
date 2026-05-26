@@ -1,58 +1,118 @@
 {{- define "main" -}}
 
-<!-- HERO SECTION -->
-<section class="hero-section">
-  <div class="hero-content">
-    <div class="hero-logo">
-      <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Tools & Tech Guides" width="80" height="80">
+<!-- ===== TOP BAR: TRENDING / ANNOUNCEMENT ===== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-inner">
+      <span class="top-bar-badge">NEW</span>
+      <span class="top-bar-text">Latest: 
+        {{- $latest := first 1 (where .Site.RegularPages "Section" "posts") -}}
+        {{- range $latest -}}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end -}}
+      </span>
+      <a href="/posts/" class="top-bar-link">All Articles →</a>
     </div>
-    <h1 class="hero-title">AI Tools & Tech Guides</h1>
-    <p class="hero-subtitle">Expert guides on AI tools, data science, coding, automation, and productivity — built for students and beginners who want to work smarter.</p>
-    <div class="hero-cta">
-      <a href="/categories/" class="btn btn-primary">→ Explore Articles</a>
-      <a href="/about/" class="btn btn-secondary">About the Blog</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong> <span>In-Depth Guides</span></div>
-      <div class="stat"><strong>20+</strong> <span>AI Tools Reviewed</span></div>
-      <div class="stat"><strong>Free</strong> <span>Always</span></div>
+  </div>
+</div>
+
+<!-- ===== EDITORIAL HERO ===== -->
+<section class="hero-editorial">
+  <div class="container">
+    <div class="hero-editorial-inner">
+      <div class="hero-brand">
+        <div class="brand-mark">
+          <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="" width="48" height="48">
+        </div>
+        <div class="brand-wordmark">
+          <span class="brand-name">AI Blog Factory</span>
+        </div>
+      </div>
+
+      {{- $featured := first 1 (where .Site.RegularPages "Section" "posts") -}}
+      {{- range $featured -}}
+      <div class="hero-featured">
+        <span class="hero-label">Latest Guide</span>
+        <h1 class="hero-headline">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h1>
+        <p class="hero-deck">{{ .Description }}</p>
+        <div class="hero-meta">
+          <a href="/about/" class="author-link">
+            <span class="author-avatar">JR</span>
+            <span>Joy Roy</span>
+          </a>
+          <span class="meta-sep">·</span>
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+          <span class="meta-sep">·</span>
+          <span>{{ .ReadingTime }} min read</span>
+          {{- if .Params.categories -}}
+          <span class="meta-sep">·</span>
+          <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-category">{{ index .Params.categories 0 }}</a>
+          {{- end -}}
+        </div>
+        <a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg">
+          Read Full Guide →
+          <span class="btn-time">{{ .ReadingTime }} min</span>
+        </a>
+      </div>
+      {{- end -}}
+
+      <div class="hero-secondary">
+        {{- $secondary := after 1 (first 4 (where .Site.RegularPages "Section" "posts")) -}}
+        {{- range $secondary -}}
+        <a href="{{ .RelPermalink }}" class="hero-secondary-card">
+          <span class="hero-secondary-label">{{ .ReadingTime }} min</span>
+          <span class="hero-secondary-title">{{ .Title }}</span>
+        </a>
+        {{- end -}}
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED POSTS -->
-{{- $featured := first 3 (where .Site.RegularPages "Section" "posts") -}}
-{{- if $featured -}}
-<section class="featured-section">
+<!-- ===== DIVIDER ===== -->
+<div class="section-divider">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Latest Articles</h2>
-      <a href="/posts/" class="section-link">View all →</a>
+    <div class="divider-line"></div>
+  </div>
+</div>
+
+<!-- ===== FEATURED EDITOR'S PICKS ===== -->
+{{- $picks := first 6 (where .Site.RegularPages "Section" "posts") -}}
+{{- if $picks -}}
+<section class="editor-picks">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">Editor's Picks</span>
+        <h2 class="section-title">Curated guides worth reading</h2>
+      </div>
+      <a href="/posts/" class="section-link">Browse all →</a>
     </div>
-    <div class="post-grid">
-      {{- range $i, $post := $featured -}}
-      <article class="post-card">
-        {{- if .Params.cover -}}
-        <a href="{{ .RelPermalink }}" class="post-card-image-link">
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
+    <div class="picks-grid">
+      {{- range $i, $post := $picks -}}
+      <article class="pick-card {{ if eq $i 0 }}pick-card-lead{{ end }}">
+        <a href="{{ .RelPermalink }}" class="pick-card-media">
+          {{- if .Params.cover -}}
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+          {{- else -}}
+          <div class="pick-card-placeholder"></div>
+          {{- end -}}
+          {{- if .Params.categories -}}
+          <span class="pick-card-badge">{{ index .Params.categories 0 }}</span>
+          {{- end -}}
         </a>
-        {{- else -}}
-        <a href="{{ .RelPermalink }}" class="post-card-image post-card-image-placeholder">
-          <span>{{ .Title }}</span>
-        </a>
-        {{- end -}}
-        <div class="post-card-content">
-          <div class="post-card-meta">
-            {{- if .Params.categories -}}
-            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
-            {{- end -}}
-            <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+        <div class="pick-card-body">
+          <div class="pick-card-meta">
+            <span class="pick-num">{{ printf "0%d" (add $i 1) }}</span>
+            <span class="pick-date">{{ .Date.Format "Jan 2, 2006" }}</span>
           </div>
-          <h3 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p class="post-card-excerpt">{{ .Description }}</p>
-          <div class="post-card-footer">
-            <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
-            <a href="{{ .RelPermalink }}" class="post-card-link">Read →</a>
+          <h3 class="pick-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="pick-card-excerpt">{{ .Description }}</p>
+          <div class="pick-card-footer">
+            <span class="pick-readtime">{{ .ReadingTime }} min read</span>
+            <a href="{{ .RelPermalink }}" class="pick-read-link">Read →</a>
           </div>
         </div>
       </article>
@@ -62,20 +122,24 @@
 </section>
 {{- end -}}
 
-<!-- CATEGORY BLOCKS -->
+<!-- ===== CATEGORY SHOWCASE ===== -->
 {{- $categories := .Site.Taxonomies.categories -}}
 {{- if $categories -}}
-<section class="categories-section">
+<section class="category-showcase">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Browse by Topic</h2>
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">Explore Topics</span>
+        <h2 class="section-title">Browse by category</h2>
+      </div>
+      <a href="/categories/" class="section-link">All categories →</a>
     </div>
-    <div class="category-grid">
+    <div class="category-show-grid">
       {{- range $name, $pages := $categories -}}
-      {{- $urlName := $name | urlize -}}
-      <a href="/categories/{{ $urlName }}/" class="category-card">
-        <span class="category-name">{{ $name }}</span>
-        <span class="category-count">{{ len $pages }} article{{ if ne (len $pages) 1 }}s{{ end }}</span>
+      <a href="/categories/{{ $name | urlize }}/" class="cat-card">
+        <span class="cat-card-name">{{ $name }}</span>
+        <span class="cat-card-count">{{ len $pages }} {{ if eq (len $pages) 1 }}guide{{ else }}guides{{ end }}</span>
+        <span class="cat-card-arrow">→</span>
       </a>
       {{- end -}}
     </div>
@@ -83,35 +147,64 @@
 </section>
 {{- end -}}
 
-<!-- ALL POSTS -->
-{{- $allPages := after 3 (where .Site.RegularPages "Section" "posts") -}}
-{{- if $allPages -}}
-<section class="all-posts-section">
+<!-- ===== NEWSLETTER / CTA STRIP ===== -->
+<section class="cta-strip">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">More Articles</h2>
+    <div class="cta-strip-inner">
+      <div class="cta-strip-content">
+        <span class="section-kicker">Stay Updated</span>
+        <h2>Get AI & tech guides delivered</h2>
+        <p>Free weekly digest of the best AI tools, coding tutorials, and productivity tips for students and creators.</p>
+      </div>
+      <div class="cta-strip-form">
+        <form class="newsletter-form" action="#" onsubmit="return false;">
+          <input type="email" placeholder="your@email.com" class="newsletter-input" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <span class="newsletter-note">No spam. Unsubscribe anytime.</span>
+      </div>
     </div>
-    <div class="post-list">
-      {{- range $allPages -}}
-      <article class="post-list-item">
-        {{- if .Params.cover -}}
-        <a href="{{ .RelPermalink }}" class="post-list-image-link">
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+    <div class="cta-strip-stats">
+      <div class="cta-stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong><span>Guides published</span></div>
+      <div class="cta-stat"><strong>20+</strong><span>AI tools reviewed</span></div>
+      <div class="cta-stat"><strong>Free</strong><span>Always free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REST OF POSTS: LIST VIEW ===== -->
+{{- $remaining := after 6 (where .Site.RegularPages "Section" "posts") -}}
+{{- if $remaining -}}
+<section class="article-list-section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">More Guides</span>
+        <h2 class="section-title">All articles</h2>
+      </div>
+    </div>
+    <div class="article-list">
+      {{- range $remaining -}}
+      <article class="article-list-card">
+        <a href="{{ .RelPermalink }}" class="article-list-media">
+          {{- if .Params.cover -}}
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+          {{- else -}}
+          <div class="article-list-placeholder"></div>
+          {{- end -}}
         </a>
-        {{- end -}}
-        <div class="post-list-content">
-          <div class="post-list-meta">
+        <div class="article-list-body">
+          <div class="article-list-meta">
             {{- if .Params.categories -}}
-            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-card-category">{{ index .Params.categories 0 }}</a>
+            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
             {{- end -}}
-            <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span>·</span>
+            <span>{{ .ReadingTime }} min read</span>
           </div>
-          <h3 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p class="post-list-excerpt">{{ .Description }}</p>
-          <div class="post-list-footer">
-            <span class="post-card-readtime">{{ .ReadingTime }} min read</span>
-            <a href="{{ .RelPermalink }}" class="post-card-link">Read →</a>
-          </div>
+          <h3 class="article-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="article-list-excerpt">{{ .Description }}</p>
+          <a href="{{ .RelPermalink }}" class="article-list-link">Read guide →</a>
         </div>
       </article>
       {{- end -}}
@@ -120,23 +213,18 @@
 </section>
 {{- end -}}
 
-<!-- CTA SECTION -->
-<section class="cta-section">
+<!-- ===== TAG CLOUD ===== -->
+<section class="tag-cloud-section">
   <div class="container">
-    <div class="cta-box">
-      <h2>Stay Ahead with AI & Data Science</h2>
-      <p>New articles on AI tools, coding tutorials, data science guides, and productivity tips published regularly.</p>
-      <div class="cta-tags">
-        <a href="/tags/ai-tools/" class="tag-chip">AI Tools</a>
-        <a href="/tags/python/" class="tag-chip">Python</a>
-        <a href="/tags/automation/" class="tag-chip">Automation</a>
-        <a href="/tags/beginners/" class="tag-chip">Beginners</a>
-        <a href="/tags/data-science/" class="tag-chip">Data Science</a>
-        <a href="/tags/students/" class="tag-chip">Students</a>
-      </div>
-      <a href="/posts/" class="btn btn-primary" style="margin-top: 24px;">Browse All Articles</a>
+    <div class="tag-cloud">
+      {{- range $name, $pages := .Site.Taxonomies.tags -}}
+      <a href="/tags/{{ $name | urlize }}/" class="tag-pill" data-count="{{ len $pages }}">
+        {{ $name }}
+        <span class="tag-pill-count">{{ len $pages }}</span>
+      </a>
+      {{- end -}}
     </div>
   </div>
 </section>
 
-{{- end -}}
+{{- end -}}{{/* end main */}}

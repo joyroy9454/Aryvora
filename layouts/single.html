@@ -19,9 +19,6 @@
     {{- if not (.Param "hideMeta") -}}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
-      {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
-      {{- partial "post_canonical.html" . -}}
     </div>
     {{- end -}}
   </header>
@@ -65,34 +62,45 @@
 
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) -}}
     <div class="share-wrapper">
-      <div class="share-label">Share this article:</div>
+      <div class="share-label">Share this article</div>
       {{- partial "share_icons.html" . -}}
     </div>
     {{- end -}}
   </footer>
 
-  <!-- RELATED POSTS -->
-  {{- $related := .Site.RegularPages.Related . | first 3 -}}
-  {{- if $related -}}
-  <section class="related-posts">
-    <h3>Related Articles</h3>
-    <div class="post-grid">
-      {{- range $related -}}
-      <article class="post-card post-card-small">
-        {{- if .Params.cover -}}
-        <a href="{{ .RelPermalink }}" class="post-card-image-link">
-          <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
-        </a>
-        {{- end -}}
-        <div class="post-card-content">
-          <h4 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-          <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        </div>
-      </article>
-      {{- end -}}
+  <!-- AUTHOR BIO CARD -->
+  <div class="author-card">
+    <div class="author-card-avatar">JR</div>
+    <div class="author-card-info">
+      <span class="author-card-label">Written by</span>
+      <h4 class="author-card-name">Joy Roy</h4>
+      <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of AI Blog Factory. I test and review AI tools so you don't have to.</p>
+      <a href="/about/" class="author-card-link">About AI Blog Factory →</a>
     </div>
-  </section>
-  {{- end -}}
+  </div>
 </article>
+
+<!-- RELATED POSTS -->
+{{- $related := .Site.RegularPages.Related . | first 3 -}}
+{{- if $related -}}
+<section class="related-posts">
+  <h3>Related Articles</h3>
+  <div class="post-grid">
+    {{- range $related -}}
+    <article class="post-card">
+      {{- if .Params.cover -}}
+      <a href="{{ .RelPermalink }}" class="post-card-image-link">
+        <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
+      </a>
+      {{- end -}}
+      <div class="post-card-content">
+        <h4 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+        <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      </div>
+    </article>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}
 
 {{- end -}}{{/* end main */}}

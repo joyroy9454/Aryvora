@@ -1,0 +1,16 @@
+{{- $tags := .Language.Params.Taxonomies.tag | default "tags" -}}
+<div class="post-footer-top">
+  <div class="post-tags-label">Topics:</div>
+  <ul class="post-tags">
+    {{- range ($.GetTerms $tags) -}}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{- end -}}
+  </ul>
+</div>
+
+{{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) -}}
+<div class="share-wrapper">
+  <div class="share-label">Share this article</div>
+  {{- partial "share_icons.html" . -}}
+</div>
+{{- end -}}

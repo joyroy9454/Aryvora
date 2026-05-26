@@ -6,7 +6,7 @@ paginate = 9
 
 [params]
   author = 'Joy Roy'
-  description = 'Premium digital guides and eBooks for students, creators, and tech learners. Built by Joy Roy.'
+  description = 'Premium digital guides and eBooks for students, creators, and tech learners. AI tools, coding tutorials, and productivity guides — built by Joy Roy.'
   defaultTheme = 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -25,23 +25,17 @@ paginate = 9
   tocopen = false
   DateFormat = 'January 2, 2006'
 
-  # Cover image settings
   [params.cover]
     linkFullImages = true
     responsiveImages = true
 
-  # Default image for social sharing (homepage, etc.)
   images = ["/images/og-default.svg"]
-
-  # Site logo
   logo = "/images/logo.svg"
 
-  # Homepage info
   [params.homeInfoParams]
     Title = 'AI Blog Factory'
     Content = 'Digital guides for students, creators & tech learners. Premium eBooks, playbooks, and practical resources to help you study smarter, code faster, and build your future with AI.'
 
-  # Social icons
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/joyroy9454'
@@ -49,7 +43,6 @@ paginate = 9
     name = 'rss'
     url = '/ai-blog-factory/index.xml'
 
-  # Assets
   [params.assets]
     favicon = 'favicon.ico'
     favicon16x16 = 'favicon-16x16.png'
@@ -69,19 +62,14 @@ paginate = 9
     weight = 20
   [[menu.main]]
     identifier = 'categories'
-    name = 'Categories'
+    name = 'Topics'
     url = '/categories/'
     weight = 30
-  [[menu.main]]
-    identifier = 'tags'
-    name = 'Tags'
-    url = '/tags/'
-    weight = 40
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about/'
-    weight = 50
+    weight = 40
 
 [taxonomies]
   category = 'categories'
@@ -89,6 +77,14 @@ paginate = 9
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS', 'JSON']
+  taxonomy = ['HTML', 'RSS', 'JSON']
+  term = ['HTML', 'RSS', 'JSON']
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 [markup]
   [markup.goldmark]
