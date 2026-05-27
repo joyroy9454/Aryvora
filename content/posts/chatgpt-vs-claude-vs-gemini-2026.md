@@ -4,8 +4,8 @@ description: "ChatGPT, Claude, Gemini — which AI assistant should you actually
 date: 2026-05-26
 draft: false
 cover:
-  image: "/ai-blog-factory/images/ai-comparison-cover.svg"
-  alt: "ChatGPT vs Claude vs Gemini 2026"
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=80"
+  alt: "AI chatbot comparison showing three different AI assistants"
 categories: ["AI Tools"]
 tags:
   - "chatgpt"

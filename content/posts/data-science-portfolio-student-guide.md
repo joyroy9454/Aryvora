@@ -4,8 +4,8 @@ description: "Want to land a data science internship? You need a portfolio. Here
 date: 2026-05-26
 draft: false
 cover:
-  image: "/ai-blog-factory/images/data-science-portfolio-cover.svg"
-  alt: "Data Science Portfolio Guide for Students"
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"
+  alt: "Data science portfolio with code and charts on screen"
 categories: ["Career & Education"]
 tags:
   - "data science"

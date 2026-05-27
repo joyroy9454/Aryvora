@@ -4,8 +4,8 @@ description: "Looking for free coding websites? Here are the 15 best platforms t
 date: 2026-05-26
 draft: false
 cover:
-  image: "/ai-blog-factory/images/free-coding-websites-cover.svg"
-  alt: "Best Free Coding Websites 2026"
+  image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop&q=80"
+  alt: "Free coding websites and laptop showing programming tutorials"
 categories: ["Programming & Coding"]
 tags:
   - "coding"
