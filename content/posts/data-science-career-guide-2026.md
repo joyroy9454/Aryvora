@@ -4,7 +4,7 @@ description: "Thinking about a data science career? This 2026 guide covers every
 date: 2026-05-26
 draft: false
 cover:
-  image: "/images/data-science-career-cover.svg"
+  image: "/ai-blog-factory/images/data-science-career-cover.svg"
   alt: "Data Science Career Guide 2026"
 categories: ["Career & Education"]
 tags:
