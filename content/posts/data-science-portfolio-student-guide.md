@@ -4,7 +4,7 @@ description: "Want to land a data science internship? You need a portfolio. Here
 date: 2026-05-26
 draft: false
 cover:
-  image: "https://joyroy9454.github.io/ai-blog-factory/images/data-science-portfolio-cover.svg"
+  image: "/images/data-science-portfolio-cover.svg"
   alt: "Data Science Portfolio Guide for Students"
 categories: ["Career & Education"]
 tags:
@@ -25,15 +25,24 @@ keywords:
   - "student data science projects"
   - "data science internship"
 slug: "data-science-portfolio-student-guide"
+faq:
+  - question: "How many projects do I need in my data science portfolio?"
+    answer: "Quality beats quantity. 3-5 well-documented, diverse projects are better than 10 rushed ones. Aim for variety: one data cleaning/exploration project, one ML model, one dashboard or visualization project, and one end-to-end pipeline."
+  - question: "What if I don't have real-world data for my projects?"
+    answer: "Use public datasets from Kaggle, UCI Machine Learning Repository, or government open data portals. Many hiring managers actually prefer seeing Kaggle projects because they show you can work with messy, real-world data."
+  - question: "Do I need to deploy my models in my portfolio?"
+    answer: "It's not required but it's a huge plus. Even a simple Streamlit or Gradio app hosted on Hugging Face Spaces shows you can take a model from notebook to production. It takes about 30 minutes to deploy a basic app."
+  - question: "Should I include class projects in my portfolio?"
+    answer: "Yes, if you've significantly extended them beyond what was required. Add your own analysis, visualizations, or improvements. Don't just submit the assignment as-is — show what extra value you added."
+  - question: "How do I write a good project README for my GitHub portfolio?"
+    answer: "A good README includes: 1) Project overview and motivation, 2) Data source and description, 3) Methodology and approach, 4) Key findings with visualizations, 5) How to run the code, 6) Tools and libraries used. Keep it clear and visual — use markdown formatting, images, and bullet points."
 ---
 
 Your degree says you studied data science. Your portfolio **PROVES** you can do it.
 
 Every year, thousands of students graduate with data science degrees. They all have similar coursework. Similar grades. Similar resumes. But the ones who land internships and job offers? They have something the others don't — a **data science portfolio** that shows real skills in action.
 
-If you're a student wondering how to stand out, this guide is for you. We'll cover exactly what employers look for, what makes a great project, 10 project ideas ranked from beginner to advanced, and a 30-day plan to go from zero to portfolio-ready.
-
-Let's build something that gets you hired.
+Here's exactly what employers look for, what makes a great project, 10 project ideas ranked from beginner to advanced, and a 30-day plan to go from zero to portfolio-ready. Let's build something that gets you hired.
 
 ## Why a Data Science Portfolio Matters
 

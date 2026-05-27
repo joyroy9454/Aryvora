@@ -36,6 +36,9 @@ paginate = 9
     Title = 'AI Blog Factory'
     Content = 'Digital guides for students, creators & tech learners. Premium eBooks, playbooks, and practical resources to help you study smarter, code faster, and build your future with AI.'
 
+  [params.contact]
+    email = 'joyroy9454@gmail.com'
+
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/joyroy9454'

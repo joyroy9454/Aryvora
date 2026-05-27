@@ -4,7 +4,7 @@ description: "Vibe coding is the hottest trend in tech. Learn what it is, which 
 date: 2026-05-26
 draft: false
 cover:
-  image: "https://joyroy9454.github.io/ai-blog-factory/images/vibe-coding-cover.svg"
+  image: "/images/vibe-coding-cover.svg"
   alt: "What Is Vibe Coding 2026"
 categories: ["AI Tools"]
 tags:
