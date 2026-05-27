@@ -1,5 +1,8 @@
 {{- define "main" -}}
 
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="reading-progress"></div>
+
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
@@ -75,7 +78,7 @@
       <span class="author-card-label">Written by</span>
       <h4 class="author-card-name">Joy Roy</h4>
       <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of AI Blog Factory. I test and review AI tools so you don't have to.</p>
-      <a href="/about/" class="author-card-link">About AI Blog Factory →</a>
+      <a href="/about/" class="author-card-link">More about me →</a>
     </div>
   </div>
 </article>
@@ -84,7 +87,7 @@
 {{- $related := .Site.RegularPages.Related . | first 3 -}}
 {{- if $related -}}
 <section class="related-posts">
-  <h3>Related Articles</h3>
+  <h3>You Might Also Like</h3>
   <div class="post-grid">
     {{- range $related -}}
     <article class="post-card">
@@ -95,12 +98,49 @@
       {{- end -}}
       <div class="post-card-content">
         <h4 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-        <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <div class="post-card-meta">
+          <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          <span>·</span>
+          <span>{{ .ReadingTime }} min read</span>
+        </div>
       </div>
     </article>
     {{- end -}}
   </div>
 </section>
 {{- end -}}
+
+<!-- FAQ Section (if frontmatter has faq) -->
+{{- if .Params.faq -}}
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  {{- range .Params.faq -}}
+  <details class="faq-item">
+    <summary>{{ .question }}</summary>
+    <div class="faq-answer">
+      {{ .answer | markdownify }}
+    </div>
+  </details>
+  {{- end -}}
+</section>
+{{- end -}}
+
+<!-- Reading Progress Script -->
+<script>
+(function() {
+  var progressBar = document.getElementById('reading-progress');
+  if (!progressBar) return;
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (docHeight > 0) {
+      var progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    }
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
+</script>
 
 {{- end -}}{{/* end main */}}

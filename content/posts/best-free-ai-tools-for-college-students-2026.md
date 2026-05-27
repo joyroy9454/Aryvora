@@ -11,6 +11,15 @@ cover:
   image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=80"
   alt: "AI tools dashboard showing various artificial intelligence applications on a computer screen"
   caption: "Photo by Unsplash"
+faq:
+  - question: "Are these AI tools really free for students?"
+    answer: "Yes — all 15 tools listed here have free tiers that are genuinely useful. Some are completely free, while others offer free plans with generous limits. A few also offer special student discounts or educational plans."
+  - question: "Which AI tool is best for writing essays?"
+    answer: "ChatGPT and Claude are the most popular for essay writing, but QuillBot and Grammarly are better for grammar and paraphrasing. For research-heavy papers, combine a writing tool with Perplexity AI for fact-checking."
+  - question: "Can I use AI tools for assignments without getting in trouble?"
+    answer: "This depends on your institution's policy. Most schools allow AI as a research or brainstorming aid but not for submitting AI-generated work as your own. Always check your syllabus and be transparent with professors."
+  - question: "Do these tools work on low-end laptops?"
+    answer: "Most of these are cloud-based and run in a browser, so they work on any device with internet access. You don't need a powerful PC — even a basic laptop or tablet works fine."
 ---
 
 # 15 Best Free AI Tools for College Students in 2026

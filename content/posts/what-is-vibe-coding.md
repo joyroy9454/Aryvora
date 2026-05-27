@@ -13,11 +13,20 @@ tags:
   - "cursor ai"
   - "replit"
   - "bolt.new"
-  - "no-code"
   - "ai tools"
   - "programming"
   - "beginners"
   - "app development"
+faq:
+  - question: "Is vibe coding actually programming?"
+    answer: "Vibe coding is a form of programming where you use natural language to describe what you want, and an AI generates the code. You're still directing the logic and making decisions — but you're describing intentions in plain English instead of writing syntax."
+  - question: "Can you really build a real product with vibe coding?"
+    answer: "Yes. People have built SaaS products, mobile apps, and websites using vibe-coded prototypes. The key is starting with a clear idea and iterating. AI handles the syntax; you handle the vision and testing."
+  - question: "Do I need to know any coding to start vibe coding?"
+    answer: "Basic understanding of programming concepts (variables, loops, functions) helps, but you don't need to write code from scratch. Tools like Cursor, Bolt.new, and Replit AI can generate working code from plain descriptions."
+  - question: "Will vibe coding replace developers?"
+    answer: "Not entirely. Vibe coding is excellent for prototyping, building MVPs, and automating simple tasks. But complex systems still need experienced developers. Think of it as a superpower multiplier, not a replacement."
+---
 keywords:
   - "what is vibe coding"
   - "vibe coding explained"
