@@ -1,190 +1,330 @@
 {{- define "main" -}}
 
-<!-- ===== TOP BAR: TRENDING / ANNOUNCEMENT ===== -->
+<!-- ===== TOP BAR: LATEST ANNOUNCEMENT ===== -->
 <div class="top-bar">
   <div class="container">
     <div class="top-bar-inner">
       <span class="top-bar-badge">NEW</span>
-      <span class="top-bar-text">Latest: 
+      <span class="top-bar-text">
         {{- $latest := first 1 (where .Site.RegularPages "Section" "posts") -}}
         {{- range $latest -}}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- end -}}
       </span>
-      <a href="/posts/" class="top-bar-link">All Articles →</a>
+      <a href="/posts/" class="top-bar-link">All Guides →</a>
     </div>
   </div>
 </div>
 
-<!-- ===== EDITORIAL HERO ===== -->
-<section class="hero-editorial">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section">
   <div class="container">
-    <div class="hero-editorial-inner">
+    <div class="hero-inner">
+
+      <!-- Brand -->
       <div class="hero-brand">
-        <div class="brand-mark">
-          <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="" width="48" height="48">
-        </div>
-        <div class="brand-wordmark">
-          <span class="brand-name">AI Blog Factory</span>
-        </div>
+        <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Blog Factory" width="44" height="44">
+        <span class="hero-brand-name">AI Blog Factory</span>
       </div>
 
+      <!-- Headline -->
+      <h1 class="hero-title">AI Tools & Tech Guides for Students</h1>
+      <p class="hero-subtitle">Honest reviews, practical tutorials, and the best free tools to boost your productivity — curated for students, by a student.</p>
+
+      <!-- Search -->
+      <form class="hero-search" action="/search/" method="get">
+        <span class="hero-search-icon">🔍</span>
+        <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search">
+      </form>
+
+      <!-- Topic Chips -->
+      <div class="topic-chips">
+        {{- range $name, $pages := .Site.Taxonomies.categories -}}
+        {{- if lt (len $name) 20 -}}
+        <a href="/categories/{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
+        {{- end -}}
+        {{- end -}}
+        <a href="/posts/" class="topic-chip">All Guides</a>
+      </div>
+
+      <!-- Featured Article -->
       {{- $featured := first 1 (where .Site.RegularPages "Section" "posts") -}}
       {{- range $featured -}}
       <div class="hero-featured">
-        <span class="hero-label">Latest Guide</span>
-        <h1 class="hero-headline">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h1>
-        <p class="hero-deck">{{ .Description }}</p>
-        <div class="hero-meta">
-          <a href="/about/" class="author-link">
-            <span class="author-avatar">JR</span>
-            <span>Joy Roy</span>
-          </a>
-          <span class="meta-sep">·</span>
-          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-          <span class="meta-sep">·</span>
-          <span>{{ .ReadingTime }} min read</span>
-          {{- if .Params.categories -}}
-          <span class="meta-sep">·</span>
-          <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-category">{{ index .Params.categories 0 }}</a>
-          {{- end -}}
-        </div>
-        <a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg">
-          Read Full Guide →
-          <span class="btn-time">{{ .ReadingTime }} min</span>
+        <a href="{{ .RelPermalink }}" class="hero-featured-link">
+          <div class="hero-featured-media">
+            {{- if .Params.cover -}}
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            {{- else -}}
+            <div class="article-card-placeholder"></div>
+            {{- end -}}
+            {{- if .Params.categories -}}
+            <span class="article-card-img-badge">{{ index .Params.categories 0 }}</span>
+            {{- end -}}
+          </div>
+          <div class="hero-featured-body">
+            <span class="hero-featured-label">Latest Guide</span>
+            <h2 class="hero-featured-title">{{ .Title }}</h2>
+            <p class="hero-featured-excerpt">{{ .Description }}</p>
+            <div class="hero-featured-meta">
+              <span class="hero-featured-author">
+                <span class="hero-featured-avatar">JR</span>
+                Joy Roy
+              </span>
+              <span class="hero-featured-sep">·</span>
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              <span class="hero-featured-sep">·</span>
+              <span>{{ .ReadingTime }} min read</span>
+              {{- if .Params.categories -}}
+              <span class="hero-featured-sep">·</span>
+              <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-featured-cat">{{ index .Params.categories 0 }}</a>
+              {{- end -}}
+            </div>
+          </div>
         </a>
       </div>
       {{- end -}}
 
-      <div class="hero-secondary">
-        {{- $secondary := after 1 (first 4 (where .Site.RegularPages "Section" "posts")) -}}
-        {{- range $secondary -}}
-        <a href="{{ .RelPermalink }}" class="hero-secondary-card">
-          <span class="hero-secondary-label">{{ .ReadingTime }} min</span>
-          <span class="hero-secondary-title">{{ .Title }}</span>
-        </a>
-        {{- end -}}
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST SECTION ===== -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-card">
+      <div class="trust-avatar">JR</div>
+      <div class="trust-content">
+        <h3>Hi, I'm Joy Roy — BSc Data Science student &amp; vibe coder</h3>
+        <p>Every guide on this site is tested, researched, and written to actually help students. No filler, no fluff — just practical tools and honest reviews.</p>
+        <div class="trust-badges">
+          <span class="trust-badge trust-badge-verified">✓ Student-Verified</span>
+          <span class="trust-badge trust-badge-updated">↻ Updated 2026</span>
+          <span class="trust-badge trust-badge-free">★ Free to Use</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== DIVIDER ===== -->
-<div class="section-divider">
-  <div class="container">
-    <div class="divider-line"></div>
-  </div>
-</div>
-
-<!-- ===== FEATURED EDITOR'S PICKS ===== -->
-{{- $picks := first 6 (where .Site.RegularPages "Section" "posts") -}}
-{{- if $picks -}}
-<section class="editor-picks">
+<!-- ===== TRENDING / POPULAR ARTICLES ===== -->
+<section class="section">
   <div class="container">
     <div class="section-heading">
       <div class="section-heading-left">
-        <span class="section-kicker">Editor's Picks</span>
-        <h2 class="section-title">Curated guides worth reading</h2>
+        <span class="section-kicker">Discover</span>
+        <h2 class="section-title">Explore guides</h2>
       </div>
       <a href="/posts/" class="section-link">Browse all →</a>
     </div>
-    <div class="picks-grid">
-      {{- range $i, $post := $picks -}}
-      <article class="pick-card {{ if eq $i 0 }}pick-card-lead{{ end }}">
-        <a href="{{ .RelPermalink }}" class="pick-card-media">
-          {{- if .Params.cover -}}
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
-          {{- else -}}
-          <div class="pick-card-placeholder"></div>
-          {{- end -}}
-          {{- if .Params.categories -}}
-          <span class="pick-card-badge">{{ index .Params.categories 0 }}</span>
-          {{- end -}}
-        </a>
-        <div class="pick-card-body">
-          <div class="pick-card-meta">
-            <span class="pick-num">{{ printf "0%d" (add $i 1) }}</span>
-            <span class="pick-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-          </div>
-          <h3 class="pick-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p class="pick-card-excerpt">{{ .Description }}</p>
-          <div class="pick-card-footer">
-            <span class="pick-readtime">{{ .ReadingTime }} min read</span>
-            <a href="{{ .RelPermalink }}" class="pick-read-link">Read →</a>
-          </div>
-        </div>
-      </article>
-      {{- end -}}
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="latest">✨ Latest</button>
+      <button class="tab-btn" data-tab="popular">🔥 Popular</button>
+      <button class="tab-btn" data-tab="beginner">🎯 Beginner Friendly</button>
+      <button class="tab-btn" data-tab="free">💡 Free Tools</button>
     </div>
+
+    <!-- Latest -->
+    <div class="tab-content active" id="tab-latest">
+      <div class="articles-grid">
+        {{- range $i, $post := first 6 (where .Site.RegularPages "Section" "posts") -}}
+        <article class="article-card {{ if eq $i 0 }}article-card-featured{{ end }}">
+          <a href="{{ .RelPermalink }}" class="article-card-media">
+            {{- if .Params.cover -}}
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            {{- else -}}
+            <div class="article-card-placeholder"></div>
+            {{- end -}}
+            <div class="article-card-badges">
+              {{- if eq $i 0 -}}<span class="badge badge-accent">Featured</span>{{- end -}}
+              {{- if .Params.categories -}}<span class="badge badge-outline">{{ index .Params.categories 0 }}</span>{{- end -}}
+            </div>
+          </a>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span>{{ .Date.Format "Jan 2" }}</span>
+              <span class="article-card-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min</span>
+            </div>
+            <h3 class="article-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="article-card-excerpt">{{ .Description }}</p>
+            <div class="article-card-footer">
+              <span class="article-card-readtime">{{ .ReadingTime }} min read</span>
+              <a href="{{ .RelPermalink }}" class="article-card-link">Read →</a>
+            </div>
+          </div>
+        </article>
+        {{- end -}}
+      </div>
+    </div>
+
+    <!-- Popular -->
+    <div class="tab-content" id="tab-popular">
+      <div class="articles-grid">
+        {{- $sorted := sort (where .Site.RegularPages "Section" "posts") "Date" "desc" -}}
+        {{- range $i, $post := first 6 $sorted -}}
+        <article class="article-card">
+          <a href="{{ .RelPermalink }}" class="article-card-media">
+            {{- if .Params.cover -}}
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            {{- else -}}
+            <div class="article-card-placeholder"></div>
+            {{- end -}}
+            <div class="article-card-badges">
+              <span class="badge badge-orange">Popular</span>
+              {{- if .Params.categories -}}<span class="badge badge-outline">{{ index .Params.categories 0 }}</span>{{- end -}}
+            </div>
+          </a>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span>{{ .Date.Format "Jan 2" }}</span>
+              <span class="article-card-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min</span>
+            </div>
+            <h3 class="article-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="article-card-excerpt">{{ .Description }}</p>
+            <div class="article-card-footer">
+              <span class="article-card-readtime">{{ .ReadingTime }} min read</span>
+              <a href="{{ .RelPermalink }}" class="article-card-link">Read →</a>
+            </div>
+          </div>
+        </article>
+        {{- end -}}
+      </div>
+    </div>
+
+    <!-- Beginner Friendly -->
+    <div class="tab-content" id="tab-beginner">
+      <div class="articles-grid">
+        {{- range $i, $post := first 6 (where (where .Site.RegularPages "Section" "posts") "Params.tags" "intersect" (slice "beginners" "tutorial" "guide")) -}}
+        <article class="article-card">
+          <a href="{{ .RelPermalink }}" class="article-card-media">
+            {{- if .Params.cover -}}
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            {{- else -}}
+            <div class="article-card-placeholder"></div>
+            {{- end -}}
+            <div class="article-card-badges">
+              <span class="badge badge-green">Beginner Friendly</span>
+            </div>
+          </a>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span>{{ .Date.Format "Jan 2" }}</span>
+              <span class="article-card-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min</span>
+            </div>
+            <h3 class="article-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="article-card-excerpt">{{ .Description }}</p>
+            <div class="article-card-footer">
+              <span class="article-card-readtime">{{ .ReadingTime }} min read</span>
+              <a href="{{ .RelPermalink }}" class="article-card-link">Read →</a>
+            </div>
+          </div>
+        </article>
+        {{- end -}}
+      </div>
+    </div>
+
+    <!-- Free Tools -->
+    <div class="tab-content" id="tab-free">
+      <div class="articles-grid">
+        {{- range $i, $post := first 6 (where (where .Site.RegularPages "Section" "posts") "Params.tags" "intersect" (slice "free-ai-tools" "free-resources" "free-tools" "best-ai-tools-2026")) -}}
+        <article class="article-card">
+          <a href="{{ .RelPermalink }}" class="article-card-media">
+            {{- if .Params.cover -}}
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            {{- else -}}
+            <div class="article-card-placeholder"></div>
+            {{- end -}}
+            <div class="article-card-badges">
+              <span class="badge badge-pink">Free Tools</span>
+            </div>
+          </a>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span>{{ .Date.Format "Jan 2" }}</span>
+              <span class="article-card-meta-sep">·</span>
+              <span>{{ .ReadingTime }} min</span>
+            </div>
+            <h3 class="article-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="article-card-excerpt">{{ .Description }}</p>
+            <div class="article-card-footer">
+              <span class="article-card-readtime">{{ .ReadingTime }} min read</span>
+              <a href="{{ .RelPermalink }}" class="article-card-link">Read →</a>
+            </div>
+          </div>
+        </article>
+        {{- end -}}
+      </div>
+    </div>
+
   </div>
 </section>
-{{- end -}}
 
-<!-- ===== CATEGORY SHOWCASE ===== -->
-{{- $categories := .Site.Taxonomies.categories -}}
-{{- if $categories -}}
-<section class="category-showcase">
+<!-- ===== CATEGORIES ===== -->
+<section class="section" style="padding-top: 0;">
   <div class="container">
     <div class="section-heading">
       <div class="section-heading-left">
-        <span class="section-kicker">Explore Topics</span>
-        <h2 class="section-title">Browse by category</h2>
+        <span class="section-kicker">Browse</span>
+        <h2 class="section-title">By category</h2>
       </div>
       <a href="/categories/" class="section-link">All categories →</a>
     </div>
-    <div class="category-show-grid">
-      {{- range $name, $pages := $categories -}}
+    <div class="categories-grid">
+      {{- range $name, $pages := .Site.Taxonomies.categories -}}
       <a href="/categories/{{ $name | urlize }}/" class="cat-card">
-        <span class="cat-card-name">{{ $name }}</span>
-        <span class="cat-card-count">{{ len $pages }} {{ if eq (len $pages) 1 }}guide{{ else }}guides{{ end }}</span>
+        <div>
+          <span class="cat-card-name">{{ $name }}</span>
+          <span class="cat-card-meta">{{ len $pages }} guides</span>
+        </div>
         <span class="cat-card-arrow">→</span>
       </a>
       {{- end -}}
     </div>
   </div>
 </section>
-{{- end -}}
 
-<!-- ===== NEWSLETTER / CTA STRIP ===== -->
-<section class="cta-strip">
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter-section">
   <div class="container">
-    <div class="cta-strip-inner">
-      <div class="cta-strip-content">
-        <span class="section-kicker">Stay Updated</span>
-        <h2>Get AI & tech guides delivered</h2>
-        <p>Free weekly digest of the best AI tools, coding tutorials, and productivity tips for students and creators.</p>
+    <div class="newsletter-card">
+      <div class="newsletter-inner">
+        <div class="newsletter-content">
+          <span class="section-kicker">Stay Sharp</span>
+          <h2>Get the best AI tools &amp; student tech guides every week</h2>
+          <p>Join readers who get practical tips, honest tool reviews, and free resources delivered straight to their inbox. Zero spam, instant unsubscribe.</p>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form class="newsletter-form" action="#" onsubmit="return false;">
+            <input type="email" placeholder="your@email.com" class="newsletter-input" aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe ✨</button>
+          </form>
+          <span class="newsletter-note">Free. No spam. Unsubscribe anytime.</span>
+        </div>
+        <div class="newsletter-stats">
+          <div class="nl-stat"><strong>{{ len (where .Site.RegularPages "Section" "posts") }}</strong><span>Guides published</span></div>
+          <div class="nl-stat"><strong>20+</strong><span>AI tools reviewed</span></div>
+          <div class="nl-stat"><strong>Free</strong><span>Always free to read</span></div>
+        </div>
       </div>
-      <div class="cta-strip-form">
-        <form class="newsletter-form" action="#" onsubmit="return false;">
-          <input type="email" placeholder="your@email.com" class="newsletter-input" aria-label="Email address">
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-        <span class="newsletter-note">No spam. Unsubscribe anytime.</span>
-      </div>
-    </div>
-    <div class="cta-strip-stats">
-      <div class="cta-stat"><strong>{{ len (where .Site.RegularPages "Section" "posts" ) }}</strong><span>Guides published</span></div>
-      <div class="cta-stat"><strong>20+</strong><span>AI tools reviewed</span></div>
-      <div class="cta-stat"><strong>Free</strong><span>Always free</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===== REST OF POSTS: LIST VIEW ===== -->
-{{- $remaining := after 6 (where .Site.RegularPages "Section" "posts") -}}
-{{- if $remaining -}}
-<section class="article-list-section">
+<!-- ===== ALL ARTICLES FEED ===== -->
+<section class="section-compact" style="padding-bottom: 48px;">
   <div class="container">
     <div class="section-heading">
       <div class="section-heading-left">
-        <span class="section-kicker">More Guides</span>
-        <h2 class="section-title">All articles</h2>
+        <span class="section-kicker">All Guides</span>
+        <h2 class="section-title">Complete article feed</h2>
       </div>
     </div>
     <div class="article-list">
-      {{- range $remaining -}}
+      {{- range first 20 (where .Site.RegularPages "Section" "posts") -}}
       <article class="article-list-card">
         <a href="{{ .RelPermalink }}" class="article-list-media">
           {{- if .Params.cover -}}
@@ -196,35 +336,53 @@
         <div class="article-list-body">
           <div class="article-list-meta">
             {{- if .Params.categories -}}
-            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
+            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-list-cat">{{ index .Params.categories 0 }}</a>
             {{- end -}}
             <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            <span>·</span>
+            <span class="article-card-meta-sep">·</span>
             <span>{{ .ReadingTime }} min read</span>
           </div>
           <h3 class="article-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="article-list-excerpt">{{ .Description }}</p>
-          <a href="{{ .RelPermalink }}" class="article-list-link">Read guide →</a>
         </div>
       </article>
       {{- end -}}
     </div>
   </div>
 </section>
-{{- end -}}
 
 <!-- ===== TAG CLOUD ===== -->
 <section class="tag-cloud-section">
   <div class="container">
     <div class="tag-cloud">
       {{- range $name, $pages := .Site.Taxonomies.tags -}}
-      <a href="/tags/{{ $name | urlize }}/" class="tag-pill" data-count="{{ len $pages }}">
+      {{- if gt (len $pages) 1 -}}
+      <a href="/tags/{{ $name | urlize }}/" class="tag-pill">
         {{ $name }}
         <span class="tag-pill-count">{{ len $pages }}</span>
       </a>
       {{- end -}}
+      {{- end -}}
     </div>
   </div>
 </section>
+
+<!-- ===== TABS JS ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.tab-btn');
+  var contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = this.getAttribute('data-tab');
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      contents.forEach(function(c) { c.classList.remove('active'); });
+      this.classList.add('active');
+      var el = document.getElementById('tab-' + target);
+      if (el) el.classList.add('active');
+    });
+  });
+});
+</script>
 
 {{- end -}}{{/* end main */}}

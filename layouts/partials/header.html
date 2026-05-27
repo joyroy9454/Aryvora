@@ -1,0 +1,27 @@
+{{- /* Custom nav header for AI Blog Factory */ -}}
+<header class="nav">
+  <div class="container">
+    <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo">
+      <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="" width="34" height="34">
+      AI Blog Factory
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="/posts/">Guides</a>
+      <a href="/categories/">Categories</a>
+      <a href="/about/">About</a>
+      <a href="/search/" class="nav-search-btn" aria-label="Search">🔍</a>
+    </nav>
+    <button class="nav-mobile-toggle" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.add('active')">☰</button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" aria-label="Close menu" onclick="document.getElementById('mobile-menu').classList.remove('active')">✕</button>
+  <a href="{{ .Site.Home.RelPermalink }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🏠 Home</a>
+  <a href="/posts/" onclick="document.getElementById('mobile-menu').classList.remove('active')">📝 All Guides</a>
+  <a href="/categories/" onclick="document.getElementById('mobile-menu').classList.remove('active')">📂 Categories</a>
+  <a href="/about/" onclick="document.getElementById('mobile-menu').classList.remove('active')">👤 About</a>
+  <a href="/search/" onclick="document.getElementById('mobile-menu').classList.remove('active')">🔍 Search</a>
+</div>

@@ -1,0 +1,43 @@
+{{- /* Custom footer for AI Blog Factory */ -}}
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo" style="color: var(--text-primary);">
+        <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="" width="32" height="32">
+        AI Blog Factory
+      </a>
+      <p class="footer-brand-desc">Honest AI tool reviews, practical tech guides, and free resources for students. Built by a student, for students.</p>
+      <div class="footer-social">
+        <a href="https://github.com/joyroy9454" aria-label="GitHub">GH</a>
+        <a href="mailto:joyroy9454@gmail.com" aria-label="Email">✉</a>
+        <a href="/index.xml" aria-label="RSS Feed">RSS</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/posts/">All Guides</a>
+      <a href="/categories/">Categories</a>
+      <a href="/tags/">Tags</a>
+      <a href="/about/">About</a>
+    </div>
+    <div class="footer-col">
+      <h4>Popular Topics</h4>
+      {{- range $name, $pages := .Site.Taxonomies.categories -}}
+      {{- if lt (len $name) 20 -}}
+      <a href="/categories/{{ $name | urlize }}/">{{ $name }}</a>
+      {{- end -}}
+      {{- end -}}
+    </div>
+    <div class="footer-col">
+      <h4>Stay Updated</h4>
+      <a href="#newsletter">Newsletter</a>
+      <a href="/index.xml">RSS Feed</a>
+      <a href="mailto:joyroy9454@gmail.com">Contact</a>
+      <a href="/about/">About Joy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ now.Format "2006" }} AI Blog Factory. All rights reserved.</span>
+    <span>Made with ❤️ by Joy Roy — <a href="https://github.com/joyroy9454/ai-blog-factory">Open Source</a></span>
+  </div>
+</footer>
