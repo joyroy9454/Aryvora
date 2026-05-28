@@ -7,7 +7,7 @@
   </header>
 
   <div class="search-form-wrap" style="max-width: 600px; margin: 24px auto;">
-    <form class="hero-search" action="{{ "/search/" | relURL }}" method="get">
+    <form class="hero-search" action="/ai-blog-factory/search/" method="get">
       <span class="hero-search-icon">&#128269;</span>
       <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus>
     </form>
@@ -21,7 +21,7 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   var params = new URLSearchParams(window.location.search);
   var query = params.get('q');
   if (!query || query.trim() === '') return;
@@ -29,10 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var resultsDiv = document.getElementById('search-results');
   resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:20px 0;">Searching...</p>';
 
-  fetch('{{ "/index.json" | relURL }}')
-    .then(function(r) { return r.json(); })
+  // Use absolute path with baseURL to avoid 404 on GitHub Pages subpath
+  fetch('/ai-blog-factory/index.json')
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(function(data) {
-      var q = query.toLowerCase();
+      if (!Array.isArray(data)) {
+        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search data not available.</p>';
+        return;
+      }
+
+      var q = query.toLowerCase().trim();
+      var terms = q.split(/\s+/);
       var matches = data.filter(function(item) {
         var text = [
           item.title || '',
@@ -41,37 +51,45 @@ document.addEventListener('DOMContentLoaded', function() {
           (item.tags || []).join(' '),
           (item.categories || []).join(' '),
         ].join(' ').toLowerCase();
-        return text.indexOf(q) !== -1;
+        return terms.every(function(t) { return text.indexOf(t) !== -1; });
       }).slice(0, 30);
 
       if (matches.length === 0) {
-        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "' + query + '". Try different keywords.</p>';
+        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "<strong>' + query.replace(/</g,'&lt;') + '</strong>". Try different keywords.</p>';
         return;
       }
 
       var html = '';
       matches.forEach(function(item) {
+        // Hugo JSON index uses permalink (full URL), not url
         var url = item.permalink || item.url || '#';
         var desc = item.description || item.summary || '';
-        var date = item.date ? new Date(item.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '';
+        var title = item.title || 'Untitled';
+        var dateStr = '';
+        if (item.date) {
+          try { dateStr = new Date(item.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}); } catch(e) {}
+        }
         var cat = (item.categories && item.categories.length) ? item.categories[0] : '';
-        var catSlug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        var catSlug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        var truncated = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
+
         html += '<article class="post-list-item">';
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
         if (cat) html += '<a href="/ai-blog-factory/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
-        if (date) html += '<span>' + date + '</span>';
+        if (dateStr) html += '<span>' + dateStr + '</span>';
         html += '</div>';
-        html += '<h3 class="post-list-title"><a href="' + url + '">' + item.title + '</a></h3>';
-        if (desc) html += '<p class="post-list-excerpt">' + desc.substring(0, 200) + '...</p>';
+        html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';
+        if (truncated) html += '<p class="post-list-excerpt">' + truncated + '</p>';
         html += '<a href="' + url + '" class="post-card-link">Read guide &rarr;</a>';
         html += '</div></article>';
       });
       resultsDiv.innerHTML = html;
     })
-    .catch(function() {
+    .catch(function(err) {
+      console.error('Search error:', err);
       resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search unavailable. Please try again later.</p>';
     });
-});
+})();
 </script>
 {{ end }}

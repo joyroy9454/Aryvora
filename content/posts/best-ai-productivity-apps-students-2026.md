@@ -5,7 +5,7 @@ date: 2026-05-28
 draft: false
 slug: best-ai-productivity-apps-students-2026
 cover:
-  image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595d?w=1200&h=630&fit=crop&q=80"
+  image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=630&fit=crop&q=80"
   alt: "Student using AI productivity app on laptop"
 categories: [Productivity]
 tags: [productivity, ai-apps, students, free-tools, time-management, study-tips]
