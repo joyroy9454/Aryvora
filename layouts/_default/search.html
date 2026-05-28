@@ -1,24 +1,27 @@
-{{ define "main" }}
-<div class="search-page-wrapper">
-  <header class="list-header">
-    <span class="section-kicker">Search</span>
-    <h1 class="list-title">Search Guides</h1>
-    <p class="list-description">Search through all {{ len .Site.RegularPages }} articles on {{ site.Title }}.</p>
-  </header>
+{{- define "main" -}}
+<article class="post-single">
+<header class="post-header">
+  <h1 class="post-title">Search</h1>
+  <div class="post-description">Search all guides and articles on {{ site.Title }}.</div>
+</header>
 
-  <div class="search-form-wrap" style="max-width: 600px; margin: 24px auto;">
-    <form class="hero-search" action="/ai-blog-factory/search/" method="get">
-      <span class="hero-search-icon">&#128269;</span>
-      <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus>
-    </form>
-  </div>
+<div class="post-content">
 
-  <div id="search-results" class="post-list" style="margin-top: 32px;">
-    <p style="text-align: center; color: var(--text-muted); padding: 40px 0;">
-      Type something above to search across all guides.
-    </p>
-  </div>
+<div class="search-form-wrap" style="max-width: 600px; margin: 0 auto 32px;">
+  <form class="hero-search" action="/ai-blog-factory/search/" method="get">
+    <span class="hero-search-icon">&#128269;</span>
+    <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus>
+  </form>
 </div>
+
+<div id="search-results" class="post-list">
+  <p style="text-align: center; color: var(--text-muted); padding: 40px 0;">
+    Type something above and press Enter to search across all guides.
+  </p>
+</div>
+
+</div>
+</article>
 
 <script>
 (function() {
@@ -29,41 +32,50 @@
   var resultsDiv = document.getElementById('search-results');
   resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:20px 0;">Searching...</p>';
 
-  // Use absolute path with baseURL to avoid 404 on GitHub Pages subpath
   fetch('/ai-blog-factory/index.json')
     .then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
     .then(function(data) {
-      if (!Array.isArray(data)) {
+      if (!Array.isArray(data) || data.length === 0) {
         resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search data not available.</p>';
         return;
       }
 
       var q = query.toLowerCase().trim();
       var terms = q.split(/\s+/);
+
       var matches = data.filter(function(item) {
+        // Strip HTML tags from content for searching
+        var contentText = (item.content || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+        var summaryText = (item.summary || '').replace(/<[^>]+>/g, ' ');
+        var descText = (item.description || '').replace(/<[^>]+>/g, ' ');
+
         var text = [
           item.title || '',
-          item.description || '',
-          item.summary || '',
+          descText,
+          summaryText,
+          contentText,
           (item.tags || []).join(' '),
           (item.categories || []).join(' '),
         ].join(' ').toLowerCase();
+
         return terms.every(function(t) { return text.indexOf(t) !== -1; });
       }).slice(0, 30);
 
       if (matches.length === 0) {
-        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "<strong>' + query.replace(/</g,'&lt;') + '</strong>". Try different keywords.</p>';
+        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "<strong>' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</strong>". Try different keywords.</p>';
         return;
       }
 
-      var html = '';
+      var html = '<p style="color:var(--text-muted);margin-bottom:16px;font-size:0.9em;">Found ' + matches.length + ' result' + (matches.length > 1 ? 's' : '') + ' for "<strong>' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</strong>"</p>';
+
       matches.forEach(function(item) {
-        // Hugo JSON index uses permalink (full URL), not url
         var url = item.permalink || item.url || '#';
         var desc = item.description || item.summary || '';
+        // Strip HTML from description
+        desc = desc.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
         var title = item.title || 'Untitled';
         var dateStr = '';
         if (item.date) {
@@ -77,7 +89,7 @@
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
         if (cat) html += '<a href="/ai-blog-factory/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
-        if (dateStr) html += '<span>' + dateStr + '</span>';
+        if (dateStr) html += '<span> ' + dateStr + '</span>';
         html += '</div>';
         html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';
         if (truncated) html += '<p class="post-list-excerpt">' + truncated + '</p>';
@@ -92,4 +104,4 @@
     });
 })();
 </script>
-{{ end }}
+{{- end -}}
