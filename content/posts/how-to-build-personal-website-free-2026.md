@@ -8,9 +8,20 @@ cover:
   image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80"
   alt: "Building a personal website"
   caption: "Create your online presence for free"
-categories: ["Tutorials"]
+categories: ["Coding"]
 tags: ["website", "portfolio", "free hosting", "hugo", "github pages", "students", "web development"]
 keywords: ["how to build a personal website for free", "free website builder", "personal portfolio website", "student website"]
+faq:
+  - question: "How long does it take to build a personal website for free?"
+    answer: "Using the GitHub Pages and Hugo method in this guide, you can have a basic site live in about 30-45 minutes. Adding content, customizing the design, and setting up a custom domain adds another hour or two. The key is to launch with just an About page and a Projects page, then iterate over time. A simple live site today is worth more than a 'perfect' site next month."
+  - question: "Do I need to know how to code to build a personal website?"
+    answer: "Not necessarily. Wix, Carrd, and Google Sites let you build a site with zero coding knowledge using drag-and-drop editors. The GitHub Pages method does require some basic command-line usage, but every command is copy-paste simple and teaches you valuable developer skills. If you can follow a step-by-step tutorial, you can handle it regardless of your technical background."
+  - question: "Can I use a free GitHub Pages website for job applications and professional purposes?"
+    answer: "Absolutely. GitHub Pages sites are used by professional developers, researchers, and companies worldwide. A well-designed site on GitHub Pages looks just as professional as any paid alternative. Recruiters care about the quality of your content and projects, not what hosting platform you use. The .github.io domain is widely respected in the tech industry."
+  - question: "How can I get a free custom domain as a student?"
+    answer: "Sign up for the GitHub Student Developer Pack at education.github.com/pack. It includes a free .me domain from Namecheap for one year, along with dozens of other developer tools. You will need to verify your student status with a school email or student ID. After the first year, domain renewal is typically $10-15/year, which is very affordable for a professional web presence."
+  - question: "What pages should I include on my personal website as a student?"
+    answer: "At minimum, include a Home page with your name and a brief introduction, an About page telling your story, a Projects page showcasing your best work with live demo links, and a Contact page with your email, LinkedIn, and GitHub. If you are tech-inclined, add a blog to demonstrate your thinking and improve your SEO. Finally, include a downloadable PDF of your resume for recruiters."
 ---
 
 ## How to Build a Personal Website for Free in 2026 (Step-by-Step Guide)

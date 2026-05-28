@@ -1,6 +1,6 @@
 ---
 title: "Data Science Career Guide 2026: Skills, Salaries & Jobs for Students"
-description: "Thinking about a data science career? This 2026 guide covers everything — skills, salaries, career paths, courses, and a semester-by-semester action plan for students."
+description: "Thinking about a data science career in 2026? This guide covers skills, salaries, career paths, and a semester-by-semester action plan for students."
 date: 2026-05-26
 draft: false
 cover:

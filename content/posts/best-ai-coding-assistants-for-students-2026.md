@@ -1,6 +1,6 @@
 ---
 title: "10 Best AI Coding Assistants for Students in 2026 (Free & Paid)"
-description: "Discover the 10 best AI coding assistants for students in 2026. Compare free tools like GitHub Copilot, Cursor, Cody, and more — features, pricing, and which one to pick."
+description: "Discover the 10 best AI coding assistants for students in 2026. Compare free tools like GitHub Copilot, Cursor, and Cody with features, pricing, and picks."
 date: 2026-05-26
 draft: false
 cover:
