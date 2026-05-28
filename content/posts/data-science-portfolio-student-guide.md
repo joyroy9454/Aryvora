@@ -6,7 +6,7 @@ draft: false
 cover:
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"
   alt: "Data science portfolio with code and charts on screen"
-categories: ["Career & Education"]
+categories: ["Education"]
 tags:
   - "data science"
   - "portfolio"

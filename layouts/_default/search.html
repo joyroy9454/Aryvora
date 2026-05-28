@@ -1,0 +1,73 @@
+{{- define "main" -}}
+
+<div class="search-page">
+  <header class="list-header">
+    <span class="section-kicker">Search</span>
+    <h1 class="list-title">Search Guides</h1>
+    <p class="list-description">Search through all {{ len .Site.RegularPages }} articles on AI Blog Factory.</p>
+  </header>
+
+  <div class="search-form-wrap">
+    <form class="hero-search" action="/ai-blog-factory/search/" method="get" style="max-width: 600px; margin: 0 auto;">
+      <span class="hero-search-icon">🔍</span>
+      <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus>
+    </form>
+  </div>
+
+  <div id="search-results" class="post-list" style="margin-top: 32px;">
+    <p style="text-align: center; color: var(--text-muted); padding: 40px 0;">
+      Type something above to search across all guides.
+    </p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var query = params.get('q');
+  if (!query || query.trim() === '') return;
+
+  var resultsDiv = document.getElementById('search-results');
+  resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:20px 0;">Searching...</p>';
+
+  // Fetch the JSON index
+  fetch('/ai-blog-factory/index.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var q = query.toLowerCase();
+      var matches = data.filter(function(item) {
+        var text = (item.title + ' ' + (item.description || '') + ' ' + (item.content || '') + ' ' + (item.tags || []).join(' ') + ' ' + (item.categories || []).join(' ')).toLowerCase();
+        return text.indexOf(q) !== -1;
+      }).slice(0, 20);
+
+      if (matches.length === 0) {
+        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "' + query + '". Try different keywords.</p>';
+        return;
+      }
+
+      var html = '';
+      matches.forEach(function(item) {
+        var url = item.permalink || item.url || '#';
+        var desc = item.description || item.summary || '';
+        var date = item.date ? new Date(item.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '';
+        var cat = (item.categories && item.categories.length) ? item.categories[0] : '';
+        html += '<article class="post-list-item">';
+        html += '<div class="post-list-content">';
+        html += '<div class="post-list-meta">';
+        if (cat) html += '<a href="/ai-blog-factory/categories/' + cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/" class="article-cat">' + cat + '</a>';
+        if (date) html += '<span>' + date + '</span>';
+        html += '</div>';
+        html += '<h3 class="post-list-title"><a href="' + url + '">' + item.title + '</a></h3>';
+        if (desc) html += '<p class="post-list-excerpt">' + desc.substring(0, 200) + '...</p>';
+        html += '<a href="' + url + '" class="post-card-link">Read guide →</a>';
+        html += '</div></article>';
+      });
+      resultsDiv.innerHTML = html;
+    })
+    .catch(function() {
+      resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search unavailable. Please try again later.</p>';
+    });
+});
+</script>
+
+{{- end -}}

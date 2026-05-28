@@ -8,7 +8,7 @@ cover:
   image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&h=630&fit=crop&q=80"
   alt: "Making money with AI as a student"
   caption: "AI-powered income streams"
-categories: ["Career & Money"]
+categories: ["Career"]
 tags: ["make money", "side hustle", "ai", "students", "freelance", "passive income", "chatgpt"]
 keywords: ["make money with ai as a student", "ai side hustle", "student income ai", "freelance ai work"]
 ---

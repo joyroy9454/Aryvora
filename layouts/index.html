@@ -11,7 +11,7 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- end -}}
       </span>
-      <a href="/posts/" class="top-bar-link">All Guides →</a>
+        <a href="/ai-blog-factory/posts/" class="top-bar-link">All Guides →</a>
     </div>
   </div>
 </div>
@@ -32,7 +32,7 @@
       <p class="hero-subtitle">Honest reviews, practical tutorials, and the best free tools to boost your productivity — curated for students, by a student.</p>
 
       <!-- Search -->
-      <form class="hero-search" action="/search/" method="get">
+      <form class="hero-search" action="/ai-blog-factory/search/" method="get">
         <span class="hero-search-icon">🔍</span>
         <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search">
       </form>
@@ -41,10 +41,10 @@
       <div class="topic-chips">
         {{- range $name, $pages := .Site.Taxonomies.categories -}}
         {{- if lt (len $name) 20 -}}
-        <a href="/categories/{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
+        <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
         {{- end -}}
         {{- end -}}
-        <a href="/posts/" class="topic-chip">All Guides</a>
+        <a href="/ai-blog-factory/posts/" class="topic-chip">All Guides</a>
       </div>
 
       <!-- Featured Article -->
@@ -77,7 +77,7 @@
               <span>{{ .ReadingTime }} min read</span>
               {{- if .Params.categories -}}
               <span class="hero-featured-sep">·</span>
-              <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-featured-cat">{{ index .Params.categories 0 }}</a>
+              <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-featured-cat">{{ index .Params.categories 0 }}</a>
               {{- end -}}
             </div>
           </div>
@@ -115,7 +115,7 @@
         <span class="section-kicker">Discover</span>
         <h2 class="section-title">Explore guides</h2>
       </div>
-      <a href="/posts/" class="section-link">Browse all →</a>
+      <a href="/ai-blog-factory/posts/" class="section-link">Browse all →</a>
     </div>
 
     <div class="tabs">
@@ -271,11 +271,11 @@
         <span class="section-kicker">Browse</span>
         <h2 class="section-title">By category</h2>
       </div>
-      <a href="/categories/" class="section-link">All categories →</a>
+      <a href="/ai-blog-factory/categories/" class="section-link">All categories →</a>
     </div>
     <div class="categories-grid">
       {{- range $name, $pages := .Site.Taxonomies.categories -}}
-      <a href="/categories/{{ $name | urlize }}/" class="cat-card">
+      <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="cat-card">
         <div>
           <span class="cat-card-name">{{ $name }}</span>
           <span class="cat-card-meta">{{ len $pages }} guides</span>
@@ -336,7 +336,7 @@
         <div class="article-list-body">
           <div class="article-list-meta">
             {{- if .Params.categories -}}
-            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-list-cat">{{ index .Params.categories 0 }}</a>
+            <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="article-list-cat">{{ index .Params.categories 0 }}</a>
             {{- end -}}
             <span>{{ .Date.Format "Jan 2, 2006" }}</span>
             <span class="article-card-meta-sep">·</span>
@@ -357,7 +357,7 @@
     <div class="tag-cloud">
       {{- range $name, $pages := .Site.Taxonomies.tags -}}
       {{- if gt (len $pages) 1 -}}
-      <a href="/tags/{{ $name | urlize }}/" class="tag-pill">
+      <a href="/ai-blog-factory/tags/{{ $name | urlize }}/" class="tag-pill">
         {{ $name }}
         <span class="tag-pill-count">{{ len $pages }}</span>
       </a>

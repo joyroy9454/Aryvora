@@ -6,7 +6,7 @@ draft: false
 cover:
   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop&q=80"
   alt: "Data visualization dashboard showing charts and analytics"
-categories: ["Career & Education"]
+categories: ["Education"]
 tags:
   - "data science"
   - "career guide"

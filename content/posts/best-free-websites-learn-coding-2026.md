@@ -6,7 +6,7 @@ draft: false
 cover:
   image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop&q=80"
   alt: "Free coding websites and laptop showing programming tutorials"
-categories: ["Programming & Coding"]
+categories: ["Programming"]
 tags:
   - "coding"
   - "programming"

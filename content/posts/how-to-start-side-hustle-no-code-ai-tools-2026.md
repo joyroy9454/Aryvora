@@ -8,7 +8,7 @@ cover:
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"
   alt: "Starting a side hustle with no-code AI tools"
   caption: "Build a business without coding"
-categories: ["Career & Money"]
+categories: ["Career"]
 tags: ["side hustle", "no-code", "ai tools", "make money", "students", "entrepreneurship", "business"]
 keywords: ["side hustle with no-code ai", "no-code business", "ai side hustle", "start business no coding"]
 ---

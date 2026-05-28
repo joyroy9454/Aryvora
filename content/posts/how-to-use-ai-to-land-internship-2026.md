@@ -8,7 +8,7 @@ cover:
   image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=630&fit=crop&q=80"
   alt: "Using AI to land your dream internship"
   caption: "AI-powered career tools"
-categories: ["Career & Money"]
+categories: ["Career"]
 tags: ["internship", "career", "resume", "ai tools", "interview prep", "students", "job search"]
 keywords: ["use ai to land internship", "ai internship strategy", "ai resume builder", "ai for job applications"]
 ---
