@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://joyroy9454.github.io/ai-blog-factory/sitemap.xml
