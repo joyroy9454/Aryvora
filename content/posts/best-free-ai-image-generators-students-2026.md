@@ -4,6 +4,7 @@ description: "Discover the best free AI image generators for students in 2026. R
 date: 2026-05-26
 draft: false
 slug: best-free-ai-image-generators-students-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-free-ai-image-generators-students-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=630&fit=crop&q=80"
   alt: "AI image generation tools"

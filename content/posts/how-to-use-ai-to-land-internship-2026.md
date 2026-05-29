@@ -4,6 +4,7 @@ description: "Learn how to use AI to land internship offers in 2026. Step-by-ste
 date: 2026-05-26
 draft: false
 slug: how-to-use-ai-to-land-internship-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-use-ai-to-land-internship-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=630&fit=crop&q=80"
   alt: "Using AI to land your dream internship"

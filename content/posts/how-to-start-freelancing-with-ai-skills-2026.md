@@ -4,6 +4,7 @@ description: "Learn how to start freelancing with AI skills as a student in 2026
 date: 2026-05-28
 draft: false
 slug: how-to-start-freelancing-with-ai-skills-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-start-freelancing-with-ai-skills-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"
   alt: "Student freelancer working on laptop with AI tools"

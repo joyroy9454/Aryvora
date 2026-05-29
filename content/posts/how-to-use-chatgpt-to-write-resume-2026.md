@@ -4,6 +4,7 @@ description: "Learn how to use ChatGPT to craft a professional resume that passe
 date: 2026-05-28
 draft: false
 slug: how-to-use-chatgpt-to-write-resume-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-use-chatgpt-to-write-resume-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=630&fit=crop&q=80"
   alt: "Professional resume on desk with laptop"

@@ -4,6 +4,7 @@ description: "Discover the best AI tools for group projects in 2026. Boost teamw
 date: 2026-05-26
 draft: false
 slug: best-ai-tools-group-projects-collaboration-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-ai-tools-group-projects-collaboration-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=630&fit=crop&q=80"
   alt: "AI tools for group projects and collaboration"

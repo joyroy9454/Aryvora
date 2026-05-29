@@ -7,6 +7,7 @@ cover:
 draft: false
 description: "7 free AI tools that help college students study smarter — spaced repetition, AI tutors, lecture transcription, and research with citations."
 slug: ai-tools-study-smarter-not-harder
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/ai-tools-study-smarter-not-harder/"
 tags: ["ai-tools", "study-tips", "students", "productivity", "learning", "education"]
 categories: ["Productivity"]
 keywords: ["ai tools for studying", "study smarter with ai", "ai study tools for college", "best ai for students"]

@@ -4,6 +4,7 @@ description: "Learn how to launch a profitable side hustle with no-code AI tools
 date: 2026-05-26
 draft: false
 slug: how-to-start-side-hustle-no-code-ai-tools-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-start-side-hustle-no-code-ai-tools-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"
   alt: "Starting a side hustle with no-code AI tools"

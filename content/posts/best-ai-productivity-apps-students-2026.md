@@ -4,6 +4,7 @@ description: "Discover the best free AI productivity apps every student needs in
 date: 2026-05-28
 draft: false
 slug: best-ai-productivity-apps-students-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-ai-productivity-apps-students-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&h=630&fit=crop&q=80"
   alt: "Student using AI productivity app on laptop"

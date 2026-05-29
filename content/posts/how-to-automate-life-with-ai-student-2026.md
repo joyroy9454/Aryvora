@@ -4,6 +4,7 @@ description: "Learn how to automate your life with AI as a student in 2026. 10 p
 date: 2026-05-26
 draft: false
 slug: how-to-automate-life-with-ai-student-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-automate-life-with-ai-student-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=630&fit=crop&q=80"
   alt: "AI automation for students"

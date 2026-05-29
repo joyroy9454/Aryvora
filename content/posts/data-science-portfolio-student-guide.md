@@ -25,6 +25,7 @@ keywords:
   - "student data science projects"
   - "data science internship"
 slug: "data-science-portfolio-student-guide"
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/data-science-portfolio-student-guide/"
 faq:
   - question: "How many projects do I need in my data science portfolio?"
     answer: "Quality beats quantity. 3-5 well-documented, diverse projects are better than 10 rushed ones. Aim for variety: one data cleaning/exploration project, one ML model, one dashboard or visualization project, and one end-to-end pipeline."

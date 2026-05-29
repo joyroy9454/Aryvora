@@ -4,6 +4,7 @@ description: "Learn how to build a personal website for free in 2026. Step-by-st
 date: 2026-05-26
 draft: false
 slug: how-to-build-personal-website-free-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-build-personal-website-free-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80"
   alt: "Building a personal website"

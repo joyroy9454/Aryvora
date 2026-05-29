@@ -4,6 +4,7 @@ description: "Learn how to build an impressive AI-powered project for your stude
 date: 2026-05-28
 draft: false
 slug: build-ai-powered-project-portfolio-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/build-ai-powered-project-portfolio-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop&q=80"
   alt: "Student building AI project for portfolio"

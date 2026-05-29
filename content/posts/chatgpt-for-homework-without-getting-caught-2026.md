@@ -4,6 +4,7 @@ description: "Learn how to use ChatGPT for homework and assignments the smart wa
 date: 2026-05-26
 draft: false
 slug: chatgpt-for-homework-without-getting-caught-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/chatgpt-for-homework-without-getting-caught-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop&q=80"
   alt: "ChatGPT for homework and assignments"

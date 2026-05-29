@@ -4,6 +4,7 @@ description: "Real data on how employees use AI tools at work in 2026. Learn the
 date: 2026-05-29
 draft: false
 slug: how-people-use-ai-at-work-2026
+canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-people-use-ai-at-work-2026/"
 cover:
   image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop&q=80"
   alt: "Professional using AI tools at work"
