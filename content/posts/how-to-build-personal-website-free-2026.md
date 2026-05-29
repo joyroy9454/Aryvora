@@ -24,7 +24,7 @@ faq:
     answer: "At minimum, include a Home page with your name and a brief introduction, an About page telling your story, a Projects page showcasing your best work with live demo links, and a Contact page with your email, LinkedIn, and GitHub. If you are tech-inclined, add a blog to demonstrate your thinking and improve your SEO. Finally, include a downloadable PDF of your resume for recruiters."
 ---
 
-## How to Build a Personal Website for Free in 2026 (Step-by-Step Guide)
+### How to Build a Personal Website for Free in 2026 (Step-by-Step Guide)
 
 Let me ask you something. When was the last time you Googled yourself?
 
@@ -40,7 +40,7 @@ Let's get into it.
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 1. [Why You Need a Personal Website in 2026](#why-you-need-a-personal-website)
 2. [5 Free Ways to Build a Personal Website](#5-free-ways-to-build)
@@ -53,7 +53,7 @@ Let's get into it.
 
 ---
 
-## Why You Need a Personal Website in 2026 {#why-you-need-a-personal-website}
+### Why You Need a Personal Website in 2026 {#why-you-need-a-personal-website}
 
 Before we dive into the how, let's talk about the why. Because if you're thinking "I'm just a student, I don't need a website" — trust me, you do.
 
@@ -79,7 +79,7 @@ Let's be real — most students don't have personal websites. When you include a
 
 ---
 
-## 5 Free Ways to Build a Personal Website {#5-free-ways-to-build}
+### 5 Free Ways to Build a Personal Website {#5-free-ways-to-build}
 
 Not all free website builders are created equal. Here are the five best options in 2026, ranked by how much they offer students specifically.
 
@@ -671,3 +671,7 @@ You've got this.
 ---
 
 *Found this guide helpful? Share it with a friend who's been meaning to build their own website. And if you want more tutorials like this, check out our guides on [the best free AI tools for students](/best-free-ai-tools-for-college-students-2026) and [how to start learning coding for free](/best-free-websites-learn-coding-2026).*
+
+---
+
+*This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*

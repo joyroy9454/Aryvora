@@ -348,3 +348,7 @@ Your future employer is going to Google your name. Make sure what they find make
 ---
 
 *Found this guide helpful? Share it with a fellow student who's building their data science portfolio. And if you want more practical guides on data science careers, tools, and projects, subscribe to the blog for weekly updates.*
+
+---
+
+*This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*

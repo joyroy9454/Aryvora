@@ -23,7 +23,7 @@ faq:
     answer: "Focus on the problem you solved, not just the technology you used. Include a live demo link (not just a GitHub repo), write a brief case study explaining your design decisions and challenges you overcame, and mention specific metrics or features. Recruiters want to see that you can ship a complete product, handle real-world API constraints, and think about the user experience — not just call an API endpoint."
 ---
 
-# How to Build an AI-Powered Project for Your Portfolio in 2026
+## How to Build an AI-Powered Project for Your Portfolio in 2026
 
 Here's the thing about landing your first tech job or internship in 2026: everyone has good grades, everyone has a polished resume, and everyone claims to "love problem-solving." But when a hiring manager opens your portfolio, they're not looking for adjectives. They want to *see* something. They want to click a link, interact with a live demo, and think, "Okay, this person actually ships things."
 
@@ -39,7 +39,7 @@ Let's get into it.
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 1. [Why AI-Powered Projects Make Your Portfolio Stand Out](#why-ai-powered-projects-make-your-portfolio-stand-out)
 2. [5 Beginner-Friendly AI Project Ideas (With Tech Stacks & Timelines)](#5-beginner-friendly-ai-project-ideas)
@@ -52,7 +52,7 @@ Let's get into it.
 
 ---
 
-## Why AI-Powered Projects Make Your Portfolio Stand Out {#why-ai-powered-projects-make-your-portfolio-stand-out}
+### Why AI-Powered Projects Make Your Portfolio Stand Out {#why-ai-powered-projects-make-your-portfolio-stand-out}
 
 Let's talk about what hiring managers actually see when they review student portfolios. It's the same pattern over and over: a weather app, a calculator, another to-do list. These projects are fine for learning, but they don't start conversations in an interview.
 
@@ -70,13 +70,13 @@ And here's the kicker: AI projects are no longer harder to build than traditiona
 
 ---
 
-## 5 Beginner-Friendly AI Project Ideas {#5-beginner-friendly-ai-project-ideas}
+### 5 Beginner-Friendly AI Project Ideas {#5-beginner-friendly-ai-project-ideas}
 
 Not sure where to start? Here are five AI project ideas for students, each with a full breakdown of what you'll build, what you'll learn, and how long it takes. Pick the one that excites you most — you'll do your best work on a project you actually care about.
 
 ---
 
-### Project 1: AI Chatbot with Knowledge Base
+#### Project 1: AI Chatbot with Knowledge Base
 
 **What it is:** A conversational chatbot that can answer questions about a specific topic — like your university's course catalog, your favorite book series, or a company's documentation. Unlike a generic chatbot, this one uses Retrieval-Augmented Generation (RAG), which means it actually "knows" things instead of making stuff up.
 
@@ -97,7 +97,7 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
-### Project 2: AI Resume Analyzer
+#### Project 2: AI Resume Analyzer
 
 **What it is:** A web app where users paste their resume and a job description, and the AI analyzes how well their resume matches the role. It highlights missing keywords, suggests improvements, and gives a match score.
 
@@ -118,7 +118,7 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
-### Project 3: AI Study Planner (Full Walkthrough Below!)
+#### Project 3: AI Study Planner (Full Walkthrough Below!)
 
 **What it is:** Students input their subjects, exam dates, and available study hours. The AI generates a personalized weekly study schedule, prioritizes topics based on difficulty and deadlines, and adjusts the plan as the user progresses.
 
@@ -139,7 +139,7 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
-### Project 4: AI Image Generator Web App
+#### Project 4: AI Image Generator Web App
 
 **What it is:** A web interface where users type a text description and generate AI images. Include features like style presets (watercolor, pixel art, photorealistic), image history, and download/share functionality.
 
@@ -160,7 +160,7 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
-### Project 5: AI Sentiment Analyzer Dashboard
+#### Project 5: AI Sentiment Analyzer Dashboard
 
 **What it is:** A dashboard where users paste product reviews, social media comments, or feedback text, and the AI analyzes the overall sentiment (positive/negative/neutral), extracts key themes, and displays results in charts.
 
@@ -181,11 +181,11 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
-## Full Walkthrough: Build an AI Study Planner {#full-walkthrough-build-an-ai-study-planner}
+### Full Walkthrough: Build an AI Study Planner {#full-walkthrough-build-an-ai-study-planner}
 
 This is the project we're going to build together, step by step. By the end, you'll have a fully functional AI study planner deployed to the web that you can link on your resume. Don't worry if you're not an experienced developer — we'll go line by line.
 
-### What We're Building
+#### What We're Building
 
 A web app where students can:
 1. Add subjects and topics they need to study
@@ -194,7 +194,7 @@ A web app where students can:
 4. Click "Generate Plan" and get an AI-created weekly schedule
 5. Mark topics as "completed" and regenerate the plan
 
-### Prerequisites
+#### Prerequisites
 
 Make sure you have these installed:
 - **Node.js 18+** — Download from [nodejs.org](https://nodejs.org)
@@ -203,7 +203,7 @@ Make sure you have these installed:
 
 Get your free Google Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). It takes 30 seconds and requires zero credit card.
 
-### Step 1: Create the Next.js Project
+#### Step 1: Create the Next.js Project
 
 Open your terminal and run:
 
@@ -218,14 +218,14 @@ When prompted, select:
 - Tailwind CSS: **Yes**
 - App Router: **Yes**
 
-### Step 2: Install Dependencies
+#### Step 2: Install Dependencies
 
 ```bash
 npm install @google/generative-ai date-fns
 npm installlucide-react # for nice icons
 ```
 
-### Step 3: Set Up Your Environment Variables
+#### Step 3: Set Up Your Environment Variables
 
 Create a file called `.env.local` in your project root:
 
@@ -235,7 +235,7 @@ GEMINI_API_KEY=your_api_key_here
 
 Replace `your_api_key_here` with the actual key you got from Google AI Studio. **Never commit this file to GitHub.** Next.js automatically loads `.env.local`, but make sure it's in your `.gitignore` (it is by default).
 
-### Step 4: Create the AI Configuration
+#### Step 4: Create the AI Configuration
 
 Create `src/lib/ai.ts`:
 
@@ -301,7 +301,7 @@ Keep it realistic and motivating. Do not use markdown tables — use bullet poin
 }
 ```
 
-### Step 5: Create the Subject Form Component
+#### Step 5: Create the Subject Form Component
 
 Create `src/components/SubjectForm.tsx`:
 
@@ -446,7 +446,7 @@ export default function SubjectForm({ onAddSubject }: SubjectFormProps) {
 }
 ```
 
-### Step 6: Create the Generated Plan Display
+#### Step 6: Create the Generated Plan Display
 
 Create `src/components/StudyPlan.tsx`:
 
@@ -497,7 +497,7 @@ export default function StudyPlan({ plan, isGenerating, onRegenerate }: StudyPla
 }
 ```
 
-### Step 7: Build the Main App Page
+#### Step 7: Build the Main App Page
 
 Replace the contents of `src/app/page.tsx`:
 
@@ -672,7 +672,7 @@ export default function Home() {
 }
 ```
 
-### Step 8: Add the API Route (Optional — for production)
+#### Step 8: Add the API Route (Optional — for production)
 
 When deploying, you should route API calls through a Next.js API route to keep your key completely server-side. Create `src/app/api/generate/route.ts`:
 
@@ -695,7 +695,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-### Step 9: Run Your App Locally
+#### Step 9: Run Your App Locally
 
 ```bash
 npm run dev
@@ -703,7 +703,7 @@ npm run dev
 
 Open `http://localhost:3000` in your browser. You should see the full AI Study Planner. Add a subject, set your hours, and hit "Generate Study Plan." The AI will create a customized weekly schedule in about 10 seconds.
 
-### Step 10: Enhance It (Optional Ideas)
+#### Step 10: Enhance It (Optional Ideas)
 
 Once the basic version works, here are ideas to make it even more impressive:
 - **Save plans to localStorage** so students can keep a history
@@ -714,11 +714,11 @@ Once the basic version works, here are ideas to make it even more impressive:
 
 ---
 
-## Deploy Your AI Project for Free {#deploy-your-ai-project-for-free}
+### Deploy Your AI Project for Free {#deploy-your-ai-project-for-free}
 
 Building the project is half the battle. Now you need to put it on the internet where anyone can see it. Here are three free platforms, ranked by how well they work for AI projects:
 
-### Option 1: Vercel (Best for Next.js)
+#### Option 1: Vercel (Best for Next.js)
 **Cost:** Free for personal projects
 **Best for:** Full-stack Next.js apps with API routes
 
@@ -730,7 +730,7 @@ Building the project is half the battle. Now you need to put it on the internet 
 
 Vercel gives you a free `.vercel.app` domain, automatic HTTPS, and deploys on every git push. It's the gold standard for Next.js projects.
 
-### Option 2: GitHub Pages (Best for Static Sites)
+#### Option 2: GitHub Pages (Best for Static Sites)
 **Cost:** Free
 **Best for:** Frontend-only React projects (no API routes)
 
@@ -755,7 +755,7 @@ module.exports = nextConfig;
 ```
 4. Run `npm run deploy`
 
-### Option 3: Hugging Face Spaces (Best for AI/ML Demos)
+#### Option 3: Hugging Face Spaces (Best for AI/ML Demos)
 **Cost:** Free
 **Best for:** Any AI project — it's where developers expect to see AI demos
 
@@ -770,11 +770,11 @@ Hugging Face Spaces is like GitHub Pages but built specifically for AI applicati
 
 ---
 
-## How to Write About Your Project in Your Portfolio {#how-to-write-about-your-project-in-your-portfolio}
+### How to Write About Your Project in Your Portfolio {#how-to-write-about-your-project-in-your-portfolio}
 
 A beautiful project means nothing if your portfolio page makes it sound boring. Here's how to write about your AI project so it actually impresses people:
 
-### The STAR Framework for Project Descriptions
+#### The STAR Framework for Project Descriptions
 
 Use this format for each project on your portfolio:
 
@@ -783,7 +783,7 @@ Use this format for each project on your portfolio:
 **Action:** What did you build? What technologies did you use? What challenges did you solve?
 **Result:** What was the outcome? How many users tested it? What did you learn?
 
-### Example Write-Up for the AI Study Planner
+#### Example Write-Up for the AI Study Planner
 
 > **AI Study Planner** | Next.js, TypeScript, Google Gemini API
 >
@@ -802,7 +802,7 @@ Use this format for each project on your portfolio:
 
 Notice what this does: it's specific, it's technical where it matters, it shows problem-solving, and it includes links to both the live demo and the source code. Recruiters love clicking both.
 
-### Portfolio Page Essentials
+#### Portfolio Page Essentials
 
 Every project page or card should have:
 - A **clear title** with the technology keywords (e.g., "AI Study Planner — Gemini API + Next.js")
@@ -814,11 +814,11 @@ Every project page or card should have:
 
 ---
 
-## Tips for Making Your AI Project Look Professional {#tips-for-making-your-ai-project-look-professional}
+### Tips for Making Your AI Project Look Professional {#tips-for-making-your-ai-project-look-professional}
 
 The difference between a "student project" and something that looks like a "real product" comes down to polish. Here are the details that separate the two:
 
-### 1. Use a Consistent Design System
+#### 1. Use a Consistent Design System
 Pick a component library and stick with it. Don't mix random CSS frameworks. Great options:
 - **shadcn/ui** (copy-paste components, extremely customizable)
 - **Tailwind UI** (paid, but professional)
@@ -827,7 +827,7 @@ Pick a component library and stick with it. Don't mix random CSS frameworks. Gre
 
 For the study planner, we used Tailwind CSS with consistent spacing, a blue/indigo color scheme, and Lucide icons. That alone makes 90% of student projects look better.
 
-### 2. Handle Loading States Beautifully
+#### 2. Handle Loading States Beautifully
 This is where most student projects fall apart. When the AI is generating something for 10 seconds, don't just show a blank screen. Use:
 - **Animated spinners or skeleton loaders**
 - **Progress indicators** ("Analyzing your subjects... Generating schedule...")
@@ -835,7 +835,7 @@ This is where most student projects fall apart. When the AI is generating someth
 
 In our study planner, we used a spinning loader with a "this usually takes 10-15 seconds" message. Simple, but it keeps users from clicking away.
 
-### 3. Add Error Handling (and Make It Friendly)
+#### 3. Add Error Handling (and Make It Friendly)
 Nothing kills credibility faster than an unhandled error displaying raw JSON to the user. Always:
 - Wrap API calls in try/catch blocks
 - Show user-friendly error messages
@@ -852,13 +852,13 @@ try {
 }
 ```
 
-### 4. Make It Responsive
+#### 4. Make It Responsive
 Test your project on a phone. Seriously. Many recruiters browse portfolios on mobile during commutes. If your layout breaks on a small screen, you look like someone who only tested in full-screen Chrome on their laptop. Use:
 - Tailwind's responsive prefixes (`sm:`, `md:`, `lg:`)
 - Mobile-first design approach
 - Touch-friendly button sizes (minimum 44x44px tap targets)
 
-### 5. Add a README That Doesn't Suck
+#### 5. Add a README That Doesn't Suck
 Your GitHub repo's README is often the first thing technical reviewers look at. Include:
 - A screenshot or GIF at the top
 - What the project does (one sentence)
@@ -868,16 +868,16 @@ Your GitHub repo's README is often the first thing technical reviewers look at. 
 - A "Features" bullet list
 - What you learned / challenges solved
 
-### 6. Get a Real Domain (Optional but Powerful)
+#### 6. Get a Real Domain (Optional but Powerful)
 A `yourname.vercel.app` subdomain is fine. A custom domain like `yourname.dev` or `studi.ai` makes you look ten times more serious. Domains cost $10-15/year from [Namecheap](https://namecheap.com) or [Cloudflare Registrar](https://dash.cloudflare.com).
 
 ---
 
-## 7 Common Mistakes Students Make {#7-common-mistakes-students-make}
+### 7 Common Mistakes Students Make {#7-common-mistakes-students-make}
 
 After reviewing hundreds of student AI projects, these are the mistakes I see over and over:
 
-### Mistake 1: Committing API Keys to GitHub
+#### Mistake 1: Committing API Keys to GitHub
 This is the #1 mistake, and it can cost you real money. If you push an `.env` file with your API key, bots will find it within minutes and use up your quota (or rack up charges).
 
 **Fix:** Always use `.gitignore` for environment variables. Use Vercel/Netlify environment variable settings for deployment. Add a pre-commit hook or use a tool like `git-secrets` to prevent accidental commits.
@@ -889,20 +889,20 @@ This is the #1 mistake, and it can cost you real money. If you push an `.env` fi
 *.env
 ```
 
-### Mistake 2: Making the Project Too Big
+#### Mistake 2: Making the Project Too Big
 Students often try to build a "full AI SaaS platform" as their first project. They never finish. It's better to build something small and polished than something ambitious and broken.
 
 **Fix:** Start with the absolute minimum version that works. A study planner that generates a plain-text schedule is more impressive than an incomplete study planner with user accounts, payment integration, and dark mode.
 
-### Mistake 3: No Live Demo
+#### Mistake 3: No Live Demo
 If your project only exists on your laptop, it doesn't exist for portfolio purposes. Deploy it, even if it's ugly. A deployed ugly project beats a beautiful local-only project every time.
 
-### Mistake 4: Copying a Tutorial Without Understanding
+#### Mistake 4: Copying a Tutorial Without Understanding
 There's nothing wrong with following a tutorial — everyone does. But if an interviewer asks you "what does this code do?" and you can't explain it, that's a red flag.
 
 **Fix:** After building a tutorial project, change something significant. Add a feature, refactor a component, switch the API, or redesign the UI. Make it yours.
 
-### Mistake 5: Not Versioning Properly
+#### Mistake 5: Not Versioning Properly
 Committing everything as "update" or "fixed stuff" tells a reviewer you don't understand git. Use meaningful commit messages:
 
 ```bash
@@ -917,15 +917,15 @@ git commit -m "Fix: handle empty topic list edge case"
 git commit -m "Style: improve mobile responsiveness for subject cards"
 ```
 
-### Mistake 6: Ignoring Accessibility
+#### Mistake 6: Ignoring Accessibility
 If someone using a screen reader or keyboard can't navigate your app, you're excluding users and showing inexperience. Add `alt` text to images, use semantic HTML (`<button>`, `<nav>`, `<main>`), and ensure sufficient color contrast.
 
-### Mistake 7: Not Telling the Story
+#### Mistake 7: Not Telling the Story
 Having a GitHub repo with code is not a portfolio. Having a portfolio page with context, screenshots, a live demo, and a write-up about your process — that's a portfolio. The story behind the project is as impressive as the project itself.
 
 ---
 
-## FAQ {#faq}
+### FAQ {#faq}
 
 <details>
 <summary><strong>What is the best AI project for a student portfolio in 2026?</strong></summary>
@@ -999,7 +999,7 @@ Example:
 
 ---
 
-## Conclusion: Your Portfolio Won't Build Itself
+### Conclusion: Your Portfolio Won't Build Itself
 
 Here's what I want you to take away from this article: the gap between "student with no experience" and "student with impressive AI projects" is smaller than you think. It's not about being the best coder in your class. It's about being curious enough to start, resourceful enough to follow through, and thorough enough to deploy something real.
 
@@ -1019,7 +1019,7 @@ Go build your project. Your future self will thank you.
 
 ---
 
-## Affiliate Disclaimer
+### Affiliate Disclaimer
 
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*
 

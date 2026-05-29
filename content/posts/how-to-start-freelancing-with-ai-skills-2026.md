@@ -23,7 +23,7 @@ faq:
     answer: "Start with these four core tools. ChatGPT for content creation, brainstorming, and client communication. Canva AI for design and visual content. Make or Zapier for workflow automation. Notion AI for project management and documentation. These cover 80% of freelance work students will encounter. Once comfortable, add Midjourney or DALL-E for image generation, Claude for advanced writing projects, and Bubble for building client websites or apps. Master two tools deeply rather than ten tools superficially."
 ---
 
-# How to Start Freelancing with AI Skills as a Student in 2026
+## How to Start Freelancing with AI Skills as a Student in 2026
 
 Let's be real for a second.
 
@@ -41,7 +41,7 @@ Let's get into it.
 
 ---
 
-## Table of Contents
+#### Table of Contents
 
 1. [Why AI Freelancing Is Exploding Right Now](#why-ai-freelancing-is-exploding-right-now)
 2. [10 AI Skills You Can Sell Today (Detailed Breakdown)](#10-ai-skills-you-can-sell-today)
@@ -54,7 +54,7 @@ Let's get into it.
 
 ---
 
-## Why AI Freelancing Is Exploding Right Now {#why-ai-freelancing-is-exploding-right-now}
+#### Why AI Freelancing Is Exploding Right Now {#why-ai-freelancing-is-exploding-right-now}
 
 Before we dive into the how, let's talk about the why — because understanding the market will help you sell with confidence.
 
@@ -77,11 +77,11 @@ The best part? The barrier to entry is lower than it's ever been for any freelan
 
 ---
 
-## 10 AI Skills You Can Sell Today {#10-ai-skills-you-can-sell-today}
+#### 10 AI Skills You Can Sell Today {#10-ai-skills-you-can-sell-today}
 
 Now let's get to the meat of it. Here are **10 AI skills you can start selling as a freelancer right now**, even as a complete beginner. For each one, I'll explain what it involves, who needs it, what tools you'll need, and how quickly you can get started.
 
-### 1. Prompt Engineering
+#### 1. Prompt Engineering
 
 **What it is:** Crafting precise, effective prompts to get the best possible output from AI language models like ChatGPT, Claude, Gemini, and others.
 
@@ -99,7 +99,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **This is one of the easiest AI freelance gigs to start with because every business using AI needs better prompts.**
 
-### 2. AI Automation & Workflow Building
+#### 2. AI Automation & Workflow Building
 
 **What it is:** Connecting different apps and AI tools together to automate repetitive business tasks — no coding required in most cases.
 
@@ -115,7 +115,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **2-3 weeks.** Both Make and Zapier have free tiers and excellent tutorials. Build 3-5 demo automations for practice.
 
-### 3. AI Chatbot Building
+#### 3. AI Chatbot Building
 
 **What it is:** Creating custom AI-powered chatbots for businesses to handle customer inquiries, lead qualification, booking, and support.
 
@@ -131,7 +131,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **2-3 weeks.** These platforms are designed for non-developers.
 
-### 4. AI Content Creation & Strategy
+#### 4. AI Content Creation & Strategy
 
 **What it is:** Using AI tools to produce blog posts, social media content, email newsletters, video scripts, and other marketing materials — but with the strategic oversight that only a human can provide.
 
@@ -148,7 +148,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **1 week.** If you can write a decent college essay, you can do this. AI handles the heavy lifting; you handle the strategy and editing.
 
-### 5. AI Data Analysis & Visualization
+#### 5. AI Data Analysis & Visualization
 
 **What it is:** Using AI tools to analyze business data, spot trends, create visualizations, and generate insights that help businesses make better decisions.
 
@@ -165,7 +165,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **2-3 weeks.** Focus on understanding business metrics (KPIs, conversion rates, customer acquisition cost) and how to translate data into recommendations.
 
-### 6. AI Voiceover, Video & Visual Content
+#### 6. AI Voiceover, Video & Visual Content
 
 **What it is:** Using AI tools to generate professional-quality voiceovers, videos, images, and visual content that would traditionally require expensive equipment and specialists.
 
@@ -182,7 +182,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **1-2 weeks.** These tools are incredibly intuitive. The key skill is learning to combine them into polished final products.
 
-### 7. Custom GPT / AI Agent Building
+#### 7. Custom GPT / AI Agent Building
 
 **What it is:** Building custom versions of ChatGPT (called GPTs on OpenAI's platform) or AI agents that are tailored to a business's specific needs, knowledge base, and workflows.
 
@@ -198,7 +198,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **2-3 weeks.** Start by building GPTs for fictional businesses to practice, then offer discounted builds to real clients.
 
-### 8. AI Workflow Consulting & Strategy
+#### 8. AI Workflow Consulting & Strategy
 
 **What it is:** Analyzing a business's existing processes and recommending which tasks to automate with AI, which tools to use, and how to implement them — essentially being an AI consultant for small businesses.
 
@@ -217,7 +217,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **This is the highest-value AI freelance service. Businesses will pay premium prices for clear AI strategy.**
 
-### 9. AI Training & Fine-Tuning Basics
+#### 9. AI Training & Fine-Tuning Basics
 
 **What it is:** Teaching AI models to perform specific tasks better by training them on custom datasets, adjusting parameters, and fine-tuning outputs for specific business needs.
 
@@ -234,7 +234,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **Time to get client-ready:** **3-5 weeks.** This is more technical and represents a step up in skill level. You don't need to be a programmer, but you should be comfortable following technical tutorials.
 
-### 10. AI Tool Setup & Training for Businesses
+#### 10. AI Tool Setup & Training for Businesses
 
 **What it is:** The most accessible entry point. You help businesses set up, configure, and learn to use AI tools like ChatGPT, Copilot, Canva AI, and others — essentially being their AI onboarding specialist.
 
@@ -253,11 +253,11 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 ---
 
-## Where to Find Clients Who Will Pay You {#where-to-find-clients-who-will-pay-you}
+### Where to Find Clients Who Will Pay You {#where-to-find-clients-who-will-pay-you}
 
 Knowing what to sell is half the battle. Now let's talk about **where to find people who will actually pay you**. Here are the six best channels for finding AI freelancing clients:
 
-### 1. Upwork
+#### 1. Upwork
 
 **Best for:** Beginners who want a structured platform with built-in payment protection.
 
@@ -269,7 +269,7 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** Search for jobs with "AI," "ChatGPT," "automation," "prompt engineering," and related keywords. Set up alerts for new postings.
 
-### 2. Fiverr
+#### 2. Fiverr
 
 **Best for:** Selling packaged AI services at fixed prices.
 
@@ -282,7 +282,7 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** Fiverr's algorithm favors sellers who respond quickly and maintain high completion rates. Be responsive.
 
-### 3. X (formerly Twitter)
+#### 3. X (formerly Twitter)
 
 **Best for:** Building authority and attracting clients through content.
 
@@ -295,7 +295,7 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** The AI community on X is massive and engaged. Being active here can build your reputation faster than any other platform.
 
-### 4. LinkedIn
+#### 4. LinkedIn
 
 **Best for:** Landing higher-paying clients and B2B work.
 
@@ -308,7 +308,7 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** LinkedIn clients typically pay **2-5x more** than Fiverr clients. The platform is worth investing time in.
 
-### 5. Reddit
+#### 5. Reddit
 
 **Best for:** Finding clients in niche communities and building credibility.
 
@@ -320,7 +320,7 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** Reddit users hate obvious self-promotion. Focus on being helpful, and the clients will come to you.
 
-### 6. Cold Email / Direct Outreach
+#### 6. Cold Email / Direct Outreach
 
 **Best for:** The most proactive and potentially highest-reward approach.
 
@@ -351,11 +351,11 @@ Would you be open to a quick 15-minute chat about how this could work for [Busin
 
 ---
 
-## Pricing Guide: What to Charge for Each Service {#pricing-guide-what-to-charge-for-each-service}
+### Pricing Guide: What to Charge for Each Service {#pricing-guide-what-to-charge-for-each-service}
 
 One of the biggest mistakes new freelancers make is **underpricing**. Here's a realistic pricing guide based on current market rates in 2026:
 
-### Hourly Rates (for time-based work)
+#### Hourly Rates (for time-based work)
 
 | Service | Beginner Rate | Intermediate | Expert |
 |---|---|---|---|
@@ -370,7 +370,7 @@ One of the biggest mistakes new freelancers make is **underpricing**. Here's a r
 | AI Workflow Consulting | $35-60/hr | $75-150/hr | $150-300/hr |
 | AI Training/Fine-Tuning | $40-75/hr | $75-150/hr | $150-300/hr |
 
-### Project-Based Pricing (for packaged services)
+#### Project-Based Pricing (for packaged services)
 
 Many clients (and freelancers) prefer fixed project rates. Here are common packages:
 
@@ -382,7 +382,7 @@ Many clients (and freelancers) prefer fixed project rates. Here are common packa
 - **AI Consulting Package** (audit + roadmap + training): $500-2,500
 - **AI Data Dashboard Setup:** $400-1,200
 
-### Pricing Tips for Students
+#### Pricing Tips for Students
 
 **Don't justify your inexperience — justify your results.** If you save a business 15 hours a week, that's worth hundreds of dollars to them. Price based on the value you deliver, not the years you've been doing this.
 
@@ -392,13 +392,13 @@ Many clients (and freelancers) prefer fixed project rates. Here are common packa
 
 ---
 
-## How to Create a Portfolio with AI Projects (Even with Zero Clients) {#how-to-create-a-portfolio-with-ai-projects}
+### How to Create a Portfolio with AI Projects (Even with Zero Clients) {#how-to-create-a-portfolio-with-ai-projects}
 
 "But how do I build a portfolio if I don't have any clients yet?"
 
 This is the classic chicken-and-egg problem. Here's how to solve it:
 
-### Strategy 1: Create Spec Projects
+#### Strategy 1: Create Spec Projects
 
 Build real projects for fictional (or real) businesses. For example:
 
@@ -410,7 +410,7 @@ Build real projects for fictional (or real) businesses. For example:
 
 4. **Generate a full AI content strategy** for a local restaurant: social media calendar, email sequences, blog post ideas, and sample content. Create it as a beautiful PDF.
 
-### Strategy 2: Offer Free Work (Strategically)
+#### Strategy 2: Offer Free Work (Strategically)
 
 Offer to do **one free project** for a real business in exchange for:
 - A testimonial you can publish
@@ -419,15 +419,15 @@ Offer to do **one free project** for a real business in exchange for:
 
 **Important:** Don't give your work away cheaply. Present it as a done-for-you showcase, not as a desperate plea for work.
 
-### Strategy 3: Document Your Learning Journey
+#### Strategy 3: Document Your Learning Journey
 
 Start a blog or Twitter/X thread documenting your AI experiments. When you build something interesting, write about it or post screenshots. This content **is** your portfolio.
 
-### Strategy 4: Contribute to Open Source AI Projects
+#### Strategy 4: Contribute to Open Source AI Projects
 
 Contribute prompts, templates, or documentation to open-source AI projects. This builds credibility and gives you visible, verifiable work to link to.
 
-### Portfolio Format
+#### Portfolio Format
 
 Your portfolio should include:
 1. **2-4 project showcases** with clear descriptions of the problem, your solution, and the result
@@ -439,59 +439,59 @@ Your portfolio should include:
 
 ---
 
-## Land Your First Client in 7 Days: Step-by-Step Plan {#land-your-first-client-in-7-days}
+### Land Your First Client in 7 Days: Step-by-Step Plan {#land-your-first-client-in-7-days}
 
 Here's your concrete, actionable plan to go from zero to your first paying client in **seven days**. This is not theoretical. Follow these steps exactly.
 
-### Day 1: Choose Your Service & Set Up Your Presence
+#### Day 1: Choose Your Service & Set Up Your Presence
 
 - Pick **one** AI service to offer. My recommendation for beginners: **AI Tool Setup & Training** or **Custom GPT Building** (high demand, low barrier to entry).
 - Choose your pricing. Start at the lower end of the range from the pricing guide above.
 - Create accounts on Upwork and Fiverr with a professional profile focused on your chosen service.
 - Create a Twitter/X account (if you don't have one) focused on AI tips.
 
-### Day 2: Build Your Portfolio
+#### Day 2: Build Your Portfolio
 
 - Create **2-3 spec projects** showcasing your chosen service.
 - Set up a simple portfolio page (Notion is fastest and free).
 - Write down your service description, pricing, and what's included in a clear, client-friendly format.
 
-### Day 3: Create Service Packages & Templates
+#### Day 3: Create Service Packages & Templates
 
 - Write templates for your offerings on Upwork and Fiverr.
 - Create a simple intake questionnaire for potential clients (Google Forms — free).
 - Prepare a 1-page PDF that explains what you do and the results businesses can expect.
 - Set up a payment method (PayPal is easiest for freelance beginners).
 
-### Day 4: Start Outreach — Platforms
+#### Day 4: Start Outreach — Platforms
 
 - Apply to **10 Upwork jobs** today. Personalize each proposal. Focus on the client's problem, not your experience.
 - Publish your first Fiverr gig(s).
 - Post your first Twitter/X thread about your AI area of expertise.
 - Comment on 10-15 relevant LinkedIn posts from business owners and startup founders.
 
-### Day 5: Start Outreach — Direct
+#### Day 5: Start Outreach — Direct
 
 - Identify **20 local businesses or online businesses** that could benefit from your service.
 - Send **10 personalized cold emails** (use the template from the cold email section above).
 - Post in Reddit communities (r/forhire, r/slavelabour) about what you offer.
 - Follow up with any responses from Day 4.
 
-### Day 6: Create Content & Build Visibility
+#### Day 6: Create Content & Build Visibility
 
 - Post 2-3 more pieces of content on Twitter/X and LinkedIn.
 - Create a case study from one of your spec projects (a mini blog post or thread).
 - Follow and engage with 50 potential clients across platforms.
 - Respond to any inquiries immediately and professionally.
 
-### Day 7: Follow Up & Close
+#### Day 7: Follow Up & Close
 
 - **Follow up** on every cold email, proposal, and inquiry from the past week.
 - Offer a **free 15-minute consultation call** to prospects who are interested but not quite ready.
 - If someone says "tell me more," send them your PDF and portfolio.
 - **Ask for the sale.** When you sense interest, directly say: "Would you like to get started this week? I can have your [GPT/chatbot/automation] ready in [timeframe]."
 
-### What to Expect
+#### What to Expect
 
 - You'll probably send 100+ touchpoints (proposals, emails, posts) across the week.
 - You might get 5-10 responses.

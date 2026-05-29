@@ -1,6 +1,6 @@
 ---
 title: "Best AI Video & Music Generator Tools for Students in 2026 (Free & Paid)"
-description: "Discover the best AI video and music generation tools for students in 2026. Create stunning videos, music, and content with free AI tools — no experience needed."
+description: "Discover the best AI video and music generation tools for students in 2026. Create stunning content with free AI tools."
 date: 2026-05-29
 draft: false
 slug: best-ai-video-music-generators-students-2026
