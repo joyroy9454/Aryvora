@@ -8,12 +8,23 @@ type: weekly
 
 # Weekly Global Tech Updates
 
-Every week, we round up the most important tech, AI, and developer news — and explain what it means for you.
+Every week, we round up the most important tech, AI, and developer news — and explain what it means for students, developers, and beginners.
 
-## This Week's Top Updates
+We focus on:
 
-Check back every Monday for the latest digest.
+- **What happened** — clear, factual summaries
+- **Why it matters** — practical impact on your work and studies
+- **What to do** — actionable next steps
+- **Related guides** — connect you to deeper content on [AI Blog Factory](/)
 
----
+## Latest Digest
 
-Browse [all weekly digests](/weekly/).
+{{ range first 1 .Site.RegularPages }}
+  **[{{ .Title }}]({{ .Permalink }})**
+  {{ .Description }}
+  [Read full digest →]({{ .Permalink }})
+{{ end }}
+
+## Browse All Digests
+
+See the full archive of weekly tech updates below.
