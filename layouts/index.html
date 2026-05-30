@@ -107,67 +107,6 @@
   </div>
 </section>
 
-<!-- ===== WEEKLY TECH DIGEST ===== -->
-{{- $weeklyPages := where .Site.RegularPages "Type" "weekly" }}
-{{- if gt (len $weeklyPages) 0 }}
-{{- $latestWeekly := index $weeklyPages 0 }}
-<section class="section weekly-digest-section">
-  <div class="container">
-    <div class="section-heading">
-      <div class="section-heading-left">
-        <span class="section-kicker">This Week in Tech</span>
-        <h2 class="section-title">Weekly Global Tech Updates</h2>
-      </div>
-      <a href="/weekly/" class="section-link">View all digests →</a>
-    </div>
-
-    <!-- Latest Weekly Digest Hero -->
-    <div class="weekly-hero-home">
-      <a href="{{ $latestWeekly.Permalink }}" class="weekly-hero-link">
-        <div class="weekly-hero-top">
-          <span class="weekly-hero-badge">LATEST DIGEST</span>
-          <time datetime="{{ $latestWeekly.Date.Format "2006-01-02" }}">{{ $latestWeekly.Date.Format "January 2, 2006" }}</time>
-          <span class="weekly-hero-readtime">{{ $latestWeekly.ReadingTime }} min read</span>
-        </div>
-        <h3 class="weekly-hero-title">{{ $latestWeekly.Title }}</h3>
-        <p class="weekly-hero-excerpt">{{ $latestWeekly.Description | plainify | truncate 180 }}</p>
-        <span class="weekly-hero-cta">Read full digest →</span>
-      </a>
-    </div>
-
-    <!-- 2 Most Recent Digests -->
-    <div class="weekly-small-grid">
-      {{- range $i, $post := first 2 (after 1 $weeklyPages) }}
-      <a href="{{ $post.Permalink }}" class="weekly-small-card">
-        <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "Jan 2" }}</time>
-        <h4>{{ .Title }}</h4>
-        <p>{{ .Description | plainify | truncate 100 }}</p>
-      </a>
-      {{- end }}
-    </div>
-
-    <!-- 3 Latest Updates from Latest Digest -->
-    {{- if $latestWeekly.Params.updates }}
-    <div class="weekly-updates-preview">
-      <h3 class="weekly-updates-heading">Top Updates This Week</h3>
-      <ul class="weekly-updates-list">
-        {{- range first 3 $latestWeekly.Params.updates }}
-        <li>
-          <span class="weekly-update-cat">{{ .category }}</span>
-          <strong>{{ .headline }}</strong>
-          <p>{{ .summary | plainify | truncate 100 }}</p>
-          {{- if .source_url }}
-          <a href="{{ .source_url }}" target="_blank" rel="noopener" class="weekly-update-source">Read more →</a>
-          {{- end }}
-        </li>
-        {{- end }}
-      </ul>
-    </div>
-    {{- end }}
-  </div>
-</section>
-{{- end }}
-
 <!-- ===== TRENDING / POPULAR ARTICLES ===== -->
 <section class="section">
   <div class="container">

@@ -59,14 +59,9 @@ paginate = 9
     url = '/'
     weight = 10
   [[menu.main]]
-    identifier = 'tech-pulse'
-    name = '⚡ Tech Pulse'
-    url = '/tech-pulse/'
-    weight = 15
-  [[menu.main]]
-    identifier = 'posts'
-    name = 'Guides'
-    url = '/posts/'
+    identifier = 'products'
+    name = 'Products'
+    url = '/products/'
     weight = 20
   [[menu.main]]
     identifier = 'categories'
@@ -88,7 +83,6 @@ paginate = 9
   section = ['HTML', 'RSS', 'JSON']
   taxonomy = ['HTML', 'RSS', 'JSON']
   term = ['HTML', 'RSS', 'JSON']
-  tech-pulse = ['HTML', 'RSS', 'JSON']
 
 [sitemap]
   changefreq = 'weekly'
