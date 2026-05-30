@@ -59,20 +59,25 @@ paginate = 9
     url = '/'
     weight = 10
   [[menu.main]]
+    identifier = 'weekly'
+    name = 'Tech Digest'
+    url = '/weekly/'
+    weight = 20
+  [[menu.main]]
     identifier = 'products'
     name = 'Products'
     url = '/products/'
-    weight = 20
+    weight = 30
   [[menu.main]]
     identifier = 'categories'
     name = 'Topics'
     url = '/categories/'
-    weight = 30
+    weight = 40
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about/'
-    weight = 40
+    weight = 50
 
 [taxonomies]
   category = 'categories'

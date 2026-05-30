@@ -1,0 +1,15 @@
+<article class="weekly-card">
+  <div class="weekly-card-header">
+    <time class="weekly-card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+    <span class="weekly-card-badge">Digest</span>
+  </div>
+  <h3 class="weekly-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <p class="weekly-card-summary">{{ .Description | plainify | truncate 120 }}</p>
+  <div class="weekly-card-meta">
+    {{- if .Params.updates }}
+    <span class="weekly-card-count">{{ len .Params.updates }} updates</span>
+    {{- end }}
+    <span class="weekly-card-readtime">{{ .ReadingTime }} min read</span>
+  </div>
+  <a class="weekly-card-link" href="{{ .Permalink }}">Read full digest →</a>
+</article>
