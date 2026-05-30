@@ -59,25 +59,25 @@ paginate = 9
     url = '/'
     weight = 10
   [[menu.main]]
-    identifier = 'weekly'
-    name = 'Tech Digest'
-    url = '/weekly/'
-    weight = 20
+    identifier = 'tech-pulse'
+    name = '⚡ Tech Pulse'
+    url = '/tech-pulse/'
+    weight = 15
   [[menu.main]]
-    identifier = 'products'
-    name = 'Products'
-    url = '/products/'
-    weight = 30
+    identifier = 'posts'
+    name = 'Guides'
+    url = '/posts/'
+    weight = 20
   [[menu.main]]
     identifier = 'categories'
     name = 'Topics'
     url = '/categories/'
-    weight = 40
+    weight = 30
   [[menu.main]]
     identifier = 'about'
     name = 'About'
     url = '/about/'
-    weight = 50
+    weight = 40
 
 [taxonomies]
   category = 'categories'
@@ -88,6 +88,7 @@ paginate = 9
   section = ['HTML', 'RSS', 'JSON']
   taxonomy = ['HTML', 'RSS', 'JSON']
   term = ['HTML', 'RSS', 'JSON']
+  tech-pulse = ['HTML', 'RSS', 'JSON']
 
 [sitemap]
   changefreq = 'weekly'

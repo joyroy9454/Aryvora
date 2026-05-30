@@ -1,0 +1,43 @@
+{{- define "main" }}
+
+<article class="post-single tech-pulse-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <div class="tp-digest-header">
+      <span class="tp-digest-badge">⚡ Tech Pulse</span>
+      <time class="tp-digest-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+  </header>
+
+  {{- if .Params.cover.image }}
+  <figure class="entry-cover">
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" false) }}
+  </figure>
+  {{- end }}
+
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+
+  {{- partial "newsletter.html" . }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+  </footer>
+</article>
+
+{{- end }}
