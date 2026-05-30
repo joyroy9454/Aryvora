@@ -1,16 +1,17 @@
 {{- define "main" -}}
-<article class="post-single">
+<article class="post-single" itemscope itemtype="https://schema.org/WebPage">
+<meta itemprop="name" content="Search AI Blog Factory" />
 <header class="post-header">
-  <h1 class="post-title">Search</h1>
-  <div class="post-description">Search all guides and articles on {{ site.Title }}.</div>
+  <h1 class="post-title" itemprop="headline">Search</h1>
+  <div class="post-description" itemprop="description">Search all guides and articles on {{ site.Title }}.</div>
 </header>
 
 <div class="post-content">
 
 <div class="search-form-wrap" style="max-width: 600px; margin: 0 auto 32px;">
-  <form class="hero-search" action="/ai-blog-factory/search/" method="get">
+  <form class="hero-search" action="/ai-blog-factory/search/" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
-    <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus>
+    <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
 </div>
 

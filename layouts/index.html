@@ -23,18 +23,18 @@
 
       <!-- Brand -->
       <div class="hero-brand">
-        <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Blog Factory" width="44" height="44">
+        <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo.svg" alt="AI Blog Factory" width="44" height="44" />
         <span class="hero-brand-name">AI Blog Factory</span>
       </div>
 
       <!-- Headline -->
       <h1 class="hero-title">AI Tools & Tech Guides for Students</h1>
-      <p class="hero-subtitle">Honest reviews, practical tutorials, and the best free tools to boost your productivity — curated for students, by a student.</p>
+      <p class="hero-subtitle">Honest AI tool reviews, practical coding tutorials, and free productivity guides for students. Learn vibe coding, AI automation, programming, and study smarter — curated by a student, for students.</p>
 
       <!-- Search -->
-      <form class="hero-search" action="/ai-blog-factory/search/" method="get">
+      <form class="hero-search" action="/ai-blog-factory/search/" method="get" role="search">
         <span class="hero-search-icon">🔍</span>
-        <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search">
+        <input type="text" name="q" class="hero-search-input" placeholder="Search AI tools, coding guides, tutorials..." aria-label="Search" />
       </form>
 
       <!-- Topic Chips -->
@@ -54,7 +54,7 @@
         <a href="{{ .RelPermalink }}" class="hero-featured-link">
           <div class="hero-featured-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -89,20 +89,64 @@
   </div>
 </section>
 
-<!-- ===== TRUST SECTION ===== -->
+<!-- ===== TRUST / AUTHORITY SECTION ===== -->
 <section class="trust-section">
   <div class="container">
     <div class="trust-card">
       <div class="trust-avatar">JR</div>
       <div class="trust-content">
         <h3>Hi, I'm Joy Roy — BSc Data Science student &amp; vibe coder</h3>
-        <p>Every guide on this site is tested, researched, and written to actually help students. No filler, no fluff — just practical tools and honest reviews.</p>
+        <p>AI Blog Factory is my project to help students learn AI tools, coding, and productivity. Every guide is tested, researched, and written to actually help. No filler, no fluff — just practical tech guides you can use today.</p>
         <div class="trust-badges">
           <span class="trust-badge trust-badge-verified">✓ Student-Verified</span>
           <span class="trust-badge trust-badge-updated">↻ Updated 2026</span>
           <span class="trust-badge trust-badge-free">★ Free to Use</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU'LL LEARN — Topic Clusters for AI extraction ===== -->
+<section class="section topic-clusters-section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">Explore by Topic</span>
+        <h2 class="section-title">What do you want to learn?</h2>
+      </div>
+    </div>
+    <div class="topic-clusters-grid">
+      <a href="/ai-blog-factory/categories/ai-tools/" class="topic-cluster-card">
+        <span class="tc-icon">🤖</span>
+        <h3>AI Tools</h3>
+        <p>Reviews and comparisons of the best AI tools for students — ChatGPT, Claude, Gemini, and more.</p>
+      </a>
+      <a href="/ai-blog-factory/categories/coding/" class="topic-cluster-card">
+        <span class="tc-icon">💻</span>
+        <h3>Coding & Development</h3>
+        <p>Python, vibe coding, web development, and building your first projects.</p>
+      </a>
+      <a href="/ai-blog-factory/categories/productivity/" class="topic-cluster-card">
+        <span class="tc-icon">⚡</span>
+        <h3>Productivity</h3>
+        <p>Study smarter with AI. Note-taking, exam prep, time management, and workflow automation.</p>
+      </a>
+      <a href="/ai-blog-factory/categories/career/" class="topic-cluster-card">
+        <span class="tc-icon">🚀</span>
+        <h3>Career & Freelancing</h3>
+        <p>Resume building, freelancing with AI, internships, and making money as a student.</p>
+      </a>
+      <a href="/ai-blog-factory/categories/automation/" class="topic-cluster-card">
+        <span class="tc-icon">🔄</span>
+        <h3>Automation</h3>
+        <p>Automate your life with AI. Python scripts, no-code tools, and smart workflows.</p>
+      </a>
+      <a href="/ai-blog-factory/categories/education/" class="topic-cluster-card">
+        <span class="tc-icon">📚</span>
+        <h3>Learning & Education</h3>
+        <p>Data science career guides, portfolio building, and student-focused learning resources.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -132,7 +176,7 @@
         <article class="article-card {{ if eq $i 0 }}article-card-featured{{ end }}">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -167,7 +211,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -201,7 +245,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -234,7 +278,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -295,11 +339,11 @@
         <div class="newsletter-content">
           <span class="section-kicker">Stay Sharp</span>
           <h2>Get the best AI tools &amp; student tech guides every week</h2>
-          <p>Join readers who get practical tips, honest tool reviews, and free resources delivered straight to their inbox. Zero spam, instant unsubscribe.</p>
+          <p>Join students getting free AI tool reviews, coding tutorials, productivity tips, and honest guides delivered straight to their inbox. Zero spam, instant unsubscribe.</p>
         </div>
         <div class="newsletter-form-wrap">
-          <form class="newsletter-form" action="#" onsubmit="return false;">
-            <input type="email" placeholder="your@email.com" class="newsletter-input" aria-label="Email address">
+          <form class="newsletter-form" action="https://formspree.io/f/xpwzgkqn" method="POST">
+            <input type="email" name="email" placeholder="your@email.com" class="newsletter-input" aria-label="Email address" required />
             <button type="submit" class="btn btn-primary">Subscribe ✨</button>
           </form>
           <span class="newsletter-note">Free. No spam. Unsubscribe anytime.</span>
@@ -328,7 +372,7 @@
       <article class="article-list-card">
         <a href="{{ .RelPermalink }}" class="article-list-media">
           {{- if .Params.cover -}}
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
           {{- else -}}
           <div class="article-list-placeholder"></div>
           {{- end -}}

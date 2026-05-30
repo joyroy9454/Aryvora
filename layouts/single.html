@@ -3,10 +3,10 @@
 <!-- Reading Progress Bar -->
 <div class="reading-progress" id="reading-progress"></div>
 
-<article class="post-single">
+<article class="post-single" itemscope itemtype="https://schema.org/Article">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title entry-hint-parent">
+    <h1 class="post-title entry-hint-parent" itemprop="headline">
       {{ .Title }}
       {{- if .Draft -}}
       <span class="entry-hint" title="Draft">
@@ -17,7 +17,7 @@
       {{- end -}}
     </h1>
     {{- if .Description -}}
-    <div class="post-description">{{ .Description }}</div>
+    <div class="post-description" itemprop="description">{{ .Description }}</div>
     {{- end -}}
     {{- if not (.Param "hideMeta") -}}
     <div class="post-meta">
@@ -29,6 +29,26 @@
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false -}}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) -}}
 
+  {{- /* Article Meta Bar for AI extraction */ -}}
+  <div class="post-meta-bar">
+    <div class="post-meta-bar-inner">
+      <span class="post-meta-author">
+        <span class="post-avatar-sm">JR</span>
+        <span>By <a href="/about/" rel="author">Joy Roy</a></span>
+      </span>
+      <span class="post-meta-sep">·</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <span class="post-meta-sep">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+      <span class="post-meta-sep">·</span>
+      <span>{{ .WordCount }} words</span>
+      {{- if .Params.categories }}
+      <span class="post-meta-sep">·</span>
+      <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="post-meta-cat">{{ index .Params.categories 0 }}</a>
+      {{- end }}
+    </div>
+  </div>
+
   {{- if (.Param "ShowToc") -}}
   <div class="toc-wrapper">
     <div class="toc-header">Table of Contents</div>
@@ -37,7 +57,7 @@
   {{- end -}}
 
   {{- if .Content -}}
-  <div class="post-content md-content">
+  <div class="post-content md-content" itemprop="articleBody">
     {{- if not (.Param "disableAnchoredHeadings") -}}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else -}}{{ .Content }}{{ end -}}
@@ -45,6 +65,22 @@
   {{- end -}}
 
   {{- partial "extend_post_content.html" . -}}
+
+  {{- /* ===== ARTICLE END: Key Takeaways for AI extraction ===== */ -}}
+  {{- if and .IsPage (eq .Section "posts") }}
+  <div class="article-end-section">
+    <div class="article-end-box">
+      <div class="article-end-left">
+        <div class="article-end-avatar">JR</div>
+        <div>
+          <strong>About the Author</strong>
+          <p>Joy Roy is a BSc Data Science student and vibe coder. He reviews AI tools and builds practical tech guides at AI Blog Factory.</p>
+          <a href="/about/" class="article-end-link">Read full bio →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{- end }}
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" -}}
@@ -76,8 +112,8 @@
     <div class="author-card-avatar">JR</div>
     <div class="author-card-info">
       <span class="author-card-label">Written by</span>
-      <h4 class="author-card-name">Joy Roy</h4>
-      <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of AI Blog Factory. I test and review AI tools so you don't have to.</p>
+      <h4 class="author-card-name" itemprop="author">Joy Roy</h4>
+      <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of AI Blog Factory. He tests and reviews AI tools so you don't have to.</p>
       <a href="/about/" class="author-card-link">More about me →</a>
       <a href="mailto:joyroy9454@gmail.com" class="author-card-link">Email me →</a>
     </div>
@@ -116,13 +152,25 @@
 <section class="faq-section">
   <h2>Frequently Asked Questions</h2>
   {{- range .Params.faq -}}
-  <details class="faq-item">
-    <summary>{{ .question }}</summary>
-    <div class="faq-answer">
-      {{ .answer | markdownify }}
+  <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <summary itemprop="name">{{ .question }}</summary>
+    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div itemprop="text">{{ .answer | markdownify }}</div>
     </div>
   </details>
   {{- end -}}
+</section>
+{{- end -}}
+
+<!-- ===== NEWSLETTER CTA (end of post) ===== -->
+{{- if and .IsPage (eq .Section "posts") -}}
+<section class="post-newsletter-cta">
+  <h3>📬 Found this helpful? Get more guides like this.</h3>
+  <p>Join students getting free AI tool reviews, coding tutorials, and productivity tips. No spam, unsubscribe anytime.</p>
+  <form action="https://formspree.io/f/xpwzgkqn" method="POST" class="post-newsletter-form">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit" class="btn btn-primary">Subscribe Free</button>
+  </form>
 </section>
 {{- end -}}
 

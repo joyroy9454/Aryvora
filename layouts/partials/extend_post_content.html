@@ -1,0 +1,14 @@
+{{- /* AI Blog Factory — Post Content Extension */ -}}
+{{- /* This file extends single post content after the main article body */ -}}
+
+{{- if and .IsPage (eq .Section "posts") }}
+{{- /* Structured data for AI extraction — semantic summary block */ -}}
+<div class="post-seo-meta" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">
+  <span data-article-wordcount="{{ .WordCount }}">{{ .WordCount }} words</span>
+  <span data-article-reading-time="{{ .ReadingTime }}">{{ .ReadingTime }} min read</span>
+  {{- if .Params.categories }}<span data-article-category="{{ index .Params.categories 0 }}">{{ index .Params.categories 0 }}</span>{{ end }}
+  <span data-article-author="Joy Roy">Written by Joy Roy</span>
+  <span data-article-date="{{ .Date.Format "2006-01-02" }}">Published {{ .Date.Format "January 2, 2006" }}</span>
+  <span data-article-modified="{{ .Lastmod.Format "2006-01-02" }}">Updated {{ .Lastmod.Format "January 2, 2006" }}</span>
+</div>
+{{- end }}

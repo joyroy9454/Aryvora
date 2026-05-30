@@ -1,127 +1,162 @@
-<!-- Structured Data / Schema.org -->
+{{- /* ============================================================ */ -}}
+{{- /* AI Blog Factory — Extend Head                                */ -}}
+{{- /* This is loaded by PaperMod's head.html via                  */ -}}
+{{- /*   {{- partial "extend_head.html" . -}}                      */ -}}
+{{- /* Add ONLY what PaperMod doesn't already provide.             */ -}}
+{{- /* PaperMod already handles: title, meta desc, canonical,      */ -}}
+{{- /* robots, OG basics, JSON-LD (BlogPosting + BreadcrumbList).  */ -}}
+{{- /* ============================================================ */ -}}
+
+{{- /* ===== Enhanced robots directive ===== */ -}}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+{{- /* ===== Verification tags ===== */ -}}
+<meta name="google-site-verification" content="rsCt6fCTha-kR8V8Fd2Auq9ypw3R_nCul_OxMTHrlY4" />
+<meta name="theme-color" content="#0a0e14" />
+
+{{- /* ===== Enhanced Open Graph ===== */ -}}
+<meta property="og:site_name" content="AI Blog Factory" />
+<meta property="og:locale" content="en_US" />
+{{- $ogImage := "https://joyroy9454.github.io/ai-blog-factory/images/og-default.svg" }}
+{{- if and .Params.cover .Params.cover.image }}{{ $ogImage = .Params.cover.image | absURL }}{{ end }}
+<meta property="og:image" content="{{ $ogImage }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="{{ if .IsHome }}AI Blog Factory{{ else }}{{ .Title }}{{ end }}" />
+{{- if .IsPage }}
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Joy Roy" />
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- if .Params.categories }}<meta property="article:section" content="{{ index .Params.categories 0 }}" />{{ end }}
+{{- range .Params.tags }}<meta property="article:tag" content="{{ . }}" />{{ end }}
+{{- else }}
+<meta property="og:type" content="website" />
+{{- end }}
+
+{{- /* ===== Twitter Card ===== */ -}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ if .IsHome }}AI Blog Factory — AI Tools & Tech Guides for Students{{ else }}{{ .Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}Honest AI tool reviews, practical tutorials, and free resources for students — curated by a student.{{ else }}{{ .Description }}{{ end }}" />
+<meta name="twitter:image" content="{{ $ogImage }}" />
+
+{{- /* ===== GoatCounter Privacy Analytics ===== */ -}}
+<script data-goatcounter="https://joy-roy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+{{- /* ===== Google Fonts ===== */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{{- /* ===== JSON-LD: Website + Organization (Homepage only) ===== */ -}}
+{{- /* PaperMod already provides BlogPosting + BreadcrumbList for posts.   */ -}}
+{{- /* We add WebSite + Organization + BreadcrumbList for non-post pages.  */ -}}
+{{- /* We add FAQPage for posts (PaperMod doesn't do this).                */ -}}
+{{- /* We add enhanced Article schema with wordCount, keywords, @id.      */ -}}
+
 {{- if .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://joyroy9454.github.io/ai-blog-factory/#website",
   "name": "AI Blog Factory",
   "url": "https://joyroy9454.github.io/ai-blog-factory/",
-  "description": "Premium digital guides, eBooks, and playbooks for students, creators, and tech learners.",
-  "publisher": {
-    "@type": "Person",
-    "name": "Joy Roy",
-    "url": "https://joyroy9454.github.io/ai-blog-factory/about/"
-  },
+  "description": "Honest AI tool reviews, practical tech guides, and free resources for students and creators.",
+  "inLanguage": "en-US",
+  "publisher": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person", "name": "Joy Roy" },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://joyroy9454.github.io/ai-blog-factory/search/?q={search_term_string}"
-    },
+    "target": { "@type": "EntryPoint", "urlTemplate": "https://joyroy9454.github.io/ai-blog-factory/search/?q={search_term_string}" },
     "query-input": "required name=search_term_string"
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
+  "name": "AI Blog Factory",
+  "url": "https://joyroy9454.github.io/ai-blog-factory/",
+  "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg", "width": 512, "height": 512 },
+  "founder": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person" },
+  "sameAs": ["https://github.com/joyroy9454"]
+}
+</script>
 {{- end }}
 
+{{- /* Enhanced Article schema for posts — supplements PaperMod's BlogPosting with more fields */ -}}
 {{- if and .IsPage (eq .Section "posts") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": "{{ .Permalink }}#article",
   "headline": "{{ .Title }}",
   "description": "{{ .Description }}",
-  "author": {
-    "@type": "Person",
-    "name": "Joy Roy",
-    "url": "https://joyroy9454.github.io/ai-blog-factory/about/"
-  },
+  "inLanguage": "en-US",
+  "author": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person", "name": "Joy Roy", "url": "https://joyroy9454.github.io/ai-blog-factory/about/" },
   "publisher": {
-    "@type": "Organization",
+    "@type": "Organization", "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
     "name": "AI Blog Factory",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg"
-    }
+    "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg", "width": 512, "height": 512 }
   },
-  "datePublished": "{{ .Date.Format "2006-01-02" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
-  }{{- if .Params.cover }},
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ .Params.cover.image | absURL }}"
-  }{{- end }}
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" },
+  {{- if and .Params.cover .Params.cover.image }}"image": { "@type": "ImageObject", "url": "{{ .Params.cover.image | absURL }}", "width": 1200, "height": 630 },{{ end }}
+  "wordCount": "{{ .WordCount }}",
+  {{- if .Params.categories }}"articleSection": "{{ index .Params.categories 0 }}",{{ end }}
+  {{- if .Params.keywords }}"keywords": {{ .Params.keywords | jsonify }},{{ end }}
+  "isAccessibleForFree": true
 }
 </script>
 
+{{- /* FAQ Schema for posts — PaperMod doesn't generate this */ -}}
 {{- if .Params.faq }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {{- range $i, $faq := .Params.faq }}
-    {{- if $i }},{{ end }}
-    {
-      "@type": "Question",
-      "name": "{{ $faq.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ $faq.answer }}"
-      }
-    }
-    {{- end }}
-  ]
+  "mainEntity": [{{- range $i, $faq := .Params.faq }}{{- if $i }},{{ end }}
+    { "@type": "Question", "name": "{{ $faq.question }}", "acceptedAnswer": { "@type": "Answer", "text": "{{ $faq.answer }}" } }
+  {{- end }}]
 }
 </script>
 {{- end }}
 {{- end }}
 
+{{- /* About Page enhanced schemas */ -}}
 {{- if and .IsPage (eq .Type "about") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "name": "AI Blog Factory",
-  "description": "Premium digital guides and eBooks for students, creators, and tech learners.",
+  "name": "About AI Blog Factory",
+  "url": "https://joyroy9454.github.io/ai-blog-factory/about/",
   "mainEntity": {
-    "@type": "Person",
+    "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person",
     "name": "Joy Roy",
     "url": "https://joyroy9454.github.io/ai-blog-factory/about/",
     "description": "BSc Data Science student, vibe coder, and founder of AI Blog Factory",
-    "sameAs": [
-      "https://github.com/joyroy9454"
-    ]
+    "jobTitle": "Founder",
+    "worksFor": { "@type": "Organization", "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization" },
+    "sameAs": ["https://github.com/joyroy9454"]
   }
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
   "name": "AI Blog Factory",
   "url": "https://joyroy9454.github.io/ai-blog-factory/",
-  "logo": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg",
-  "founder": {
-    "@type": "Person",
-    "name": "Joy Roy"
-  },
-  "sameAs": [
-    "https://github.com/joyroy9454"
-  ]
+  "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo.svg", "width": 512, "height": 512 },
+  "description": "Honest AI tool reviews, practical tech guides, and free resources for students and creators.",
+  "founder": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person" },
+  "sameAs": ["https://github.com/joyroy9454"]
 }
 </script>
 {{- end }}
-
-<!-- Google Fonts: Inter + JetBrains Mono -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Google Search Console Verification -->
-<meta name="google-site-verification" content="rsCt6fCTha-kR8V8Fd2Auq9ypw3R_nCul_OxMTHrlY4" />
-<!-- GoatCounter Analytics -->
-<script data-goatcounter="https://joy-roy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

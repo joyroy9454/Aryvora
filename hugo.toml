@@ -4,9 +4,24 @@ title = 'AI Blog Factory'
 theme = 'PaperMod'
 paginate = 9
 
+# ============================================================
+# SEO: Robots
+# ============================================================
+enableRobotsTXT = true
+
+# ============================================================
+# SEO: URL Structure
+# ============================================================
+[permalinks]
+  posts = '/posts/:slug/'
+  products = '/products/:slug/'
+
+# ============================================================
+# Site Parameters
+# ============================================================
 [params]
   author = 'Joy Roy'
-  description = 'Premium digital guides and eBooks for students, creators, and tech learners. AI tools, coding tutorials, and productivity guides — built by Joy Roy.'
+  description = 'Honest AI tool reviews, practical tech guides, and free resources for students. Boost your productivity, learn coding, and master AI tools — curated by a student, for students.'
   defaultTheme = 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -25,6 +40,7 @@ paginate = 9
   tocopen = false
   DateFormat = 'January 2, 2006'
 
+  # SEO: Images
   [params.cover]
     linkFullImages = true
     responsiveImages = true
@@ -32,13 +48,16 @@ paginate = 9
   images = ["/images/og-default.svg"]
   logo = "/images/logo.svg"
 
+  # Homepage Info
   [params.homeInfoParams]
     Title = 'AI Blog Factory'
-    Content = 'Digital guides for students, creators & tech learners. Premium eBooks, playbooks, and practical resources to help you study smarter, code faster, and build your future with AI.'
+    Content = 'Honest AI tool reviews, practical tech guides, and free resources for students and creators. Learn AI tools, coding, automation, and productivity — curated by a student, for students.'
 
+  # Contact
   [params.contact]
     email = 'joyroy9454@gmail.com'
 
+  # Social Icons
   [[params.socialIcons]]
     name = 'github'
     url = 'https://github.com/joyroy9454'
@@ -46,12 +65,22 @@ paginate = 9
     name = 'rss'
     url = '/ai-blog-factory/index.xml'
 
+  # Favicon / Assets
   [params.assets]
     favicon = 'favicon.ico'
     favicon16x16 = 'favicon-16x16.png'
     favicon32x32 = 'favicon-32x32.png'
     apple_touch_icon = 'apple-touch-icon.png'
 
+  # SEO: Label for taxonomy pages
+  [params.label]
+    text = 'AI Blog Factory'
+    icon = '/images/logo.svg'
+    iconHeight = 35
+
+# ============================================================
+# Navigation Menu
+# ============================================================
 [menu]
   [[menu.main]]
     identifier = 'home'
@@ -74,21 +103,33 @@ paginate = 9
     url = '/about/'
     weight = 40
 
+# ============================================================
+# Taxonomies
+# ============================================================
 [taxonomies]
   category = 'categories'
   tag = 'tags'
 
+# ============================================================
+# Output Formats
+# ============================================================
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
-  section = ['HTML', 'RSS', 'JSON']
-  taxonomy = ['HTML', 'RSS', 'JSON']
-  term = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML']
+  term = ['HTML']
 
+# ============================================================
+# Sitemap
+# ============================================================
 [sitemap]
   changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
 
+# ============================================================
+# Markup
+# ============================================================
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -100,3 +141,27 @@ paginate = 9
     noClasses = false
     codeFences = true
     guessSyntax = true
+
+# ============================================================
+# Related Content (Internal Linking)
+# ============================================================
+[related]
+  includeNewer = true
+  threshold = 20
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 80
+  [[related.indices]]
+    name = 'categories'
+    weight = 60
+  [[related.indices]]
+    name = 'date'
+    weight = 10
+
+# ============================================================
+# Imaging (Open Graph Image Processing)
+# ============================================================
+[imaging]
+  quality = 85
+  resampleFilter = 'Lanczos'
