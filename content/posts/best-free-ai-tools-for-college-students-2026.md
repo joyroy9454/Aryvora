@@ -1,6 +1,7 @@
 ---
 title: "15 Best Free AI Tools for College Students in 2026"
 date: 2026-05-25
+lastmod: 2026-05-30
 cover:
   image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop&q=80"
   alt: "College students using AI tools"
@@ -29,6 +30,8 @@ College is expensive. Textbooks, software subscriptions, cloud storage — the c
 We tested dozens of AI tools and picked the 15 that give you the most value without spending a single rupee or dollar. Whether you need help writing essays, debugging code, organizing notes, or preparing for exams — there's a free AI tool for that.
 
 Let's dive in.
+> **📅 Last Updated: May 30, 2026** — Pricing, features, and availability verified as current.
+
 
 ---
 
