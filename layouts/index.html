@@ -151,6 +151,75 @@
   </div>
 </section>
 
+<!-- ===== TOPIC HUBS NAV ===== -->
+<section class="section topic-hubs-section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">Topic Hubs</span>
+        <h2 class="section-title">Explore by interest</h2>
+      </div>
+    </div>
+    <div class="topic-hubs-nav">
+      <a href="/ai-blog-factory/topics/ai-tools/" class="hub-card">
+        <span class="hub-icon">🤖</span>
+        <span class="hub-name">AI Tools</span>
+        <span class="hub-count">{{ len (where .Site.RegularPages "Section" "posts") }} guides</span>
+      </a>
+      <a href="/ai-blog-factory/topics/career/" class="hub-card">
+        <span class="hub-icon">💼</span>
+        <span class="hub-name">Career & Money</span>
+        <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Career")) }} guides</span>
+      </a>
+      <a href="/ai-blog-factory/topics/coding/" class="hub-card">
+        <span class="hub-icon">💻</span>
+        <span class="hub-name">Coding & Dev</span>
+        <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Coding")) }} guides</span>
+      </a>
+      <a href="/ai-blog-factory/topics/study/" class="hub-card">
+        <span class="hub-icon">📚</span>
+        <span class="hub-name">Study & Productivity</span>
+        <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Productivity")) }} guides</span>
+      </a>
+      <a href="/ai-blog-factory/deals/" class="hub-card hub-card-highlight">
+        <span class="hub-icon">💰</span>
+        <span class="hub-name">Student Deals</span>
+        <span class="hub-count">Free & discounted</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED THIS WEEK ===== -->
+<section class="section compact" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-heading-left">
+        <span class="section-kicker">Featured</span>
+        <h2 class="section-title">This week's picks</h2>
+      </div>
+    </div>
+    <div class="featured-grid">
+      {{- $featured := first 3 (where .Site.RegularPages "Section" "posts") -}}
+      {{- range $i, $post := $featured -}}
+      <a href="{{ .RelPermalink }}" class="featured-card {{ if eq $i 0 }}featured-card-large{{ end }}">
+        {{- if .Params.cover -}}
+        <div class="featured-card-img">
+          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+        </div>
+        {{- end -}}
+        <div class="featured-card-body">
+          {{- if .Params.categories -}}<span class="featured-card-cat">{{ index .Params.categories 0 }}</span>{{- end -}}
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description | truncate 120 }}</p>
+          <span class="featured-card-meta">{{ .Date.Format "Jan 2" }} · {{ .ReadingTime }} min read</span>
+        </div>
+      </a>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+
 <!-- ===== TRENDING / POPULAR ARTICLES ===== -->
 <section class="section">
   <div class="container">
