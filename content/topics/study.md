@@ -34,9 +34,13 @@ tags: [study, productivity, note-taking, exam-prep, time-management, students]
 - [Best AI Tools for Academic Research](/posts/best-ai-tools-academic-research-paper-writing-2026/) — Research papers, citations, literature reviews
 - [15 Best Free AI Tools for College Students](/posts/best-free-ai-tools-for-college-students-2026/) — Our mega-list of free tools
 
+## Flashcards & Spaced Repetition
+- [AI Flashcards & Spaced Repetition](/posts/ai-flashcards-spaced-repetition-study-2026/) — The study system that gets A's
+
 ## AI Safety & Ethics
 
 - [AI Safety & Responsible Use](/posts/ai-safety-responsible-use-student-guide-2026/) — How to use AI ethically in academics
+- [AI Detection — How to Use AI Without Getting Flagged](/posts/ai-detection-how-to-use-ai-without-getting-flagged-2026/) — Avoid Turnitin and GPTZero flags
 
 ---
 
@@ -65,4 +69,4 @@ tags: [study, productivity, note-taking, exam-prep, time-management, students]
 
 ---
 
-*Study content updated monthly. Last updated: May 31, 2026*
+*Study content updated monthly. Last updated: June 1, 2026*

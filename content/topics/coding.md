@@ -30,6 +30,9 @@ tags: [coding, programming, vibe-coding, python, api, ai-coding, development, st
 - [AI Agents for Students](/posts/ai-agents-for-students-guide-2026/) — Automate coding tasks with AI agents
 - [OpenAI & Anthropic API Guide](/posts/openai-anthropic-api-student-guide-2026/) — Build AI-powered applications
 
+## Data Science
+- [Data Science Skills Roadmap](/posts/data-science-skills-roadmap-student-2026/) — From zero to job-ready data scientist
+
 ## Building Projects
 
 - [Build an AI-Powered Project Portfolio](/posts/build-ai-powered-project-portfolio-2026/) — Projects that impress employers
@@ -66,4 +69,4 @@ tags: [coding, programming, vibe-coding, python, api, ai-coding, development, st
 
 ---
 
-*Coding content updated monthly. Last updated: May 31, 2026*
+*Coding content updated monthly. Last updated: June 1, 2026*

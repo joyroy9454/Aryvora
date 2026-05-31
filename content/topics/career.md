@@ -32,6 +32,9 @@ tags: [career, freelancing, internships, resume, make-money, side-hustle, studen
 - [Data Science Career Guide](/posts/data-science-career-guide-2026/) — Career paths, salaries, and skills
 - [Build an AI-Powered Project Portfolio](/posts/build-ai-powered-project-portfolio-2026/) — Portfolio projects that get you hired
 
+## Starting an AI Business
+- [How to Start an AI Agency as a Student](/posts/how-to-start-ai-agency-as-student-2026/) — Earn $1K-5K/month with AI services
+
 ## AI at Work
 
 - [How People Use AI at Work in 2026](/posts/how-people-use-ai-at-work-2026/) — Real-world AI workflows across industries
@@ -65,4 +68,4 @@ tags: [career, freelancing, internships, resume, make-money, side-hustle, studen
 
 ---
 
-*Career content updated monthly. Last updated: May 31, 2026*
+*Career content updated monthly. Last updated: June 1, 2026*

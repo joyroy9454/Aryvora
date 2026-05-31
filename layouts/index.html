@@ -181,6 +181,11 @@
         <span class="hub-name">Study & Productivity</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Productivity")) }} guides</span>
       </a>
+      <a href="/ai-blog-factory/topics/automation/" class="hub-card">
+        <span class="hub-icon">⚙️</span>
+        <span class="hub-name">Automation</span>
+        <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Automation")) }} guides</span>
+      </a>
       <a href="/ai-blog-factory/deals/" class="hub-card hub-card-highlight">
         <span class="hub-icon">💰</span>
         <span class="hub-name">Student Deals</span>

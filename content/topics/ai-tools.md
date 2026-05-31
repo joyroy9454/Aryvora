@@ -46,6 +46,12 @@ This hub is your starting point for discovering, comparing, and using AI tools e
 - [Best Free AI Image Generators](/posts/best-free-ai-image-generators-students-2026/) — Create images with AI for free
 - [Best AI Video & Music Generators](/posts/best-ai-video-music-generators-students-2026/) — Create videos and music with AI
 
+### Mobile AI Apps
+- [15 Best AI Apps for Mobile](/posts/best-ai-apps-mobile-students-2026/) — Best AI tools for Android and iPhone
+
+### AI Content Creation
+- [AI Content Creation Guide](/posts/ai-content-creation-guide-students-2026/) — Write, design, edit, and publish with AI
+
 ### AI Models & Technology
 - [Best New AI Models in 2026](/posts/best-new-ai-models-2026-student-guide/) — Claude Opus 4, GPT-5, Gemini 2.5, and more
 - [Run AI Locally on Your Computer](/posts/run-ai-locally-ollama-llama-cpp-guide/) — Free, private AI with Ollama and llama.cpp
@@ -89,4 +95,4 @@ This hub is your starting point for discovering, comparing, and using AI tools e
 
 Check our [blog](/posts/) for the latest AI tool reviews, comparisons, and guides.
 
-*Last updated: May 31, 2026*
+*Last updated: June 1, 2026*
