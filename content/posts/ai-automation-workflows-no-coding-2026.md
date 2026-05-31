@@ -5,7 +5,7 @@ date: 2026-05-31
 draft: false
 slug: ai-automation-workflows-no-coding-2026
 cover:
-  image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595d?w=1200&h=630&fit=crop&q=80"
+  image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1200&h=630&fit=crop&q=80"
   alt: "AI automation workflows for students"
 categories: ["Automation"]
 tags: ["automation", "zapier", "make-com", "n8n", "no-code", "workflows", "students"]
