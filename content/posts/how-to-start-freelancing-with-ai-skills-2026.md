@@ -120,7 +120,7 @@ Now let's get to the meat of it. Here are **10 AI skills you can start selling a
 
 **What it is:** Creating custom AI-powered chatbots for businesses to handle customer inquiries, lead qualification, booking, and support.
 
-**Why businesses need it:** 64% of consumers say 24-hour service is the best feature of chatbots. But most small businesses either use generic chatbot solutions or don't have any at all. A custom-built AI chatbot trained on a business's specific products and FAQs is a game-changer.
+**Why businesses need it:** 64% of consumers say 24-hour service is the best feature of chatbots. But most small businesses either use generic chatbot solutions or don't have any at all. A custom-built AI chatbot trained on a business's specific products and FAQs is a powerful tool.
 
 **What you'll actually do:**
 - Build chatbots using no-code platforms like Landbot, Voiceflow, or Botpress

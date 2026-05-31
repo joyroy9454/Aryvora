@@ -120,7 +120,7 @@ How well does each AI handle logic, math problems, and complex reasoning?
 
 The context window determines how much information the AI can consider in a single conversation — essentially, its working memory.
 
-**Claude** offers the largest context window: up to **200,000 tokens** (roughly 150,000+ words). This means you can paste in entire novels, lengthy legal documents, or massive codebases and Claude will be able to reference the whole thing. For anyone working with long documents, this is a game-changer.
+**Claude** offers the largest context window: up to **200,000 tokens** (roughly 150,000+ words). This means you can paste in entire novels, lengthy legal documents, or massive codebases and Claude will be able to reference the whole thing. For anyone working with long documents, this is a powerful tool.
 
 **Gemini** offers up to **1 million tokens** on its highest tier (Gemini Ultra/Advanced), which is technically the largest. However, in practice, the effective context length — how much it can actually *use* well — is sometimes less impressive than the raw number suggests. Still, for most users, even the standard tier's context window is more than sufficient.
 

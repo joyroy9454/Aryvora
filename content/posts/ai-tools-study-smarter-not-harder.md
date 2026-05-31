@@ -157,7 +157,7 @@ These six techniques — active recall, spaced repetition, interleaving, elabora
 
 **What it does:** Upload your lecture slides, notes, or textbook chapters. NotebookLM creates an AI that *only* knows your material.
 
-**Why it's a game-changer:** Instead of asking a general AI (which might hallucinate facts), you get an AI grounded in YOUR specific course material. Ask it to quiz you, summarize a chapter, or explain a concept from your professor's perspective.
+**Why it's a powerful tool:** Instead of asking a general AI (which might hallucinate facts), you get an AI grounded in YOUR specific course material. Ask it to quiz you, summarize a chapter, or explain a concept from your professor's perspective.
 
 **Best feature:** The "Audio Overview" generates a podcast-style conversation between two AI hosts discussing your material. It sounds weird, but it's surprisingly effective for review.
 
@@ -322,7 +322,7 @@ With 7 tools available, it helps to know which one addresses your specific chall
 
 **"I'm drowning in math/science problem sets."** → You need **Wolfram Alpha.** Work the problems yourself first, then use Wolfram Alpha to check your answers and study the step-by-step solutions. For every problem you got wrong, do two more of the same type.
 
-**"I miss things during lectures."** → You need **Otter.ai.** Record every lecture, then process the transcripts into your study system (NotebookLM + Anki). The searchable transcript alone is a game-changer for exam prep.
+**"I miss things during lectures."** → You need **Otter.ai.** Record every lecture, then process the transcripts into your study system (NotebookLM + Anki). The searchable transcript alone is a powerful tool for exam prep.
 
 **"I need to research and write papers."** → You need **Perplexity** for discovering sources, **NotebookLM** for organizing and synthesizing them, and **Claude** for brainstorming arguments and getting feedback on drafts.
 

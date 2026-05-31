@@ -198,7 +198,7 @@ Cody is Sourcegraph's AI coding assistant, and it shines at one thing: understan
 - **Commands** — pre-built prompts for common tasks (document, test, find bugs)
 - Supports Claude, GPT-4o, Gemini, and local models
 
-**Why students love it:** If you're working on a group project or reading open-source code, Cody's ability to understand the *whole* codebase is a game-changer. The free tier is generous.
+**Why students love it:** If you're working on a group project or reading open-source code, Cody's ability to understand the *whole* codebase is a powerful tool. The free tier is generous.
 
 **Pros:**
 ✅ Best for codebase understanding | ✅ Multiple model support | ✅ Local model option for privacy
@@ -410,11 +410,11 @@ A: Only if your instructor explicitly allows it. Always check your course's AI p
 **Q: Do these tools work offline?**
 A: Tabnine (local model) works offline. All others require an internet connection to access their AI models.
 
-## Conclusion
+## What to Do Next
 
 AI coding assistants are no longer optional for students — they're essential. The tools on this list range from completely free to freemium, so there's zero financial barrier to getting started.
 
-Start with **GitHub Copilot** (free Student Pack) and **Codeium** (free unlimited). That gives you world-class AI coding support for $0. Add **Perplexity** for research and **Cursor** when you're ready to build bigger projects.
+Start with **GitHub Copilot** (free Student Pack) and **Codeium** (free unlimited). That gives you high-quality AI coding support for $0. Add **Perplexity** for research and **Cursor** when you're ready to build bigger projects.
 
 The future of coding isn't humans vs. AI. It's humans *with* AI vs. humans without it. Get on the right side of that equation.
 

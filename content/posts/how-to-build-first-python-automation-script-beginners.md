@@ -799,7 +799,7 @@ Now that you've built your first script, here are the best free resources to kee
 
 ---
 
-### Final Thoughts
+### Ready to Get Started?
 
 You just built a working Python automation script. It organizes files, it runs on a schedule, and it saves you time every single day.
 

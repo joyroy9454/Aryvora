@@ -433,7 +433,7 @@ Stable Diffusion requires a decent GPU with at least 4GB of VRAM for basic gener
 
 ---
 
-## Conclusion
+## What to Do Next
 
 The landscape of **free AI image generators for students** has never been better. Whether you need a quick diagram for a biology presentation, a stunning banner for your student club's Instagram, or a concept illustration for your capstone project, there's a free tool that can deliver professional results in seconds.
 

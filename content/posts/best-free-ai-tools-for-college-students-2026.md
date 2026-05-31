@@ -95,7 +95,7 @@ Let's dive in.
 
 **What it does:** Upload your lecture notes, textbooks, or research papers and get an AI that *only* knows your material.
 
-**Why students love it:** This is a game-changer for exam prep. Upload your semester's notes, and NotebookLM creates summaries, generates quizzes, and even produces a podcast-style audio summary of your material. It only uses YOUR uploaded sources — so no hallucinated facts.
+**Why students love it:** This is a powerful tool for exam prep. Upload your semester's notes, and NotebookLM creates summaries, generates quizzes, and even produces a podcast-style audio summary of your material. It only uses YOUR uploaded sources — so no hallucinated facts.
 
 **Free tier limits:** Completely free with a Google account.
 
@@ -283,7 +283,7 @@ Here are some practical tips to maximize your free AI usage:
 
 ---
 
-### Final Thoughts
+### Ready to Get Started?
 
 You don't need to spend money on AI tools as a college student. The 15 tools listed above cover virtually every academic need — writing, coding, research, math, presentations, note-taking, and more.
 

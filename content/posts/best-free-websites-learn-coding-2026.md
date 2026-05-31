@@ -99,7 +99,7 @@ Each website below scored well across most of these categories. Now let's see wh
 **Languages/Tech:** C, Python, SQL, HTML, CSS, JavaScript, Flask
 **What you get:** Harvard's legendary Introduction to Computer Science course, available entirely online for free. Includes video lectures, problem sets, and a supportive global community.
 **Why it's great:** CS50 is arguably the most respected introductory CS course in the world. Professor David Malan's lectures are engaging and theatrical — you'll actually want to watch them. The problem sets are challenging but rewarding.
-**Pros:** World-class instruction, deep CS fundamentals (algorithms, data structures, memory), teaches you to think like a programmer, excellent production quality
+**Pros:** high-quality instruction, deep CS fundamentals (algorithms, data structures, memory), teaches you to think like a programmer, excellent production quality
 **Cons:** Very demanding, C language focus can be intimidating, not a quick path to job readiness
 **Best for:** Learners who want a deep understanding of computer science, not just web development
 **Certification:** Yes — free certificate from edX (paid verified version also available)

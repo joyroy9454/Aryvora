@@ -400,7 +400,7 @@ AI will change the specific tasks involved, but the demand for human judgment, c
 **What's the single best method to start with for maximum income potential?**
 If you need money fast, start with freelance writing or the resume and cover letter service. Both have low barriers to entry and clients are actively searching for these services right now. If you're thinking long-term, content creation and selling digital products offer the highest ceiling but require more patience before income kicks in.
 
-## Conclusion
+## What to Do Next
 
 Here's the bottom line: there has never been a better time to be a student who wants to earn money. The tools are free or cheap, the opportunities are real, and the barrier to entry has never been lower. Whether you want to make an extra $200 per month for groceries or build a $5,000 per month side business, AI gives you the leverage to do it.
 

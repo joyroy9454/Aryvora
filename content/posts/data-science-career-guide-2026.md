@@ -132,7 +132,7 @@ One of the biggest mistakes students make is thinking "data scientist" is the on
 
 #### 6. AI Research Scientist
 
-**What you do:** Push the boundaries of what's possible in AI — publish papers, develop novel architectures, and work on cutting-edge problems like multimodal models, robotics, or AGI.
+**What you do:** Push the boundaries of what's possible in AI — publish papers, develop novel architectures, and work on advanced problems like multimodal models, robotics, or AGI.
 
 **Core skills:** Deep learning, linear algebra, calculus, Python, PyTorch/JAX, academic writing, PhD usually required
 
@@ -150,10 +150,10 @@ The data science skills landscape has evolved. Here is what you actually need to
 
 | Skill | Why It Matters | Priority |
 |---|---|---|
-| **Python** | The universal language of data science — pandas, scikit-learn, NumPy are essential | Must-have |
-| **SQL** | Every data role starts with querying databases. You cannot avoid this. | Must-have |
-| **Statistics & Probability** | Hypothesis testing, distributions, regression, Bayesian thinking — the backbone of all analysis | Must-have |
-| **Machine Learning** | Supervised/unsupervised learning, model evaluation, feature engineering | Must-have |
+| **Python** | The universal language of data science — pandas, scikit-learn, NumPy are essential | essential |
+| **SQL** | Every data role starts with querying databases. You cannot avoid this. | essential |
+| **Statistics & Probability** | Hypothesis testing, distributions, regression, Bayesian thinking — the backbone of all analysis | essential |
+| **Machine Learning** | Supervised/unsupervised learning, model evaluation, feature engineering | essential |
 | **Data Visualization** | matplotlib, seaborn, Plotly, and dashboard tools like Tableau or Streamlit | High |
 | **Git & GitHub** | Version control is non-negotiable for any technical role | High |
 | **Cloud Platforms** | AWS, GCP, or Azure — most companies run their data infrastructure in the cloud | Medium-High |

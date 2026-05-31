@@ -74,7 +74,7 @@ Here's what trips people up the most:
 
 Before AI, writing a resume meant either hiring a professional writer ($100-$500), using a generic template and hoping for the best, or spending周末 tweaking bullet points based on advice from random blog posts. **ChatGPT flips all of that on its head.**
 
-Here's what makes ChatGPT a game-changer for resume writing:
+Here's what makes ChatGPT a powerful tool for resume writing:
 
 * **Instant personalization** — feed it your experience and a job description, and it generates tailored bullet points in seconds
 * **Keyword optimization** — it can identify important keywords from a job posting and naturally weave them into your resume

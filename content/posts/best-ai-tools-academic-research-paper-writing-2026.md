@@ -123,7 +123,7 @@ In this guide, we'll walk through **10 of the best AI tools for academic researc
 
 **What it does:** ResearchRabbit is the "Spotify for research papers." You add papers to collections, and the AI recommends visually similar research, maps citation networks, and helps you discover papers that are semantically connected — even if they don't directly cite each other.
 
-- **Pricing:** Currently free (in beta with planned premium features)
+- **Pricing:** Free tier available with premium features
 - **Best for:** Discovering hidden connections between papers and visualizing research landscapes
 - **Rating:** ★★★★½ (4.6/5)
 

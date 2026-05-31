@@ -382,7 +382,7 @@ The students who use AI as a **force multiplier** for their own effort are the o
 
 ---
 
-## Conclusion
+## What to Do Next
 
 Here's the truth: **AI won't land you an internship by itself.** But students who strategically use AI to land internship opportunities are winning — and winning big.
 

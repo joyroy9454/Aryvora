@@ -115,7 +115,7 @@ Fireflies.ai is an AI meeting assistant, but it's incredibly useful for student 
 
 ### Best Feature for Students
 
-**Smart search across all your recordings.** Ever been in a study group where someone says "wait, what did Sarah say about the French Revolution?" With Fireflies, you just search "French Revolution" and it pulls up the exact moment in any of your recorded sessions. This is game-changing for group project meetings, study discussions, and tutorial sessions where you need to reference what was said without re-listening to an entire hour of audio.
+**Smart search across all your recordings.** Ever been in a study group where someone says "wait, what did Sarah say about the French Revolution?" With Fireflies, you just search "French Revolution" and it pulls up the exact moment in any of your recorded sessions. This is powerful for group project meetings, study discussions, and tutorial sessions where you need to reference what was said without re-listening to an entire hour of audio.
 
 ### Free Tier
 
