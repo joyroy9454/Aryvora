@@ -31,10 +31,10 @@ No filler. No spam. Just useful tech content you can actually use — curated by
 <!-- Buttondown signup embed will be configured with YOUR_API_KEY below -->
 
 <form
-  action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
+  action="https://buttondown.email/api/emails/embed-subscribe/joyroy5494"
   method="post"
   target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/YOUR_BUTTONDOWN_USERNAME', 'popupwindow')"
+  onsubmit="window.open('https://buttondown.email/joyroy5494', 'popupwindow')"
   class="embeddable-buttondown-form"
 >
   <div class="newsletter-form-grid">
