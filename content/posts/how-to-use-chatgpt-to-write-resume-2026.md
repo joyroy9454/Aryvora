@@ -413,7 +413,7 @@ You've got the knowledge. Now here's how to turn it into results. **Follow this 
 ### Before You Start:
 - [ ] Create a master document with ALL your experiences (jobs, internships, projects, coursework, volunteer work)
 - [ ] Find 3-5 job descriptions for roles you want
-- [ ] Set up ChatGPT (free version works fine, but ChatGPT Plus gives you access to GPT-4 with better output quality)
+- [ ] Set up ChatGPT (free version works fine, but ChatGPT Plus gives you access to GPT-4o with better output quality)
 
 ### Writing Your Resume:
 - [ ] Use Prompt 1 to generate your first draft
@@ -509,6 +509,15 @@ You now have everything you need to create a resume that works:
 So here's your challenge: **Open ChatGPT tonight. Copy Prompt 1. Fill in your information. Generate your first draft.** Spend 30 minutes iterating. By tomorrow, you could have a resume you're actually proud of.
 
 Your future self — the one with the job offer — will thank you.
+
+
+---
+
+## You Might Also Want to Read
+
+- [land an internship with AI](/posts/how-to-use-ai-to-land-internship-2026/)
+- [ChatGPT vs Claude vs Gemini](/posts/chatgpt-vs-claude-vs-gemini-2026/)
+
 
 ---
 

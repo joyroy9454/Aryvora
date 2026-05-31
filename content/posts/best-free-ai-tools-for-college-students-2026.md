@@ -78,7 +78,7 @@ Let's dive in.
 
 **What it does:** AI assistant built into Windows 11, Edge browser, and Microsoft 365.
 
-**Why students love it:** If you have a Windows laptop (most students do), Copilot is already there. It's free, uses GPT-4 level models, and integrates with Word, Excel, and PowerPoint. Many universities provide free Microsoft 365 — which means free premium Copilot access.
+**Why students love it:** If you have a Windows laptop (most students do), Copilot is already there. It's free, uses GPT-4o level models, and integrates with Word, Excel, and PowerPoint. Many universities provide free Microsoft 365 — which means free premium Copilot access.
 
 **Free tier limits:** Available with any Microsoft account. University accounts may unlock premium features.
 

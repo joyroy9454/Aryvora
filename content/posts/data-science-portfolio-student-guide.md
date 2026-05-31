@@ -352,4 +352,11 @@ Your future employer is going to Google your name. Make sure what they find make
 
 ---
 
+## You Might Also Want to Read
+
+- [AI-powered project portfolio](/posts/build-ai-powered-project-portfolio-2026/)
+- [data science career guide](/posts/data-science-career-guide-2026/)
+
+---
+
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*

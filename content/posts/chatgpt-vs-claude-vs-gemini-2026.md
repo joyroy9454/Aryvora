@@ -62,9 +62,9 @@ Keep reading for the full reasoning behind every one of these recommendations.
 
 ## Overview: What Are These Three AIs?
 
-**ChatGPT** (by OpenAI) is the one that started the consumer AI boom back in late 2022. It runs on OpenAI's GPT-4o and GPT-4 Turbo models. It is the most widely recognized AI assistant in the world, and for good reason — it is versatile, regularly updated, and backed by a massive ecosystem of plugins, integrations, and third-party tools. If AI were a smartphone, ChatGPT would be the iPhone: not always the best at any single thing, but reliably excellent at almost everything.
+**ChatGPT** (by OpenAI) is the one that started the consumer AI boom back in late 2022. It runs on OpenAI's GPT-4o and GPT-4o Turbo models. It is the most widely recognized AI assistant in the world, and for good reason — it is versatile, regularly updated, and backed by a massive ecosystem of plugins, integrations, and third-party tools. If AI were a smartphone, ChatGPT would be the iPhone: not always the best at any single thing, but reliably excellent at almost everything.
 
-**Claude** (by Anthropic) is the AI that many power users quietly switched to and never looked back. Built on Anthropic's Claude 3.5 and Claude 4 family of models, it has earned a reputation for exceptional writing quality, thoughtful reasoning, and a noticeably more careful approach to safety and honesty. Claude tends to be the one people recommend when they want an AI that feels like it actually *understands* what you are asking, not just pattern-matching its way to an answer.
+**Claude** (by Anthropic) is the AI that many power users quietly switched to and never looked back. Built on Anthropic's Claude Sonnet 4 and Claude 4 family of models, it has earned a reputation for exceptional writing quality, thoughtful reasoning, and a noticeably more careful approach to safety and honesty. Claude tends to be the one people recommend when they want an AI that feels like it actually *understands* what you are asking, not just pattern-matching its way to an answer.
 
 **Gemini** (by Google, formerly Bard) is Google's answer to the AI assistant race. Powered by Google's Gemini Ultra and Pro models, it has a massive advantage: deep integration with Google's ecosystem — Search, Gmail, Docs, Drive, YouTube, and more. For anyone already living inside Google's world, Gemini feels less like a separate tool and more like a layer of intelligence draped over everything you already use. Its free tier is also the most generous of the three.
 
@@ -146,7 +146,7 @@ This matters a lot for students and anyone who does not want to pay for AI.
 
 **ChatGPT** offers a free tier that uses GPT-4o mini, which is noticeably less capable than the full GPT-4o. It handles basic tasks fine, but you will hit quality walls on more complex tasks. The free tier also has usage caps that can be frustrating during heavy use periods.
 
-**Claude** has a free tier that is more limited in terms of message count per day. The model quality on the free tier is good — you get access to Claude 3.5 Sonnet — but you will run out of messages faster than you would like. For a student trying to use AI throughout the day, those limits can be a real constraint.
+**Claude** has a free tier that is more limited in terms of message count per day. The model quality on the free tier is good — you get access to Claude Sonnet 4 Sonnet — but you will run out of messages faster than you would like. For a student trying to use AI throughout the day, those limits can be a real constraint.
 
 **Winner: Gemini**
 
@@ -222,7 +222,7 @@ Here is what each AI costs as of 2026:
 - ChatGPT Enterprise: Custom pricing — unlimited usage, advanced security, no data training
 
 **Claude:**
-- Free: Claude 3.5 Sonnet, limited messages per day, basic features
+- Free: Claude Sonnet 4 Sonnet, limited messages per day, basic features
 - Claude Pro: $20/month — 5x more usage, access to Claude 4 models, web search, file uploads
 - Claude Team: $30/user/month — collaboration, admin tools, higher limits
 - Claude Enterprise: Custom pricing — SSO, audit logs, enhanced security

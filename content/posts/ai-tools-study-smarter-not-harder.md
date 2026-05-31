@@ -610,4 +610,11 @@ Start with NotebookLM and Anki. Those two alone will transform how you study. Ad
 
 ---
 
+## You Might Also Want to Read
+
+- [AI exam prep guide](/posts/how-to-use-ai-for-exam-preparation-2026/)
+- [best AI productivity apps](/posts/best-ai-productivity-apps-students-2026/)
+
+---
+
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*

@@ -8,9 +8,18 @@ canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/what-is-vibe-c
 cover:
   image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1200&h=630&fit=crop&q=80"
   alt: "Person using AI to code on a laptop"
-categories: ["AI Tools"]
-tags: ["vibe coding", "ai coding", "cursor ai", "replit", "bolt.new", "no-code", "app development", "AI tools", "programming", "beginners"]
+categories: [AI Tools]
+tags: [vibe coding, ai coding, cursor ai, replit, bolt.new, no-code, app development, AI tools, programming, beginners]
 keywords: [vibe coding, what is vibe coding, ai coding tools, build apps without coding, cursor ai, replit, bolt.new, no-code development]
+faq:
+  - question: "What exactly is vibe coding?"
+    answer: "Vibe coding is a term coined by Andrej Karpathy in February 2025. It describes building software using AI tools (like Cursor, Bolt.new, or Replit) where you describe what you want in natural language and the AI generates the code. You focus on the overall vision ('vibes') rather than writing every line manually."
+  - question: "Do I need to know how to code to start vibe coding?"
+    answer: "No. Vibe coding is specifically designed for people without coding experience. However, basic programming concepts (variables, loops, functions) help you communicate better with the AI and debug issues when they arise."
+  - question: "Which vibe coding tool is best for beginners in 2026?"
+    answer: "Bolt.new is the easiest starting point — it creates full web apps from a single prompt with zero setup. Cursor is best if you want more control and plan to work on larger projects. Replit offers a good middle ground with cloud hosting built in."
+  - question: "Can you really build a sellable product with vibe coding?"
+    answer: "Yes. Many indie hackers and small business owners have built revenue-generating apps and websites using vibe coding tools. The key limitation is complexity — highly technical or performance-critical applications still benefit from professional developers."
 ---
 
 ## The Tweet That Started It All

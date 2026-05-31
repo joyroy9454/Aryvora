@@ -405,4 +405,11 @@ Your future internship is out there. Go get it.
 
 ---
 
+## You Might Also Want to Read
+
+- [ChatGPT for resume writing](/posts/how-to-use-chatgpt-to-write-resume-2026/)
+- [data science career guide](/posts/data-science-career-guide-2026/)
+
+---
+
 **Affiliate Disclaimer**: *This article contains affiliate links to tools and services we genuinely recommend. If you purchase through these links, we may earn a small commission at no extra cost to you. We only recommend tools we've tested and believe will help you succeed. Our editorial content is not influenced by affiliate partnerships.*

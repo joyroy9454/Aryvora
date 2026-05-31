@@ -91,7 +91,7 @@ Let's dive in.
 
 ## 2. Claude by Anthropic
 
-**What it does:** Claude is Anthropic's flagship AI assistant, known for producing more nuanced, thoughtful, and human-like writing. Claude 3.5 Sonnet and the newer Claude 4 models excel at longer-form writing and can handle complex essay prompts with impressive depth. It is particularly strong at maintaining a consistent voice and tone throughout longer essays.
+**What it does:** Claude is Anthropic's flagship AI assistant, known for producing more nuanced, thoughtful, and human-like writing. Claude Sonnet 4 Sonnet and the newer Claude 4 models excel at longer-form writing and can handle complex essay prompts with impressive depth. It is particularly strong at maintaining a consistent voice and tone throughout longer essays.
 
 **Pricing:** Free tier available (limited daily messages). Claude Pro is $20/month for higher usage limits and access to the most advanced models.
 

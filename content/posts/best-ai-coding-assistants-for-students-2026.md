@@ -115,7 +115,7 @@ Cursor is a VS Code fork built from the ground up around AI. It's not just an ed
 - **AI Chat** inline with your codebase context
 - **@符號 references** — point the AI at specific files, functions, or docs
 - **Auto-debug** — detects errors as you type and suggests fixes
-- Supports Claude, GPT-4, and Cursor's own models
+- Supports Claude, GPT-4o, and Cursor's own models
 
 **Why students love it:** The free tier gives you a generous number of AI completions. The Composer mode is incredible for building projects fast — perfect for hackathons and assignments.
 
@@ -195,7 +195,7 @@ Cody is Sourcegraph's AI coding assistant, and it shines at one thing: understan
 - **Codebase-aware chat** — understands your full project context
 - Autocomplete and inline editing
 - **Commands** — pre-built prompts for common tasks (document, test, find bugs)
-- Supports Claude, GPT-4, Gemini, and local models
+- Supports Claude, GPT-4o, Gemini, and local models
 
 **Why students love it:** If you're working on a group project or reading open-source code, Cody's ability to understand the *whole* codebase is a game-changer. The free tier is generous.
 

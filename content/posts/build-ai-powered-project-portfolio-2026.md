@@ -797,7 +797,7 @@ Use this format for each project on your portfolio:
 > - Implemented streaming-style loading states to improve perceived performance during 10-15 second AI generation times
 > - Handled edge cases like invalid exam dates, empty topic lists, and API rate limiting with clear user feedback
 >
-> **Tech:** Next.js 14 (App Router), TypeScript, Tailwind CSS, Google Gemini 1.5 Flash API, date-fns, deployed on Vercel
+> **Tech:** Next.js 14 (App Router), TypeScript, Tailwind CSS, Google Gemini 2.5 Flash API, date-fns, deployed on Vercel
 >
 > Live Demo: [link] | Source Code: [GitHub link]
 
@@ -1023,6 +1023,14 @@ Go build your project. Your future self will thank you.
 ### Affiliate Disclaimer
 
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*
+
+---
+
+## You Might Also Want to Read
+
+- [best AI coding assistants](/posts/best-ai-coding-assistants-for-students-2026/)
+- [free websites to learn coding](/posts/best-free-websites-learn-coding-2026/)
+- [data science career guide](/posts/data-science-career-guide-2026/)
 
 ---
 
