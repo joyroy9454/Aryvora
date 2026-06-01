@@ -1,24 +1,36 @@
 {{- define "main" -}}
-<article class="post-single" itemscope itemtype="https://schema.org/WebPage">
+<article class="post-single search-page" itemscope itemtype="https://schema.org/WebPage">
 <meta itemprop="name" content="Search Aryvora" />
-<header class="post-header">
-  <h1 class="post-title" itemprop="headline">Search</h1>
-  <div class="post-description" itemprop="description">Search all guides and articles on {{ site.Title }}.</div>
+<header class="post-header search-header">
+  <h1 class="post-title" itemprop="headline">Search Aryvora</h1>
+  <div class="post-description" itemprop="description">Search {{ len .Site.RegularPages }} guides and articles across all topics.</div>
 </header>
 
 <div class="post-content">
 
-<div class="search-form-wrap" style="max-width: 600px; margin: 0 auto 32px;">
+<div class="search-form-wrap">
   <form class="hero-search" action="/ai-blog-factory/search/" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
     <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
+  <div class="search-tips">
+    <strong>Try:</strong> "ChatGPT prompts" · "Python automation" · "AI coding" · "study tips" · "resume"
+  </div>
+</div>
+
+<!-- Quick category links -->
+<div class="search-categories">
+  {{- range $name, $pages := .Site.Taxonomies.categories -}}
+  <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
+  {{- end -}}
 </div>
 
 <div id="search-results" class="post-list">
-  <p style="text-align: center; color: var(--text-muted); padding: 40px 0;">
-    Type something above and press Enter to search across all guides.
-  </p>
+  <div class="search-empty">
+    <span class="search-empty-icon">🔍</span>
+    <h3>Search across all Aryvora guides</h3>
+    <p>Type a keyword above to find articles on AI tools, coding, productivity, study tips, and more. Or browse by category above.</p>
+  </div>
 </div>
 
 </div>
@@ -31,7 +43,7 @@
   if (!query || query.trim() === '') return;
 
   var resultsDiv = document.getElementById('search-results');
-  resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:20px 0;">Searching...</p>';
+  resultsDiv.innerHTML = '<div class="search-loading"><span class="search-empty-icon">⏳</span><p>Searching across all guides...</p></div>';
 
   fetch('/ai-blog-factory/index.json')
     .then(function(r) {
@@ -40,42 +52,51 @@
     })
     .then(function(data) {
       if (!Array.isArray(data) || data.length === 0) {
-        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search data not available.</p>';
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search data not available</h3><p>The search index could not be loaded. Try browsing <a href="/ai-blog-factory/categories/">by category</a>.</p></div>';
         return;
       }
 
       var q = query.toLowerCase().trim();
-      var terms = q.split(/\s+/);
+      var terms = q.split(/\s+/).filter(function(t) { return t.length > 1; });
 
-      var matches = data.filter(function(item) {
-        // Strip HTML tags from content for searching
+      // Score-based matching for better relevance
+      var matches = data.map(function(item) {
         var contentText = (item.content || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
         var summaryText = (item.summary || '').replace(/<[^>]+>/g, ' ');
         var descText = (item.description || '').replace(/<[^>]+>/g, ' ');
+        var title = (item.title || '').toLowerCase();
+        var desc = descText.toLowerCase();
+        var summary = summaryText.toLowerCase();
+        var content = contentText.toLowerCase();
 
-        var text = [
-          item.title || '',
-          descText,
-          summaryText,
-          contentText,
-          (item.tags || []).join(' '),
-          (item.categories || []).join(' '),
-        ].join(' ').toLowerCase();
+        var score = 0;
+        terms.forEach(function(t) {
+          if (title.indexOf(t) !== -1) score += 10;
+          if (desc.indexOf(t) !== -1) score += 5;
+          if (summary.indexOf(t) !== -1) score += 3;
+          if (content.indexOf(t) !== -1) score += 1;
+          // Tag/category match
+          var tags = (item.tags || []).join(' ').toLowerCase();
+          var cats = (item.categories || []).join(' ').toLowerCase();
+          if (tags.indexOf(t) !== -1) score += 5;
+          if (cats.indexOf(t) !== -1) score += 5;
+        });
 
-        return terms.every(function(t) { return text.indexOf(t) !== -1; });
-      }).slice(0, 30);
+        return { item: item, score: score };
+      }).filter(function(m) { return m.score > 0; }).sort(function(a, b) { return b.score - a.score; }).slice(0, 30);
 
       if (matches.length === 0) {
-        resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">No results found for "<strong>' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</strong>". Try different keywords.</p>';
+        var safeQuery = query.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">😕</span><h3>No results for "' + safeQuery + '"</h3><p>Try different keywords, check spelling, or browse <a href="/ai-blog-factory/categories/">all categories</a>.</p></div>';
         return;
       }
 
-      var html = '<p style="color:var(--text-muted);margin-bottom:16px;font-size:0.9em;">Found ' + matches.length + ' result' + (matches.length > 1 ? 's' : '') + ' for "<strong>' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</strong>"</p>';
+      var html = '<div class="search-results-header"><p>Found <strong>' + matches.length + '</strong> result' + (matches.length > 1 ? 's' : '') + ' for "<strong>' + query.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</strong>"</p></div>';
 
-      matches.forEach(function(item) {
+      matches.forEach(function(m) {
+        var item = m.item;
         var url = item.permalink || item.url || '#';
         var desc = item.description || item.summary || '';
-        // Strip HTML from description
         desc = desc.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
         var title = item.title || 'Untitled';
         var dateStr = '';
@@ -85,24 +106,50 @@
         var cat = (item.categories && item.categories.length) ? item.categories[0] : '';
         var catSlug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         var truncated = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
+        var tags = (item.tags || []).slice(0, 5);
+        var tagStr = tags.join(', ');
 
         html += '<article class="post-list-item">';
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
         if (cat) html += '<a href="/ai-blog-factory/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
-        if (dateStr) html += '<span> ' + dateStr + '</span>';
+        if (dateStr) html += '<span>' + dateStr + '</span>';
         html += '</div>';
         html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';
         if (truncated) html += '<p class="post-list-excerpt">' + truncated + '</p>';
-        html += '<a href="' + url + '" class="post-card-link">Read guide &rarr;</a>';
+        if (tagStr) html += '<div class="post-list-tags">#' + tags.join(' #') + '</div>';
+        html += '<a href="' + url + '" class="post-card-link">Read guide →</a>';
         html += '</div></article>';
       });
       resultsDiv.innerHTML = html;
     })
     .catch(function(err) {
       console.error('Search error:', err);
-      resultsDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);padding:40px 0;">Search unavailable. Please try again later.</p>';
+      resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search temporarily unavailable</h3><p>Please try again later or browse <a href="/ai-blog-factory/categories/">by category</a>.</p></div>';
     });
 })();
 </script>
-{{- end -}}
+
+<style>
+.search-header { text-align: center; padding: 48px 24px 16px; }
+.search-form-wrap { max-width: 640px; margin: 0 auto 16px; }
+.search-tips { text-align: center; color: #64748b; font-size: 0.82rem; margin-top: 0.75rem; }
+.search-tips strong { color: #94a3b8; }
+.search-categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
+.search-cat-chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; background: rgba(79, 70, 229, 0.1); border: 1px solid rgba(79, 70, 229, 0.2); border-radius: 20px; color: #818cf8; font-size: 0.82rem; text-decoration: none; transition: all 0.2s; }
+.search-cat-chip:hover { background: rgba(79, 70, 229, 0.2); border-color: rgba(79, 70, 229, 0.4); }
+.search-cat-chip span { color: #64748b; font-size: 0.75rem; }
+.search-empty { text-align: center; padding: 60px 20px; }
+.search-empty-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.search-empty h3 { color: #e2e8f0; font-size: 1.15rem; margin-bottom: 0.5rem; }
+.search-empty p { color: #64748b; font-size: 0.9rem; max-width: 400px; margin: 0 auto; }
+.search-empty a { color: #818cf8; }
+.search-loading { text-align: center; padding: 40px 20px; }
+.search-results-header { margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(71, 85, 105, 0.2); }
+.search-results-header strong { color: #e2e8f0; }
+.post-list-tags { color: #64748b; font-size: 0.78rem; margin-top: 0.4rem; }
+.post-list-tags span { color: #818cf8; }
+@media (max-width: 768px) { .search-categories { gap: 0.35rem; } .search-cat-chip { font-size: 0.75rem; padding: 0.3rem 0.6rem; } }
+</style>
+
+{{- end -}}{{/* end main */}}

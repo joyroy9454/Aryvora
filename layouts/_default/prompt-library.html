@@ -1,0 +1,33 @@
+{{- define "main" -}}
+
+<div class="prompt-library-page">
+  <div class="container">
+    <div class="prompt-library-inner">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+<style>
+.prompt-library-page { padding: 3rem 0 4rem; }
+.prompt-library-inner { max-width: 720px; margin: 0 auto; }
+.prompt-library-inner h1 { text-align: center; font-size: 2rem; margin-bottom: 0.5rem; }
+.prompt-library-inner > p { text-align: center; color: #94a3b8; font-size: 1.05rem; margin-bottom: 2.5rem; }
+.prompt-library-cta { margin: 2.5rem 0; }
+.prompt-library-cta-inner { background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(15, 23, 42, 0.6) 100%); border: 1px solid rgba(79, 70, 229, 0.25); border-radius: 16px; padding: 2.5rem 2rem; text-align: center; }
+.prompt-library-cta-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.prompt-library-cta-inner h3 { font-size: 1.3rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.5rem; }
+.prompt-library-cta-inner p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.25rem; }
+.prompt-library-form { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.prompt-library-form input[type="email"] { padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #3a3a5a; background: #0d0d1a; color: #e0e0ff; font-size: 0.95rem; min-width: 260px; }
+.prompt-library-note { color: #64748b; font-size: 0.8rem; }
+.prompt-library-inner h2 { margin-top: 2.5rem; font-size: 1.15rem; font-weight: 700; }
+.prompt-library-inner ul { list-style: none; padding: 0; }
+.prompt-library-inner ul li { padding: 0.4rem 0; color: #cbd5e1; border-bottom: 1px solid rgba(71, 85, 105, 0.1); }
+.prompt-library-inner ul li:before { content: "→ "; color: #818cf8; }
+.prompt-library-inner blockquote { border-left: 3px solid #4f46e5; background: rgba(79, 70, 229, 0.08); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+.prompt-library-inner blockquote p { color: #a0a0c0; font-style: italic; margin: 0; text-align: center; }
+@media (max-width: 768px) { .prompt-library-form input[type="email"] { min-width: 100%; } }
+</style>
+
+{{- end -}}

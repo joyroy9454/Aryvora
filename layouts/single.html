@@ -105,8 +105,7 @@
     </div>
     {{- end -}}
   </footer>
-
-  <!-- AUTHOR BIO CARD -->
+<!-- AUTHOR BIO CARD -->
   <div class="author-card">
     <div class="author-card-avatar">JR</div>
     <div class="author-card-info">
@@ -115,26 +114,34 @@
       <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of Aryvora. He tests and reviews AI tools so you don't have to.</p>
       <a href="/about/" class="author-card-link">More about me →</a>
       <a href="mailto:joyroy9454@gmail.com" class="author-card-link">Email me →</a>
+    </div>
   </div>
 </article>
 
 <!-- RELATED POSTS -->
 {{- $related := .Site.RegularPages.Related . | first 3 -}}
 {{- if $related -}}
-<section class="related-posts">
-  <h3>You Might Also Like</h3>
-  <div class="post-grid">
+<section class="related-posts-section">
+  <div class="related-posts-header">
+    <h3>📚 Related Guides</h3>
+    <span class="related-posts-sub">Readers also enjoyed these</span>
+  </div>
+  <div class="related-posts-grid">
     {{- range $related -}}
-    <article class="post-card">
+    <article class="related-post-card">
       {{- if .Params.cover -}}
-      <a href="{{ .RelPermalink }}" class="post-card-image-link">
-        <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-card-image" loading="lazy" />
+      <a href="{{ .RelPermalink }}" class="related-post-image-link">
+        <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" class="related-post-image" loading="lazy" />
       </a>
       {{- end -}}
-      <div class="post-card-content">
-        <h4 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-        <div class="post-card-meta">
-          <span class="post-card-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <div class="related-post-body">
+        {{- if .Params.categories -}}
+        <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="related-post-cat">{{ index .Params.categories 0 }}</a>
+        {{- end -}}
+        <h4 class="related-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+        <p class="related-post-excerpt">{{ .Description | truncate 100 }}</p>
+        <div class="related-post-meta">
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
           <span>·</span>
           <span>{{ .ReadingTime }} min read</span>
         </div>
@@ -160,11 +167,30 @@
 </section>
 {{- end -}}
 
+<!-- ===== CONTENT UPGRADE: AI Prompt Library CTA ===== -->
+{{- if and .IsPage (eq .Section "posts") -}}
+<section class="content-upgrade">
+  <div class="content-upgrade-inner">
+    <div class="content-upgrade-icon">🎯</div>
+    <div class="content-upgrade-content">
+      <h3>Get the AI Prompt Library</h3>
+      <p><strong>500+ tested prompts</strong> for studying, coding, writing, and productivity. Enter your email and get instant access — free.</p>
+      <form action="https://buttondown.email/api/emails/embed-subscribe/joyroy5494" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/joyroy5494', 'popupwindow')" class="content-upgrade-form">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <input type="hidden" name="tag" value="prompt-library" />
+        <button type="submit" class="btn btn-accent">Get Free Access →</button>
+      </form>
+      <span class="content-upgrade-note">Free forever. Unsubscribe anytime. No spam.</span>
+    </div>
+  </div>
+</section>
+{{- end -}}
+
 <!-- ===== NEWSLETTER CTA (end of post) ===== -->
 {{- if and .IsPage (eq .Section "posts") -}}
 <section class="post-newsletter-cta">
-  <h3>📬 Found this helpful? Get more guides like this.</h3>
-  <p>Join students getting free AI tool reviews, coding tutorials, and productivity tips. No spam, unsubscribe anytime.</p>
+  <h3>📬 Enjoyed this? Get more guides in your inbox.</h3>
+  <p>Join the Aryvora newsletter for weekly AI tool reviews, coding tutorials, and productivity tips. No spam, unsubscribe anytime.</p>
   <form action="https://buttondown.email/api/emails/embed-subscribe/joyroy5494" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/joyroy5494', 'popupwindow')" class="post-newsletter-form">
     <input type="email" name="email" placeholder="Enter your email" required />
     <button type="submit" class="btn btn-primary">Subscribe Free</button>
