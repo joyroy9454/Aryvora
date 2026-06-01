@@ -1,6 +1,7 @@
 baseURL = 'https://joyroy9454.github.io/ai-blog-factory/'
+# TODO: Update to https://aryvora.tech/ when domain is connected next week
 languageCode = 'en-us'
-title = 'AI Blog Factory'
+title = 'Aryvora'
 theme = 'PaperMod'
 paginate = 9
 
@@ -21,7 +22,7 @@ enableRobotsTXT = true
 # ============================================================
 [params]
   author = 'Joy Roy'
-  description = 'Honest AI tool reviews, practical tech guides, and free resources for students. Boost your productivity, learn coding, and master AI tools — curated by a student, for students.'
+  description = 'Aryvora — technology for the next generation. AI tools, coding tutorials, cloud guides, and productivity systems for students, developers, and tech learners.'
   defaultTheme = 'dark'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -45,13 +46,13 @@ enableRobotsTXT = true
     linkFullImages = true
     responsiveImages = true
 
-  images = ["/images/og-default.svg"]
-  logo = "/images/logo.svg"
+  images = ["/images/aryvora-logo-main.png"]
+  logo = "/images/logo-32.png"
 
   # Homepage Info
   [params.homeInfoParams]
-    Title = 'AI Blog Factory'
-    Content = 'Honest AI tool reviews, practical tech guides, and free resources for students and creators. Learn AI tools, coding, automation, and productivity — curated by a student, for students.'
+    Title = 'Aryvora'
+    Content = 'Technology for the next generation. AI tools, coding tutorials, cloud guides, and productivity systems — built for students, developers, and tech learners.'
 
   # Contact
   [params.contact]
@@ -74,8 +75,8 @@ enableRobotsTXT = true
 
   # SEO: Label for taxonomy pages
   [params.label]
-    text = 'AI Blog Factory'
-    icon = '/images/logo.svg'
+    text = 'Aryvora'
+    icon = '/images/logo-32.png'
     iconHeight = 35
 
 # ============================================================

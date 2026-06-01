@@ -1,7 +1,7 @@
 ---
-title: "Search AI Blog Factory"
-description: "Search AI Blog Factory for AI tool reviews, coding tutorials, productivity guides, and student tech resources."
+title: "Search Aryvora"
+description: "Search Aryvora for AI tool reviews, coding tutorials, productivity guides, and student tech resources."
 layout: search
 ---
 
-Search AI Blog Factory for guides on AI tools, coding, productivity, and more.
+Search Aryvora for guides on AI tools, coding, productivity, and more.

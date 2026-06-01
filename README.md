@@ -1,1 +1,1 @@
-# AI Blog Factory
+# Aryvora

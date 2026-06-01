@@ -1,6 +1,6 @@
 ---
 title: "Products"
-description: "Premium digital guides and eBooks from AI Blog Factory."
+description: "Premium digital guides and eBooks from Aryvora."
 layout: "products"
 ---
 

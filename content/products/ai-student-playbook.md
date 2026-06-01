@@ -114,9 +114,9 @@ Yes. Everyone who buys this edition gets free access to all future updated editi
 
 ## About the Author
 
-**Joy Roy** is the founder of **AI Blog Factory**. A BSc Data Science student who built these systems while studying — not after graduating. Every technique in this book was tested in real courses, with real deadlines, for real results.
+**Joy Roy** is the founder of **Aryvora**. A BSc Data Science student who built these systems while studying — not after graduating. Every technique in this book was tested in real courses, with real deadlines, for real results.
 
-AI Blog Factory creates premium digital guides for students, creators, and tech learners. Our mission: make practical AI knowledge accessible to anyone willing to put in the work.
+Aryvora creates premium digital guides for students, creators, and tech learners. Our mission: make practical AI knowledge accessible to anyone willing to put in the work.
 
 ---
 

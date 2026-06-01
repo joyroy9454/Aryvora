@@ -1,6 +1,6 @@
 ---
 title: "Newsletter — AI Tools, Study Hacks & Student Tech Guides"
-description: "Subscribe to the AI Blog Factory newsletter. Get weekly AI tool reviews, study hacks, coding tutorials, and productivity tips delivered to your inbox. Free, no spam."
+description: "Subscribe to the Aryvora newsletter. Get weekly AI tool reviews, study hacks, coding tutorials, and productivity tips delivered to your inbox. Free, no spam."
 type: newsletter
 layout: newsletter
 ---

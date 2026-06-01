@@ -1,4 +1,4 @@
-# REDDIT TRAFFIC STRATEGY — AI Blog Factory
+# REDDIT TRAFFIC STRATEGY — Aryvora
 # Generated: 2026-05-28
 # Blog: https://joyroy9454.github.io/ai-blog-factory/
 # 27 articles, SEO-optimized, ready to promote
