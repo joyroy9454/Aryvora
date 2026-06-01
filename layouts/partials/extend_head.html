@@ -17,7 +17,7 @@
 {{- /* ===== Enhanced Open Graph ===== */ -}}
 <meta property="og:site_name" content="Aryvora" />
 <meta property="og:locale" content="en_US" />
-{{- $ogImage := "https://joyroy9454.github.io/ai-blog-factory/images/aryvora-logo-main.png" }}
+{{- $ogImage := "/images/aryvora-logo-main.png" | absURL }}
 {{- if and .Params.cover .Params.cover.image }}{{ $ogImage = .Params.cover.image | absURL }}{{ end }}
 <meta property="og:image" content="{{ $ogImage }}" />
 <meta property="og:image:width" content="1200" />
@@ -59,15 +59,15 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://joyroy9454.github.io/ai-blog-factory/#website",
+  "@id": "{{ "/" | absURL }}#website",
   "name": "Aryvora",
-  "url": "https://joyroy9454.github.io/ai-blog-factory/",
+  "url": "{{ "/" | absURL }}",
   "description": "Honest AI tool reviews, practical tech guides, and free resources for students and creators.",
   "inLanguage": "en-US",
-  "publisher": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person", "name": "Joy Roy" },
+  "publisher": { "@type": "Person", "@id": "{{ "/about/" | absURL }}#person", "name": "Joy Roy" },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": { "@type": "EntryPoint", "urlTemplate": "https://joyroy9454.github.io/ai-blog-factory/search/?q={search_term_string}" },
+    "target": { "@type": "EntryPoint", "urlTemplate": "{{ "/search/" | absURL }}?q={search_term_string}" },
     "query-input": "required name=search_term_string"
   }
 }
@@ -76,11 +76,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
+  "@id": "{{ "/" | absURL }}#organization",
   "name": "Aryvora",
-  "url": "https://joyroy9454.github.io/ai-blog-factory/",
-  "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/aryvora-logo-main.png", "width": 1200, "height": 630 },
-  "founder": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person" },
+  "url": "{{ "/" | absURL }}",
+  "logo": { "@type": "ImageObject", "url": "{{ "/images/aryvora-logo-main.png" | absURL }}", "width": 1200, "height": 630 },
+  "founder": { "@type": "Person", "@id": "{{ "/about/" | absURL }}#person" },
   "sameAs": ["https://github.com/joyroy9454"]
 }
 </script>
@@ -96,11 +96,11 @@
   "headline": "{{ .Title }}",
   "description": "{{ .Description }}",
   "inLanguage": "en-US",
-  "author": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person", "name": "Joy Roy", "url": "https://joyroy9454.github.io/ai-blog-factory/about/" },
+  "author": { "@type": "Person", "@id": "{{ "/about/" | absURL }}#person", "name": "Joy Roy", "url": "{{ "/about/" | absURL }}" },
   "publisher": {
-    "@type": "Organization", "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
+    "@type": "Organization", "@id": "{{ "/" | absURL }}#organization",
     "name": "Aryvora",
-    "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/aryvora-logo-main.png", "width": 1200, "height": 630 }
+    "logo": { "@type": "ImageObject", "url": "{{ "/images/aryvora-logo-main.png" | absURL }}", "width": 1200, "height": 630 }
   },
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
@@ -134,14 +134,14 @@
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "name": "About Aryvora",
-  "url": "https://joyroy9454.github.io/ai-blog-factory/about/",
+  "url": "{{ "/about/" | absURL }}",
   "mainEntity": {
-    "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person",
+    "@type": "Person", "@id": "{{ "/about/" | absURL }}#person",
     "name": "Joy Roy",
-    "url": "https://joyroy9454.github.io/ai-blog-factory/about/",
+    "url": "{{ "/about/" | absURL }}",
     "description": "BSc Data Science student, vibe coder, and founder of Aryvora",
     "jobTitle": "Founder",
-    "worksFor": { "@type": "Organization", "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization" },
+    "worksFor": { "@type": "Organization", "@id": "{{ "/" | absURL }}#organization" },
     "sameAs": ["https://github.com/joyroy9454"]
   }
 }
@@ -150,12 +150,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://joyroy9454.github.io/ai-blog-factory/#organization",
+  "@id": "{{ "/" | absURL }}#organization",
   "name": "Aryvora",
-  "url": "https://joyroy9454.github.io/ai-blog-factory/",
-  "logo": { "@type": "ImageObject", "url": "https://joyroy9454.github.io/ai-blog-factory/images/logo-32.png", "width": 512, "height": 512 },
+  "url": "{{ "/" | absURL }}",
+  "logo": { "@type": "ImageObject", "url": "{{ "/images/logo-32.png" | absURL }}", "width": 512, "height": 512 },
   "description": "Honest AI tool reviews, practical tech guides, and free resources for students and creators.",
-  "founder": { "@type": "Person", "@id": "https://joyroy9454.github.io/ai-blog-factory/about/#person" },
+  "founder": { "@type": "Person", "@id": "{{ "/about/" | absURL }}#person" },
   "sameAs": ["https://github.com/joyroy9454"]
 }
 </script>

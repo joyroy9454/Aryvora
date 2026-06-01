@@ -9,7 +9,7 @@
 <div class="post-content">
 
 <div class="search-form-wrap">
-  <form class="hero-search" action="/search/" method="get" role="search">
+  <form class="hero-search" action="{{ "/search/" | relURL }}" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
     <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
@@ -21,7 +21,7 @@
 <!-- Quick category links -->
 <div class="search-categories">
   {{- range $name, $pages := .Site.Taxonomies.categories -}}
-  <a href="/categories/{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
+  <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
   {{- end -}}
 </div>
 
@@ -45,7 +45,7 @@
   var resultsDiv = document.getElementById('search-results');
   resultsDiv.innerHTML = '<div class="search-loading"><span class="search-empty-icon">⏳</span><p>Searching across all guides...</p></div>';
 
-  fetch('/index.json')
+  fetch('{{ "/index.json" | relURL }}')
     .then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
@@ -112,7 +112,7 @@
         html += '<article class="post-list-item">';
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
-        if (cat) html += '<a href="/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
+        if (cat) html += '<a href="{{ "/categories/" | relURL }}' + catSlug + '/" class="article-cat">' + cat + '</a>';
         if (dateStr) html += '<span>' + dateStr + '</span>';
         html += '</div>';
         html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';

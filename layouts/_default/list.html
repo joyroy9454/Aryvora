@@ -26,7 +26,7 @@
     <div class="post-list-content">
       <div class="post-list-meta">
         {{- if .Params.categories -}}
-        <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
+        <a href="{{ "/categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
         {{- end -}}
         <span>{{ .Date.Format "Jan 2, 2006" }}</span>
         <span>·</span>

@@ -3,37 +3,37 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo" style="color: var(--text-primary);">
-        <img src="https://joyroy9454.github.io/ai-blog-factory/images/logo-32.png" alt="Aryvora" width="32" height="32">
+        <img src="{{ "/images/logo-32.png" | relURL }}" alt="Aryvora" width="32" height="32">
         Aryvora
       </a>
       <p class="footer-brand-desc">Aryvora is a technology publication covering AI tools, coding, cloud, and productivity — built for students and developers.</p>
       <div class="footer-social">
         <a href="https://github.com/joyroy9454" aria-label="GitHub">GH</a>
         <a href="mailto:joyroy9454@gmail.com" aria-label="Email">✉</a>
-        <a href="/index.xml" aria-label="RSS Feed">RSS</a>
+        <a href="{{ "/index.xml" | relURL }}" aria-label="RSS Feed">RSS</a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
-      <a href="/posts/">All Guides</a>
-      <a href="/categories/">Categories</a>
-      <a href="/tags/">Tags</a>
-      <a href="/about/">About</a>
+      <a href="{{ "/posts/" | relURL }}">All Guides</a>
+      <a href="{{ "/categories/" | relURL }}">Categories</a>
+      <a href="{{ "/tags/" | relURL }}">Tags</a>
+      <a href="{{ "/about/" | relURL }}">About</a>
     </div>
     <div class="footer-col">
       <h4>Popular Topics</h4>
       {{- range $name, $pages := .Site.Taxonomies.categories -}}
       {{- if lt (len $name) 20 -}}
-      <a href="/categories/{{ $name | urlize }}/">{{ $name }}</a>
+      <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/">{{ $name }}</a>
       {{- end -}}
       {{- end -}}
     </div>
     <div class="footer-col">
       <h4>Stay Updated</h4>
-      <a href="/newsletter/">📬 Newsletter</a>
-      <a href="/index.xml">RSS Feed</a>
+      <a href="{{ "/newsletter/" | relURL }}">📬 Newsletter</a>
+      <a href="{{ "/index.xml" | relURL }}">RSS Feed</a>
       <a href="mailto:joyroy9454@gmail.com">Contact</a>
-      <a href="/about/">About Joy</a>
+      <a href="{{ "/about/" | relURL }}">About Joy</a>
     </div>
   </div>
   <div class="footer-bottom">
