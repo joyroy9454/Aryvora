@@ -44,7 +44,7 @@
       <span>{{ .WordCount }} words</span>
       {{- if .Params.categories }}
       <span class="post-meta-sep">·</span>
-      <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="post-meta-cat">{{ index .Params.categories 0 }}</a>
+      <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="post-meta-cat">{{ index .Params.categories 0 }}</a>
       {{- end }}
     </div>
   </div>
@@ -136,7 +136,7 @@
       {{- end -}}
       <div class="related-post-body">
         {{- if .Params.categories -}}
-        <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="related-post-cat">{{ index .Params.categories 0 }}</a>
+        <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="related-post-cat">{{ index .Params.categories 0 }}</a>
         {{- end -}}
         <h4 class="related-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
         <p class="related-post-excerpt">{{ .Description | truncate 100 }}</p>

@@ -68,7 +68,7 @@ No filler. No spam. Just useful tech content you can actually use — curated by
 
 ## Recent Issues
 
-Check the [blog](/ai-blog-factory/posts/) for the latest guides. New posts go live every week.
+Check the [blog](/posts/) for the latest guides. New posts go live every week.
 
 ---
 

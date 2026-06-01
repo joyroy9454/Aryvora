@@ -96,6 +96,6 @@ Most "prompt libraries" online are generic lists that don't work well in practic
 
 ## Related Guides
 
-- [ChatGPT Prompt Engineering: 75+ Proven Prompts](/ai-blog-factory/posts/chatgpt-prompt-engineering-students-2026/)
-- [Best AI Productivity Apps for Students](/ai-blog-factory/posts/best-ai-productivity-apps-students-2026/)
-- [How to Use AI for Exam Preparation](/ai-blog-factory/posts/how-to-use-ai-for-exam-preparation-2026/)
+- [ChatGPT Prompt Engineering: 75+ Proven Prompts](/posts/chatgpt-prompt-engineering-students-2026/)
+- [Best AI Productivity Apps for Students](/posts/best-ai-productivity-apps-students-2026/)
+- [How to Use AI for Exam Preparation](/posts/how-to-use-ai-for-exam-preparation-2026/)

@@ -11,7 +11,7 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- end -}}
       </span>
-        <a href="/ai-blog-factory/posts/" class="top-bar-link">All Guides →</a>
+        <a href="/posts/" class="top-bar-link">All Guides →</a>
     </div>
   </div>
 </div>
@@ -32,7 +32,7 @@
       <p class="hero-subtitle">AI tools, coding tutorials, cloud guides, and productivity systems — built for students, developers, and tech learners who want to stay ahead.</p>
 
       <!-- Search -->
-      <form class="hero-search" action="/ai-blog-factory/search/" method="get" role="search">
+      <form class="hero-search" action="/search/" method="get" role="search">
         <span class="hero-search-icon">🔍</span>
         <input type="text" name="q" class="hero-search-input" placeholder="Search Aryvora for guides, tutorials, reviews..." aria-label="Search" />
       </form>
@@ -41,10 +41,10 @@
       <div class="topic-chips">
         {{- range $name, $pages := .Site.Taxonomies.categories -}}
         {{- if lt (len $name) 20 -}}
-        <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
+        <a href="/categories/{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
         {{- end -}}
         {{- end -}}
-        <a href="/ai-blog-factory/posts/" class="topic-chip">All Guides</a>
+        <a href="/posts/" class="topic-chip">All Guides</a>
       </div>
 
       <!-- Featured Article -->
@@ -77,7 +77,7 @@
               <span>{{ .ReadingTime }} min read</span>
               {{- if .Params.categories -}}
               <span class="hero-featured-sep">·</span>
-              <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-featured-cat">{{ index .Params.categories 0 }}</a>
+              <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="hero-featured-cat">{{ index .Params.categories 0 }}</a>
               {{- end -}}
             </div>
           </div>
@@ -117,32 +117,32 @@
       </div>
     </div>
     <div class="topic-clusters-grid">
-      <a href="/ai-blog-factory/categories/ai-tools/" class="topic-cluster-card">
+      <a href="/categories/ai-tools/" class="topic-cluster-card">
         <span class="tc-icon">🤖</span>
         <h3>AI Tools</h3>
         <p>Reviews and comparisons of the best AI tools — ChatGPT, Claude, Gemini, and more.</p>
       </a>
-      <a href="/ai-blog-factory/categories/coding/" class="topic-cluster-card">
+      <a href="/categories/coding/" class="topic-cluster-card">
         <span class="tc-icon">💻</span>
         <h3>Coding & Development</h3>
         <p>Python, vibe coding, web development, and building your first projects.</p>
       </a>
-      <a href="/ai-blog-factory/categories/productivity/" class="topic-cluster-card">
+      <a href="/categories/productivity/" class="topic-cluster-card">
         <span class="tc-icon">⚡</span>
         <h3>Productivity</h3>
         <p>Study smarter with AI. Note-taking, exam prep, time management, and workflow automation.</p>
       </a>
-      <a href="/ai-blog-factory/categories/career/" class="topic-cluster-card">
+      <a href="/categories/career/" class="topic-cluster-card">
         <span class="tc-icon">🚀</span>
         <h3>Career & Freelancing</h3>
         <p>Resume building, freelancing with AI, internships, and making money as a student.</p>
       </a>
-      <a href="/ai-blog-factory/categories/automation/" class="topic-cluster-card">
+      <a href="/categories/automation/" class="topic-cluster-card">
         <span class="tc-icon">🔄</span>
         <h3>Automation</h3>
         <p>Automate your life with AI. Python scripts, no-code tools, and smart workflows.</p>
       </a>
-      <a href="/ai-blog-factory/categories/education/" class="topic-cluster-card">
+      <a href="/categories/education/" class="topic-cluster-card">
         <span class="tc-icon">📚</span>
         <h3>Learning & Education</h3>
         <p>Data science career guides, portfolio building, and learning resources.</p>
@@ -161,32 +161,32 @@
       </div>
     </div>
     <div class="topic-hubs-nav">
-      <a href="/ai-blog-factory/topics/ai-tools/" class="hub-card">
+      <a href="/topics/ai-tools/" class="hub-card">
         <span class="hub-icon">🤖</span>
         <span class="hub-name">AI Tools</span>
         <span class="hub-count">{{ len (where .Site.RegularPages "Section" "posts") }} guides</span>
       </a>
-      <a href="/ai-blog-factory/topics/career/" class="hub-card">
+      <a href="/topics/career/" class="hub-card">
         <span class="hub-icon">💼</span>
         <span class="hub-name">Career & Money</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Career")) }} guides</span>
       </a>
-      <a href="/ai-blog-factory/topics/coding/" class="hub-card">
+      <a href="/topics/coding/" class="hub-card">
         <span class="hub-icon">💻</span>
         <span class="hub-name">Coding & Dev</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Coding")) }} guides</span>
       </a>
-      <a href="/ai-blog-factory/topics/study/" class="hub-card">
+      <a href="/topics/study/" class="hub-card">
         <span class="hub-icon">📚</span>
         <span class="hub-name">Study & Productivity</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Productivity")) }} guides</span>
       </a>
-      <a href="/ai-blog-factory/topics/automation/" class="hub-card">
+      <a href="/topics/automation/" class="hub-card">
         <span class="hub-icon">⚙️</span>
         <span class="hub-name">Automation</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Automation")) }} guides</span>
       </a>
-      <a href="/ai-blog-factory/deals/" class="hub-card hub-card-highlight">
+      <a href="/deals/" class="hub-card hub-card-highlight">
         <span class="hub-icon">💰</span>
         <span class="hub-name">Student Deals</span>
         <span class="hub-count">Free & discounted</span>
@@ -233,7 +233,7 @@
         <span class="section-kicker">Discover</span>
         <h2 class="section-title">Explore guides</h2>
       </div>
-      <a href="/ai-blog-factory/posts/" class="section-link">Browse all →</a>
+      <a href="/posts/" class="section-link">Browse all →</a>
     </div>
 
     <div class="tabs">
@@ -389,11 +389,11 @@
         <span class="section-kicker">Browse</span>
         <h2 class="section-title">By category</h2>
       </div>
-      <a href="/ai-blog-factory/categories/" class="section-link">All categories →</a>
+      <a href="/categories/" class="section-link">All categories →</a>
     </div>
     <div class="categories-grid">
       {{- range $name, $pages := .Site.Taxonomies.categories -}}
-      <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="cat-card">
+      <a href="/categories/{{ $name | urlize }}/" class="cat-card">
         <div>
           <span class="cat-card-name">{{ $name }}</span>
           <span class="cat-card-meta">{{ len $pages }} guides</span>
@@ -454,7 +454,7 @@
         <div class="article-list-body">
           <div class="article-list-meta">
             {{- if .Params.categories -}}
-            <a href="/ai-blog-factory/categories/{{ index .Params.categories 0 | urlize }}/" class="article-list-cat">{{ index .Params.categories 0 }}</a>
+            <a href="/categories/{{ index .Params.categories 0 | urlize }}/" class="article-list-cat">{{ index .Params.categories 0 }}</a>
             {{- end -}}
             <span>{{ .Date.Format "Jan 2, 2006" }}</span>
             <span class="article-card-meta-sep">·</span>
@@ -475,7 +475,7 @@
     <div class="tag-cloud">
       {{- range $name, $pages := .Site.Taxonomies.tags -}}
       {{- if gt (len $pages) 1 -}}
-      <a href="/ai-blog-factory/tags/{{ $name | urlize }}/" class="tag-pill">
+      <a href="/tags/{{ $name | urlize }}/" class="tag-pill">
         {{ $name }}
         <span class="tag-pill-count">{{ len $pages }}</span>
       </a>

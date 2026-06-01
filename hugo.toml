@@ -64,7 +64,7 @@ enableRobotsTXT = true
     url = 'https://github.com/joyroy9454'
   [[params.socialIcons]]
     name = 'rss'
-    url = '/ai-blog-factory/index.xml'
+    url = '/index.xml'
 
   # Favicon / Assets
   [params.assets]

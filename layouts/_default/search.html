@@ -9,7 +9,7 @@
 <div class="post-content">
 
 <div class="search-form-wrap">
-  <form class="hero-search" action="/ai-blog-factory/search/" method="get" role="search">
+  <form class="hero-search" action="/search/" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
     <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
@@ -21,7 +21,7 @@
 <!-- Quick category links -->
 <div class="search-categories">
   {{- range $name, $pages := .Site.Taxonomies.categories -}}
-  <a href="/ai-blog-factory/categories/{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
+  <a href="/categories/{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
   {{- end -}}
 </div>
 
@@ -45,14 +45,14 @@
   var resultsDiv = document.getElementById('search-results');
   resultsDiv.innerHTML = '<div class="search-loading"><span class="search-empty-icon">⏳</span><p>Searching across all guides...</p></div>';
 
-  fetch('/ai-blog-factory/index.json')
+  fetch('/index.json')
     .then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
     .then(function(data) {
       if (!Array.isArray(data) || data.length === 0) {
-        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search data not available</h3><p>The search index could not be loaded. Try browsing <a href="/ai-blog-factory/categories/">by category</a>.</p></div>';
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search data not available</h3><p>The search index could not be loaded. Try browsing <a href="/categories/">by category</a>.</p></div>';
         return;
       }
 
@@ -87,7 +87,7 @@
 
       if (matches.length === 0) {
         var safeQuery = query.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">😕</span><h3>No results for "' + safeQuery + '"</h3><p>Try different keywords, check spelling, or browse <a href="/ai-blog-factory/categories/">all categories</a>.</p></div>';
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">😕</span><h3>No results for "' + safeQuery + '"</h3><p>Try different keywords, check spelling, or browse <a href="/categories/">all categories</a>.</p></div>';
         return;
       }
 
@@ -112,7 +112,7 @@
         html += '<article class="post-list-item">';
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
-        if (cat) html += '<a href="/ai-blog-factory/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
+        if (cat) html += '<a href="/categories/' + catSlug + '/" class="article-cat">' + cat + '</a>';
         if (dateStr) html += '<span>' + dateStr + '</span>';
         html += '</div>';
         html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';
@@ -125,7 +125,7 @@
     })
     .catch(function(err) {
       console.error('Search error:', err);
-      resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search temporarily unavailable</h3><p>Please try again later or browse <a href="/ai-blog-factory/categories/">by category</a>.</p></div>';
+      resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search temporarily unavailable</h3><p>Please try again later or browse <a href="/categories/">by category</a>.</p></div>';
     });
 })();
 </script>
