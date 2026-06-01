@@ -309,17 +309,14 @@ Knowing what to sell is half the battle. Now let's talk about **where to find pe
 
 **Tip:** LinkedIn clients typically pay **2-5x more** than Fiverr clients. The platform is worth investing time in.
 
-#### 5. Reddit
 
 **Best for:** Finding clients in niche communities and building credibility.
 
 **Strategy:**
-- Participate in subreddits like r/forhire, r/HungryArtists, r/slavelabour, r/ABoringDystopia, r/artificial, r/ChatGPT, and r/automation
 - Offer free advice and value first — don't lead with sales pitches
 - When responding to "how do I" questions, provide genuinely helpful answers and mention your services naturally
 - Look for posts where businesses describe problems you can solve with AI
 
-**Tip:** Reddit users hate obvious self-promotion. Focus on being helpful, and the clients will come to you.
 
 #### 6. Cold Email / Direct Outreach
 
@@ -366,7 +363,6 @@ One of the biggest mistakes new freelancers make is **underpricing**. Here's a r
 | Prompt Engineering | $25-50/hr | $50-100/hr | $100-200/hr |
 | Chatbot Building | $30-50/hr | $50-100/hr | $100-175/hr |
 | AI Data Analysis | $25-45/hr | $50-90/hr | $90-150/hr |
-| AI Voiceover/Video | $20-35/hr | $40-75/hr | $75-150/hr |
 | Custom GPT Building | $30-50/hr | $50-100/hr | $100-175/hr |
 | AI Workflow Consulting | $35-60/hr | $75-150/hr | $150-300/hr |
 | AI Training/Fine-Tuning | $40-75/hr | $75-150/hr | $150-300/hr |
@@ -422,7 +418,6 @@ Offer to do **one free project** for a real business in exchange for:
 
 #### Strategy 3: Document Your Learning Journey
 
-Start a blog or Twitter/X thread documenting your AI experiments. When you build something interesting, write about it or post screenshots. This content **is** your portfolio.
 
 #### Strategy 4: Contribute to Open Source AI Projects
 
@@ -449,7 +444,6 @@ Here's your concrete, actionable plan to go from zero to your first paying clien
 - Pick **one** AI service to offer. My recommendation for beginners: **AI Tool Setup & Training** or **Custom GPT Building** (high demand, low barrier to entry).
 - Choose your pricing. Start at the lower end of the range from the pricing guide above.
 - Create accounts on Upwork and Fiverr with a professional profile focused on your chosen service.
-- Create a Twitter/X account (if you don't have one) focused on AI tips.
 
 #### Day 2: Build Your Portfolio
 
@@ -468,19 +462,16 @@ Here's your concrete, actionable plan to go from zero to your first paying clien
 
 - Apply to **10 Upwork jobs** today. Personalize each proposal. Focus on the client's problem, not your experience.
 - Publish your first Fiverr gig(s).
-- Post your first Twitter/X thread about your AI area of expertise.
 - Comment on 10-15 relevant LinkedIn posts from business owners and startup founders.
 
 #### Day 5: Start Outreach — Direct
 
 - Identify **20 local businesses or online businesses** that could benefit from your service.
 - Send **10 personalized cold emails** (use the template from the cold email section above).
-- Post in Reddit communities (r/forhire, r/slavelabour) about what you offer.
 - Follow up with any responses from Day 4.
 
 #### Day 6: Create Content & Build Visibility
 
-- Post 2-3 more pieces of content on Twitter/X and LinkedIn.
 - Create a case study from one of your spec projects (a mini blog post or thread).
 - Follow and engage with 50 potential clients across platforms.
 - Respond to any inquiries immediately and professionally.
@@ -570,7 +561,6 @@ Let's recap what we covered:
 
 - **AI freelancing is exploding** because there's a massive gap between what AI can do and what businesses know how to do with it.
 - **You can sell 10 different AI skills** — from prompt engineering to chatbot building to AI consulting — many of which require no coding or technical background.
-- **Clients are everywhere** — on Upwork, Fiverr, LinkedIn, X/Twitter, Reddit, and in your own local business community.
 - **You can price your services confidently** starting at $15-50/hr (or project-based packages of $200-1,000+) and raise your rates as you build credibility.
 - **A portfolio is possible even with zero clients** — create spec projects, document your learning, and offer strategic free work.
 - **You can land your first client in 7 days** with a focused, proactive outreach plan.

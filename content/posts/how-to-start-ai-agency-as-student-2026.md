@@ -264,7 +264,6 @@ These platforms are competitive but they provide access to **ready-to-buy client
 
 Target **5-10 proposals per day** on these platforms. Expect a 10-20% response rate in the beginning.
 
-### Facebook Groups and Reddit
 
 Join groups where your ideal clients hang out. For example:
 
@@ -272,7 +271,6 @@ Join groups where your ideal clients hang out. For example:
 - E-commerce entrepreneur communities
 - Real estate investor groups
 - Startup founder communities
-- Industry-specific subreddits
 
 **Don't spam.** Instead, **be genuinely helpful.** Answer questions, share tips, and mention your services only when it's a natural fit. When people see you consistently providing value, they'll DM you.
 

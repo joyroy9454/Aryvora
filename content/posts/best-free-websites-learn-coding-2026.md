@@ -319,7 +319,6 @@ Picking a platform is step one. Sticking with it is the hard part. Here's how to
 
 2. **Build projects, not just tutorials.** Tutorial hell is real. After each lesson, build something — even if it's broken. A to-do list app, a personal portfolio, a calculator. Projects prove you actually learned something.
 
-3. **Join a community.** freeCodeCamp's forum, The Odin Project's Discord, or any programming subreddit. When you're stuck for more than 20 minutes, ask for help. You'll learn faster and feel less alone.
 
 4. **Don't jump between platforms.** Pick one, commit to it for at least 90 days, and finish what you started. The grass isn't greener on Codecademy if you've finished 10 freeCodeCamp lessons quit halfway.
 
@@ -355,7 +354,6 @@ You don't need to plan for weeks. You need to start today. Here's exactly what t
 
 **Hour 2:** Set up your development environment. Install VS Code (free), create a GitHub account (free), and push your first code commit. This is what real developers do.
 
-**Hours 3-4:** Join one community. The freeCodeCamp forum, The Odin Project Discord, or r/learnprogramming on Reddit. Introduce yourself and say what you're learning.
 
 **End of Day 1:** You've written code, set up tools, and joined a community. That's more progress than 90% of people who say "I want to learn to code" ever make.
 
