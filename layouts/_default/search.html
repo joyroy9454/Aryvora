@@ -9,7 +9,7 @@
 <div class="post-content">
 
 <div class="search-form-wrap">
-  <form class="hero-search" action="{{ "/search/" | relURL }}" method="get" role="search">
+  <form class="hero-search" action="{{ "search/" | relURL }}" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
     <input type="text" name="q" class="search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
@@ -21,7 +21,7 @@
 <!-- Quick category links -->
 <div class="search-categories">
   {{- range $name, $pages := .Site.Taxonomies.categories -}}
-  <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
+  <a href="{{ "categories/" | relURL }}{{ $name | urlize }}/" class="search-cat-chip">{{ $name }} <span>{{ len $pages }}</span></a>
   {{- end -}}
 </div>
 

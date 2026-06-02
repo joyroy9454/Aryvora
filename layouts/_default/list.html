@@ -20,13 +20,13 @@
   <article class="post-list-item">
     {{- if .Params.cover -}}
     <a href="{{ .RelPermalink }}" class="post-list-image-link">
-      <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
+      <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" class="post-list-image" loading="lazy" />
     </a>
     {{- end -}}
     <div class="post-list-content">
       <div class="post-list-meta">
         {{- if .Params.categories -}}
-        <a href="{{ "/categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
+        <a href="{{ "categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="article-cat">{{ index .Params.categories 0 }}</a>
         {{- end -}}
         <span>{{ .Date.Format "Jan 2, 2006" }}</span>
         <span>·</span>

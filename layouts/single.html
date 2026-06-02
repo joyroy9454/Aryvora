@@ -34,7 +34,7 @@
     <div class="post-meta-bar-inner">
       <span class="post-meta-author">
         <span class="post-avatar-sm">JR</span>
-        <span>By <a href="{{ "/about/" | relURL }}" rel="author">Joy Roy</a></span>
+        <span>By <a href="{{ "about/" | relURL }}" rel="author">Joy Roy</a></span>
       </span>
       <span class="post-meta-sep">·</span>
       <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time>
@@ -44,7 +44,7 @@
       <span>{{ .WordCount }} words</span>
       {{- if .Params.categories }}
       <span class="post-meta-sep">·</span>
-      <a href="{{ "/categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="post-meta-cat">{{ index .Params.categories 0 }}</a>
+      <a href="{{ "categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="post-meta-cat">{{ index .Params.categories 0 }}</a>
       {{- end }}
     </div>
   </div>
@@ -75,7 +75,7 @@
         <div>
           <strong>About the Author</strong>
           <p>Joy Roy is a BSc Data Science student and vibe coder. He reviews AI tools and builds practical tech guides at Aryvora.</p>
-          <a href="{{ "/about/" | relURL }}" class="article-end-link">Read full bio →</a>
+          <a href="{{ "about/" | relURL }}" class="article-end-link">Read full bio →</a>
         </div>
     </div>
   </div>
@@ -112,7 +112,7 @@
       <span class="author-card-label">Written by</span>
       <h4 class="author-card-name" itemprop="author">Joy Roy</h4>
       <p class="author-card-bio">BSc Data Science student, vibe coder, and founder of Aryvora. He tests and reviews AI tools so you don't have to.</p>
-      <a href="{{ "/about/" | relURL }}" class="author-card-link">More about me →</a>
+      <a href="{{ "about/" | relURL }}" class="author-card-link">More about me →</a>
       <a href="mailto:joyroy9454@gmail.com" class="author-card-link">Email me →</a>
     </div>
   </div>
@@ -136,7 +136,7 @@
       {{- end -}}
       <div class="related-post-body">
         {{- if .Params.categories -}}
-        <a href="{{ "/categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="related-post-cat">{{ index .Params.categories 0 }}</a>
+        <a href="{{ "categories/" | relURL }}{{ index .Params.categories 0 | urlize }}/" class="related-post-cat">{{ index .Params.categories 0 }}</a>
         {{- end -}}
         <h4 class="related-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
         <p class="related-post-excerpt">{{ .Description | truncate 100 }}</p>

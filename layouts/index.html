@@ -11,7 +11,7 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- end -}}
       </span>
-        <a href="{{ "/posts/" | relURL }}" class="top-bar-link">All Guides →</a>
+        <a href="{{ "posts/" | relURL }}" class="top-bar-link">All Guides →</a>
     </div>
   </div>
 </div>
@@ -23,7 +23,7 @@
 
       <!-- Brand -->
       <div class="hero-brand">
-        <img src="{{ "/images/logo-44.png" | relURL }}" alt="Aryvora" width="44" height="44" />
+        <img src="{{ "images/logo-44.png" | relURL }}" alt="Aryvora" width="44" height="44" />
         <span class="hero-brand-name">Aryvora</span>
       </div>
 
@@ -32,7 +32,7 @@
       <p class="hero-subtitle">AI tools, coding tutorials, cloud guides, and productivity systems — built for students, developers, and tech learners who want to stay ahead.</p>
 
       <!-- Search -->
-      <form class="hero-search" action="{{ "/search/" | relURL }}" method="get" role="search">
+      <form class="hero-search" action="{{ "search/" | relURL }}" method="get" role="search">
         <span class="hero-search-icon">🔍</span>
         <input type="text" name="q" class="hero-search-input" placeholder="Search Aryvora for guides, tutorials, reviews..." aria-label="Search" />
       </form>
@@ -41,10 +41,10 @@
       <div class="topic-chips">
         {{- range $name, $pages := .Site.Taxonomies.categories -}}
         {{- if lt (len $name) 20 -}}
-        <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
+        <a href="{{ "categories/" | relURL }}{{ $name | urlize }}/" class="topic-chip">{{ $name }} ({{ len $pages }})</a>
         {{- end -}}
         {{- end -}}
-        <a href="{{ "/posts/" | relURL }}" class="topic-chip">All Guides</a>
+        <a href="{{ "posts/" | relURL }}" class="topic-chip">All Guides</a>
       </div>
 
       <!-- Featured Article -->
@@ -54,7 +54,7 @@
         <a href="{{ .RelPermalink }}" class="hero-featured-link">
           <div class="hero-featured-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -117,32 +117,32 @@
       </div>
     </div>
     <div class="topic-clusters-grid">
-      <a href="{{ "/categories/ai-tools/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/ai-tools/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">🤖</span>
         <h3>AI Tools</h3>
         <p>Reviews and comparisons of the best AI tools — ChatGPT, Claude, Gemini, and more.</p>
       </a>
-      <a href="{{ "/categories/coding/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/coding/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">💻</span>
         <h3>Coding & Development</h3>
         <p>Python, vibe coding, web development, and building your first projects.</p>
       </a>
-      <a href="{{ "/categories/productivity/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/productivity/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">⚡</span>
         <h3>Productivity</h3>
         <p>Study smarter with AI. Note-taking, exam prep, time management, and workflow automation.</p>
       </a>
-      <a href="{{ "/categories/career/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/career/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">🚀</span>
         <h3>Career & Freelancing</h3>
         <p>Resume building, freelancing with AI, internships, and making money as a student.</p>
       </a>
-      <a href="{{ "/categories/automation/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/automation/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">🔄</span>
         <h3>Automation</h3>
         <p>Automate your life with AI. Python scripts, no-code tools, and smart workflows.</p>
       </a>
-      <a href="{{ "/categories/education/" | relURL }}" class="topic-cluster-card">
+      <a href="{{ "categories/education/" | relURL }}" class="topic-cluster-card">
         <span class="tc-icon">📚</span>
         <h3>Learning & Education</h3>
         <p>Data science career guides, portfolio building, and learning resources.</p>
@@ -161,32 +161,32 @@
       </div>
     </div>
     <div class="topic-hubs-nav">
-      <a href="{{ "/topics/ai-tools/" | relURL }}" class="hub-card">
+      <a href="{{ "topics/ai-tools/" | relURL }}" class="hub-card">
         <span class="hub-icon">🤖</span>
         <span class="hub-name">AI Tools</span>
         <span class="hub-count">{{ len (where .Site.RegularPages "Section" "posts") }} guides</span>
       </a>
-      <a href="{{ "/topics/career/" | relURL }}" class="hub-card">
+      <a href="{{ "topics/career/" | relURL }}" class="hub-card">
         <span class="hub-icon">💼</span>
         <span class="hub-name">Career & Money</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Career")) }} guides</span>
       </a>
-      <a href="{{ "/topics/coding/" | relURL }}" class="hub-card">
+      <a href="{{ "topics/coding/" | relURL }}" class="hub-card">
         <span class="hub-icon">💻</span>
         <span class="hub-name">Coding & Dev</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Coding")) }} guides</span>
       </a>
-      <a href="{{ "/topics/study/" | relURL }}" class="hub-card">
+      <a href="{{ "topics/study/" | relURL }}" class="hub-card">
         <span class="hub-icon">📚</span>
         <span class="hub-name">Study & Productivity</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Productivity")) }} guides</span>
       </a>
-      <a href="{{ "/topics/automation/" | relURL }}" class="hub-card">
+      <a href="{{ "topics/automation/" | relURL }}" class="hub-card">
         <span class="hub-icon">⚙️</span>
         <span class="hub-name">Automation</span>
         <span class="hub-count">{{ len (where (where .Site.RegularPages "Section" "posts") "Params.categories" "intersect" (slice "Automation")) }} guides</span>
       </a>
-      <a href="{{ "/deals/" | relURL }}" class="hub-card hub-card-highlight">
+      <a href="{{ "deals/" | relURL }}" class="hub-card hub-card-highlight">
         <span class="hub-icon">💰</span>
         <span class="hub-name">Student Deals</span>
         <span class="hub-count">Free & discounted</span>
@@ -210,7 +210,7 @@
       <a href="{{ .RelPermalink }}" class="featured-card {{ if eq $i 0 }}featured-card-large{{ end }}">
         {{- if .Params.cover -}}
         <div class="featured-card-img">
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+          <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
         </div>
         {{- end -}}
         <div class="featured-card-body">
@@ -233,7 +233,7 @@
         <span class="section-kicker">Discover</span>
         <h2 class="section-title">Explore guides</h2>
       </div>
-      <a href="{{ "/posts/" | relURL }}" class="section-link">Browse all →</a>
+      <a href="{{ "posts/" | relURL }}" class="section-link">Browse all →</a>
     </div>
 
     <div class="tabs">
@@ -250,7 +250,7 @@
         <article class="article-card {{ if eq $i 0 }}article-card-featured{{ end }}">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -285,7 +285,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -319,7 +319,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -352,7 +352,7 @@
         <article class="article-card">
           <a href="{{ .RelPermalink }}" class="article-card-media">
             {{- if .Params.cover -}}
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+            <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
             {{- else -}}
             <div class="article-card-placeholder"></div>
             {{- end -}}
@@ -389,11 +389,11 @@
         <span class="section-kicker">Browse</span>
         <h2 class="section-title">By category</h2>
       </div>
-      <a href="{{ "/categories/" | relURL }}" class="section-link">All categories →</a>
+      <a href="{{ "categories/" | relURL }}" class="section-link">All categories →</a>
     </div>
     <div class="categories-grid">
       {{- range $name, $pages := .Site.Taxonomies.categories -}}
-      <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}/" class="cat-card">
+      <a href="{{ "categories/" | relURL }}{{ $name | urlize }}/" class="cat-card">
         <div>
           <span class="cat-card-name">{{ $name }}</span>
           <span class="cat-card-meta">{{ len $pages }} guides</span>
@@ -446,7 +446,7 @@
       <article class="article-list-card">
         <a href="{{ .RelPermalink }}" class="article-list-media">
           {{- if .Params.cover -}}
-          <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+          <img src="{{ .Params.cover.image | relURL }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
           {{- else -}}
           <div class="article-list-placeholder"></div>
           {{- end -}}
@@ -475,7 +475,7 @@
     <div class="tag-cloud">
       {{- range $name, $pages := .Site.Taxonomies.tags -}}
       {{- if gt (len $pages) 1 -}}
-      <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/" class="tag-pill">
+      <a href="{{ "tags/" | relURL }}{{ $name | urlize }}/" class="tag-pill">
         {{ $name }}
         <span class="tag-pill-count">{{ len $pages }}</span>
       </a>

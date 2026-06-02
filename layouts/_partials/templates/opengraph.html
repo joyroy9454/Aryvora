@@ -37,9 +37,9 @@
 
 {{- if .Params.cover.image -}}
   {{- if (ne .Params.cover.relative true) }}
-    <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+    <meta property="og:image" content="{{ .Params.cover.image | relURL }}">
   {{- else}}
-    <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+    <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | relURL }}">
   {{- end}}
 {{- else if .IsPage }}
   {{- $ogImages := partial "_funcs/get-page-images" . }}
@@ -49,18 +49,18 @@
     {{- end }}
   {{- end }}
 {{- else }}
-  <meta property="og:image" content="{{ "/images/aryvora-logo-main.png" | absURL }}">
+  <meta property="og:image" content="{{ "images/aryvora-logo-main.png" | relURL }}">
 {{- end }}
 
 {{- with .Params.audio }}
   {{- range . | first 6  }}
-    <meta property="og:audio" content="{{ . | absURL }}">
+    <meta property="og:audio" content="{{ . | relURL }}">
   {{- end }}
 {{- end }}
 
 {{- with .Params.videos }}
   {{- range . | first 6 }}
-    <meta property="og:video" content="{{ . | absURL }}">
+    <meta property="og:video" content="{{ . | relURL }}">
   {{- end }}
 {{- end }}
 

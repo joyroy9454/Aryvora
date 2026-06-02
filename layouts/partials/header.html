@@ -2,17 +2,17 @@
 <header class="nav">
   <div class="container">
     <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo">
-      <img src="{{ "/images/logo-34.png" | relURL }}" alt="Aryvora" width="34" height="34">
+      <img src="{{ "images/logo-34.png" | relURL }}" alt="Aryvora" width="34" height="34">
       Aryvora
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="{{ .Site.Home.RelPermalink }}">Home</a>
-      <a href="{{ "/posts/" | relURL }}">Guides</a>
-      <a href="{{ "/topics/" | relURL }}">Topics</a>
-      <a href="{{ "/deals/" | relURL }}">Deals</a>
-      <a href="{{ "/newsletter/" | relURL }}">Newsletter</a>
-      <a href="{{ "/about/" | relURL }}">About</a>
-      <a href="{{ "/search/" | relURL }}" class="nav-search-btn" aria-label="Search">🔍</a>
+      <a href="{{ "posts/" | relURL }}">Guides</a>
+      <a href="{{ "topics/" | relURL }}">Topics</a>
+      <a href="{{ "deals/" | relURL }}">Deals</a>
+      <a href="{{ "newsletter/" | relURL }}">Newsletter</a>
+      <a href="{{ "about/" | relURL }}">About</a>
+      <a href="{{ "search/" | relURL }}" class="nav-search-btn" aria-label="Search">🔍</a>
     </nav>
     <button class="nav-mobile-toggle" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.add('active')">☰</button>
   </div>
@@ -22,10 +22,10 @@
 <div class="mobile-menu" id="mobile-menu">
   <button class="mobile-menu-close" aria-label="Close menu" onclick="document.getElementById('mobile-menu').classList.remove('active')">✕</button>
   <a href="{{ .Site.Home.RelPermalink }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🏠 Home</a>
-  <a href="{{ "/posts/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📝 All Guides</a>
-  <a href="{{ "/topics/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📚 Topic Hubs</a>
-  <a href="{{ "/deals/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">💰 Deals</a>
-  <a href="{{ "/newsletter/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📬 Newsletter</a>
-  <a href="{{ "/about/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">👤 About</a>
-  <a href="{{ "/search/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🔍 Search</a>
+  <a href="{{ "posts/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📝 All Guides</a>
+  <a href="{{ "topics/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📚 Topic Hubs</a>
+  <a href="{{ "deals/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">💰 Deals</a>
+  <a href="{{ "newsletter/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📬 Newsletter</a>
+  <a href="{{ "about/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">👤 About</a>
+  <a href="{{ "search/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🔍 Search</a>
 </div>

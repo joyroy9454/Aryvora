@@ -1,11 +1,11 @@
 {{- if .Params.cover.image }}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
+  <meta name="twitter:image" content="{{ .Params.cover.image | relURL }}">
 {{- else }}
   <meta name="twitter:card" content="summary">
   {{- with site.Params.images }}
     {{- range . | first 1 }}
-      <meta name="twitter:image" content="{{ . | absURL }}">
+      <meta name="twitter:image" content="{{ . | relURL }}">
     {{- end }}
   {{- end }}
 {{- end }}
