@@ -15,7 +15,6 @@ enableRobotsTXT = true
 # ============================================================
 [permalinks]
   posts = '/posts/:slug/'
-  products = '/products/:slug/'
 
 # ============================================================
 # Site Parameters
@@ -88,11 +87,6 @@ enableRobotsTXT = true
     name = 'Home'
     url = '/'
     weight = 10
-  [[menu.main]]
-    identifier = 'products'
-    name = 'Products'
-    url = '/products/'
-    weight = 20
   [[menu.main]]
     identifier = 'categories'
     name = 'Topics'
