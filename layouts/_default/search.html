@@ -11,7 +11,7 @@
 <div class="search-form-wrap">
   <form class="hero-search" action="{{ "/search/" | relURL }}" method="get" role="search">
     <span class="hero-search-icon">&#128269;</span>
-    <input type="text" name="q" class="hero-search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
+    <input type="text" name="q" class="search-input" placeholder="Search guides, tools, tutorials..." aria-label="Search" autofocus />
   </form>
   <div class="search-tips">
     <strong>Try:</strong> "ChatGPT prompts" · "Python automation" · "AI coding" · "study tips" · "resume"
@@ -29,15 +29,17 @@
   <div class="search-empty">
     <span class="search-empty-icon">🔍</span>
     <h3>Search across all Aryvora guides</h3>
-    <p>Type a keyword above to find articles on AI tools, coding, productivity, study tips, and more. Or browse by category above.</p>
+    <p>Type a keyword above to find articles on AI tools, coding, productivity, study tips, and more.</p>
   </div>
 </div>
 
 </div>
 </article>
 
+<script id="search-config" type="application/json">{"catUrl":"{{ .Site.BaseURL }}categories/","indexJson":"{{ .Site.BaseURL }}index.json"}</script>
 <script>
 (function() {
+  var config = JSON.parse(document.getElementById('search-config').textContent);
   var params = new URLSearchParams(window.location.search);
   var query = params.get('q');
   if (!query || query.trim() === '') return;
@@ -45,21 +47,20 @@
   var resultsDiv = document.getElementById('search-results');
   resultsDiv.innerHTML = '<div class="search-loading"><span class="search-empty-icon">⏳</span><p>Searching across all guides...</p></div>';
 
-  fetch('{{ "/index.json" | relURL }}')
+  fetch(config.indexJson)
     .then(function(r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
     .then(function(data) {
       if (!Array.isArray(data) || data.length === 0) {
-        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search data not available</h3><p>The search index could not be loaded. Try browsing <a href="/categories/">by category</a>.</p></div>';
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search data not available</h3><p>The search index could not be loaded. Try browsing <a href="' + config.catUrl + '">by category</a>.</p></div>';
         return;
       }
 
       var q = query.toLowerCase().trim();
       var terms = q.split(/\s+/).filter(function(t) { return t.length > 1; });
 
-      // Score-based matching for better relevance
       var matches = data.map(function(item) {
         var contentText = (item.content || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
         var summaryText = (item.summary || '').replace(/<[^>]+>/g, ' ');
@@ -75,7 +76,6 @@
           if (desc.indexOf(t) !== -1) score += 5;
           if (summary.indexOf(t) !== -1) score += 3;
           if (content.indexOf(t) !== -1) score += 1;
-          // Tag/category match
           var tags = (item.tags || []).join(' ').toLowerCase();
           var cats = (item.categories || []).join(' ').toLowerCase();
           if (tags.indexOf(t) !== -1) score += 5;
@@ -87,7 +87,7 @@
 
       if (matches.length === 0) {
         var safeQuery = query.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">😕</span><h3>No results for "' + safeQuery + '"</h3><p>Try different keywords, check spelling, or browse <a href="/categories/">all categories</a>.</p></div>';
+        resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">😕</span><h3>No results for "' + safeQuery + '"</h3><p>Try different keywords, check spelling, or browse <a href="' + config.catUrl + '">all categories</a>.</p></div>';
         return;
       }
 
@@ -107,17 +107,16 @@
         var catSlug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         var truncated = desc.length > 200 ? desc.substring(0, 200) + '...' : desc;
         var tags = (item.tags || []).slice(0, 5);
-        var tagStr = tags.join(', ');
 
         html += '<article class="post-list-item">';
         html += '<div class="post-list-content">';
         html += '<div class="post-list-meta">';
-        if (cat) html += '<a href="{{ "/categories/" | relURL }}' + catSlug + '/" class="article-cat">' + cat + '</a>';
+        if (cat) html += '<a href="' + config.catUrl + catSlug + '/" class="article-cat">' + cat + '</a>';
         if (dateStr) html += '<span>' + dateStr + '</span>';
         html += '</div>';
         html += '<h3 class="post-list-title"><a href="' + url + '">' + title + '</a></h3>';
         if (truncated) html += '<p class="post-list-excerpt">' + truncated + '</p>';
-        if (tagStr) html += '<div class="post-list-tags">#' + tags.join(' #') + '</div>';
+        if (tags.length) html += '<div class="post-list-tags">#' + tags.join(' #') + '</div>';
         html += '<a href="' + url + '" class="post-card-link">Read guide →</a>';
         html += '</div></article>';
       });
@@ -125,7 +124,7 @@
     })
     .catch(function(err) {
       console.error('Search error:', err);
-      resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search temporarily unavailable</h3><p>Please try again later or browse <a href="/categories/">by category</a>.</p></div>';
+      resultsDiv.innerHTML = '<div class="search-empty"><span class="search-empty-icon">⚠️</span><h3>Search temporarily unavailable</h3><p>Please try again later or browse <a href="' + config.catUrl + '">by category</a>.</p></div>';
     });
 })();
 </script>
@@ -133,6 +132,8 @@
 <style>
 .search-header { text-align: center; padding: 48px 24px 16px; }
 .search-form-wrap { max-width: 640px; margin: 0 auto 16px; }
+.search-input { width: 100%; padding: 12px 16px 12px 44px; background: rgba(30,41,59,.8); border: 1px solid rgba(71,85,105,.4); border-radius: 12px; color: #e2e8f0; font-size: 1rem; outline: none; }
+.search-input:focus { border-color: #818cf8; box-shadow: 0 0 0 3px rgba(129,140,248,.15); }
 .search-tips { text-align: center; color: #64748b; font-size: 0.82rem; margin-top: 0.75rem; }
 .search-tips strong { color: #94a3b8; }
 .search-categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
@@ -147,8 +148,17 @@
 .search-loading { text-align: center; padding: 40px 20px; }
 .search-results-header { margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(71, 85, 105, 0.2); }
 .search-results-header strong { color: #e2e8f0; }
-.post-list-tags { color: #64748b; font-size: 0.78rem; margin-top: 0.4rem; }
-.post-list-tags span { color: #818cf8; }
+.post-list { max-width: 780px; margin: 0 auto; }
+.post-list-item { margin-bottom: 1.5rem; padding: 1.25rem; background: rgba(30,41,59,.5); border: 1px solid rgba(71,85,105,.2); border-radius: 12px; }
+.post-list-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.8rem; color: #64748b; }
+.post-list-meta .article-cat { color: #818cf8; text-decoration: none; }
+.post-list-title { font-size: 1.1rem; margin: 0 0 0.5rem; }
+.post-list-title a { color: #e2e8f0; text-decoration: none; }
+.post-list-title a:hover { color: #818cf8; }
+.post-list-excerpt { color: #94a3b8; font-size: 0.88rem; margin: 0 0 0.5rem; }
+.post-list-tags { color: #64748b; font-size: 0.78rem; }
+.post-card-link { color: #818cf8; font-size: 0.85rem; text-decoration: none; }
+.post-card-link:hover { text-decoration: underline; }
 @media (max-width: 768px) { .search-categories { gap: 0.35rem; } .search-cat-chip { font-size: 0.75rem; padding: 0.3rem 0.6rem; } }
 </style>
 
