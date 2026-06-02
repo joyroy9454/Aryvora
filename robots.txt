@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://joyroy9454.github.io/Aryvora/sitemap.xml
+Sitemap: https://joyroy9454.github.io/ai-blog-factory/sitemap.xml
