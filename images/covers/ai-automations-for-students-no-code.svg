@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d8b4fe;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M 0 100 Q 700 120.0 1200 140" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.15" stroke-linecap="round"/>
+  <path d="M 0 190 Q 500 210.0 1200 230" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.2" stroke-linecap="round"/>
+  <path d="M 0 280 Q 700 300.0 1200 320" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.25" stroke-linecap="round"/>
+  <path d="M 0 370 Q 500 390.0 1200 410" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.30000000000000004" stroke-linecap="round"/>
+  <path d="M 0 460 Q 700 480.0 1200 500" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <path d="M 0 550 Q 500 570.0 1200 590" stroke="#d8b4fe" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <rect x="0" y="450" width="1200" height="180" fill="url(#accent)" opacity="0.3"/>
+  <text x="60" y="550" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="800" fill="white" filter="url(#glow)">AI Automations</text>
+  <text x="60" y="590" font-family="Inter, system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">Aryvora</text>
+</svg>

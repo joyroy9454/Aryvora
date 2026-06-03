@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="1066" y="206" width="112" height="8" rx="4" fill="#10b981" opacity="0.1"/>
+  <rect x="982" y="362" width="104" height="8" rx="4" fill="#10b981" opacity="0.12000000000000001"/>
+  <rect x="898" y="518" width="96" height="8" rx="4" fill="#10b981" opacity="0.14"/>
+  <rect x="814" y="144" width="88" height="8" rx="4" fill="#10b981" opacity="0.16"/>
+  <rect x="730" y="300" width="80" height="8" rx="4" fill="#10b981" opacity="0.18"/>
+  <rect x="646" y="456" width="72" height="8" rx="4" fill="#10b981" opacity="0.2"/>
+  <rect x="562" y="82" width="64" height="8" rx="4" fill="#10b981" opacity="0.22"/>
+  <rect x="478" y="238" width="56" height="8" rx="4" fill="#10b981" opacity="0.24000000000000002"/>
+  <rect x="394" y="394" width="48" height="8" rx="4" fill="#10b981" opacity="0.26"/>
+  <rect x="310" y="550" width="40" height="8" rx="4" fill="#10b981" opacity="0.28"/>
+  <rect x="226" y="176" width="112" height="8" rx="4" fill="#10b981" opacity="0.30000000000000004"/>
+  <rect x="142" y="332" width="104" height="8" rx="4" fill="#10b981" opacity="0.32"/>
+
+  <rect x="0" y="450" width="1200" height="180" fill="url(#accent)" opacity="0.3"/>
+  <text x="60" y="550" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="800" fill="white" filter="url(#glow)">Learn Python Programming</text>
+  <text x="60" y="590" font-family="Inter, system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">Aryvora</text>
+</svg>
