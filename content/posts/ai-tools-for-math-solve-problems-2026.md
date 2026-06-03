@@ -2,6 +2,7 @@
 title: "AI Tools for Math: Solve Any Math Problem Instantly in 2026"
 description: "Discover the best AI tools for math in 2026. From Photomath to Wolfram Alpha, solve algebra, calculus, and statistics instantly with step-by-step guidance."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: ai-tools-for-math-solve-problems-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/ai-tools-for-math-solve-problems-2026/"

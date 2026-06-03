@@ -1,7 +1,8 @@
 ---
-title: "Best AI Note-Taking Tools for Students in 2026 (Ranked & Tested)"
+title: "Best AI Note-Taking Tools for Students (2026)"
 description: "Discover the best AI note-taking tools for students in 2026. From lecture transcription to smart summaries — these tools will change how you take notes forever."
 date: 2026-05-28
+lastmod: 2026-06-02
 draft: false
 slug: best-ai-note-taking-tools-students-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-ai-note-taking-tools-students-2026/"

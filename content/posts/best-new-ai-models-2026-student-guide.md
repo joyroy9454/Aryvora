@@ -1,5 +1,5 @@
 ---
-title: "Best New AI Models in 2026 — Claude Opus 4.8, Hy3, Gemini & More (Student Guide)"
+title: "Best New AI Models 2026: Student Guide"
 description: "A student guide to the best new AI models in 2026 including Claude Opus 4.8, Hy3, DeepSeek V4, and more. Many are completely free."
 date: 2026-05-29
 lastmod: 2026-05-30

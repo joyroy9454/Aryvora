@@ -1,6 +1,7 @@
 ---
-title: "How to Build Your First Python Automation Script (Step-by-Step Guide for Beginners)"
+title: "How to Build Your First Python Automation Script in 2026"
 date: 2026-05-25
+lastmod: 2026-06-02
 cover:
   image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=630&fit=crop&q=80"
   alt: "Python automation code on screen"

@@ -1,7 +1,8 @@
 ---
-title: "How to Start an AI Agency as a Student (Complete Guide 2026)"
+title: "Start an AI Agency as a Student (2026)"
 description: "Start a profitable AI agency while still in college. Learn how to find clients, price AI services, build a portfolio, and earn $1K-5K/month — no experience required."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: how-to-start-ai-agency-as-student-2026
 cover:

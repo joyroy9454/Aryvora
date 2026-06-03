@@ -1,7 +1,8 @@
 ---
-title: "Data Science Skills Roadmap for Students — From Zero to Job-Ready (2026)"
+title: "Data Science Roadmap for Students (2026)"
 description: "The exact skills you need to become a data scientist in 2026. Python, SQL, ML, data visualization, AI tools, and a step-by-step learning plan for students — with free resources."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: data-science-skills-roadmap-student-2026
 cover:

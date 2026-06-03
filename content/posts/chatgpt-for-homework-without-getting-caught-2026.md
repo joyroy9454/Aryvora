@@ -1,7 +1,8 @@
 ---
-title: "How to Use ChatGPT for Homework & Assignments in 2026 (Without Getting Caught)"
+title: "ChatGPT for Homework: Use It Right (2026)"
 description: "Learn how to use ChatGPT for homework and assignments the smart way in 2026. Practical tips, proven prompts, and ethical guidelines every student should follow."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: chatgpt-for-homework-without-getting-caught-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/chatgpt-for-homework-without-getting-caught-2026/"

@@ -1,7 +1,8 @@
 ---
-title: "AI Content Creation Guide for Students — Write, Design, Edit & Publish with AI (2026)"
+title: "AI Content Creation Guide for Students (2026)"
 description: "Master AI content creation as a student. Write blog posts, create social media content, design graphics, edit videos, and build a content system — all with free AI tools."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: ai-content-creation-guide-students-2026
 cover:

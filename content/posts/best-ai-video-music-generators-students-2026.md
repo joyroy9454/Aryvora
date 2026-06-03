@@ -1,5 +1,5 @@
 ---
-title: "10 Best AI Video & Music Generators for Students (Free & Paid)"
+title: "10 Best AI Video & Music Generators for Students (2026)"
 description: "Create stunning videos and music with AI. The best AI video generators and AI music generators for students — including free options."
 date: 2026-05-29
 lastmod: 2026-05-30

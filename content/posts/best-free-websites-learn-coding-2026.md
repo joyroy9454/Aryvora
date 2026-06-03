@@ -2,6 +2,7 @@
 title: "15 Free Websites to Learn Coding (Ranked & Reviewed) – 2026"
 description: "Looking to learn coding on a budget? We ranked and reviewed 15 free websites and apps for beginners (freeCodeCamp, Codecademy, The Odin Project, etc.). Find interactive tutorials, exercises, and certificates to master programming."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 cover:
   image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop&q=80"

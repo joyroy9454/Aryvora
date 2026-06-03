@@ -1,7 +1,8 @@
 ---
-title: "How to Make Money with AI as a Student in 2026 (10 Proven Ways)"
+title: "Make Money with AI as a Student (2026)"
 description: "Discover 10 proven ways to make money with AI as a student in 2026. From freelance writing to AI art, start earning with these practical AI side hustles."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: how-to-make-money-with-ai-as-student-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-make-money-with-ai-as-student-2026/"

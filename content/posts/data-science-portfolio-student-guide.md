@@ -1,7 +1,8 @@
 ---
-title: "How to Build a Data Science Portfolio as a Student (With 10 Project Ideas)"
+title: "Data Science Portfolio Guide for Students (2026)"
 description: "Want to land a data science internship? You need a portfolio. Here's how to build one as a student — with 10 project ideas, tools, and a step-by-step guide."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 cover:
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop&q=80"

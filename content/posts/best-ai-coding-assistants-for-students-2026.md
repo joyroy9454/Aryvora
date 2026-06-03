@@ -1,5 +1,5 @@
 ---
-title: "Top 10 AI Coding Assistants for Students (Free & Paid) – 2026"
+title: "Best AI Coding Assistants for Students (2026)"
 description: "Explore the 10 best AI coding assistants of 2026. Learn how tools like GitHub Copilot, ChatGPT, and free AI tutors can boost students' programming skills. Each review includes features and pricing."
 date: 2026-05-26
 lastmod: 2026-05-30

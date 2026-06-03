@@ -1,7 +1,8 @@
 ---
-title: "AI Exam Preparation Guide 2026: Tools & Strategies for Students"
+title: "AI Exam Prep Guide for Students (2026)"
 description: "Ready to study smarter? Learn how to use AI tools for exam prep in 2026. From AI-generated study plans and flashcards to personalized quizzes, this step-by-step strategy will boost your grades and save you time."
 date: 2026-05-28
+lastmod: 2026-06-02
 draft: false
 slug: how-to-use-ai-for-exam-preparation-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-use-ai-for-exam-preparation-2026/"

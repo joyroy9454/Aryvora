@@ -1,7 +1,8 @@
 ---
-title: "How to Build an AI-Powered Project for Your Portfolio in 2026 (Step-by-Step)"
+title: "Build an AI-Powered Portfolio Project (2026)"
 description: "Learn how to build an impressive AI-powered project for your student portfolio using free tools. No experience needed — complete walkthrough with code examples."
 date: 2026-05-28
+lastmod: 2026-06-02
 draft: false
 slug: build-ai-powered-project-portfolio-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/build-ai-powered-project-portfolio-2026/"

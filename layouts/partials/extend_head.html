@@ -17,8 +17,8 @@
 {{- /* ===== Enhanced Open Graph ===== */ -}}
 <meta property="og:site_name" content="Aryvora" />
 <meta property="og:locale" content="en_US" />
-{{- $ogImage := "images/aryvora-logo-main.png" | relURL }}
-{{- if and .Params.cover .Params.cover.image }}{{ $ogImage = .Params.cover.image | relURL }}{{ end }}
+{{- $ogImage := "images/aryvora-logo-main.png" | absURL }}
+{{- if and .Params.cover .Params.cover.image }}{{ $ogImage = .Params.cover.image }}{{ end }}
 <meta property="og:image" content="{{ $ogImage }}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />

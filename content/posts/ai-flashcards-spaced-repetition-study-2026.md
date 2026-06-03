@@ -1,7 +1,8 @@
 ---
-title: "AI Flashcards & Spaced Repetition: The Study System That Gets A's (2026 Guide)"
+title: "AI Flashcards & Spaced Repetition: Study System (2026)"
 description: "Use AI to generate flashcards automatically and spaced repetition to remember everything. The ultimate study system for students using Anki, Quizlet, and AI tools."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: ai-flashcards-spaced-repetition-study-2026
 cover:

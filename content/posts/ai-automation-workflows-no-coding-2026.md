@@ -1,7 +1,8 @@
 ---
-title: "AI Automation Workflows for Students — Connect Tools, Save Hours (No Coding) 2026"
+title: "AI Automation for Students: No-Code Workflows (2026)"
 description: "Automate your student life with AI workflows. Connect apps, auto-summarize lectures, organize notes, schedule tasks, and build automation pipelines — no coding required."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: ai-automation-workflows-no-coding-2026
 cover:

@@ -1,5 +1,5 @@
 ---
-title: "How to Build a LinkedIn Profile That Gets You Hired (2026 Guide)"
+title: "How to Build a LinkedIn Profile That Gets You Hired (2026)"
 description: "Step-by-step guide to building a LinkedIn profile that stands out to recruiters in 2026. Photo tips, headline formulas, about section templates, and how to use AI to optimize your profile."
 date: 2026-06-02
 lastmod: 2026-06-02

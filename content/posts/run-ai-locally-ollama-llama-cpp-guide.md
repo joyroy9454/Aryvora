@@ -1,5 +1,5 @@
 ---
-title: "Run AI Locally: Complete Guide to LLaMA, Ollama & llama.cpp for Students (2026)"
+title: "Run AI Locally: LLaMA, Ollama & llama.cpp (2026)"
 description: "Run powerful AI models on your own computer for free. Step-by-step guide to installing and using Ollama, llama.cpp, and LLaMA models on Windows, Mac, and Linux — no GPU required."
 date: 2026-05-31
 lastmod: 2026-05-31

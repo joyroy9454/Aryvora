@@ -1,7 +1,8 @@
 ---
-title: "How to Start Freelancing with AI Skills as a Student in 2026 (Complete Guide)"
+title: "Freelancing with AI Skills: Student Guide (2026)"
 description: "Learn how to start freelancing with AI skills as a student in 2026. Find clients, set rates, and earn your first $500 using AI tools — no experience needed."
 date: 2026-05-28
+lastmod: 2026-06-02
 draft: false
 slug: how-to-start-freelancing-with-ai-skills-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-start-freelancing-with-ai-skills-2026/"

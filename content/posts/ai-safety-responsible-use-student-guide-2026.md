@@ -1,5 +1,5 @@
 ---
-title: "AI Safety & Responsible Use: The Complete Student Guide for 2026"
+title: "AI Safety & Responsible Use: Student Guide"
 description: "How to use AI ethically and responsibly as a student. Covers academic integrity, data privacy, AI bias, deepfakes, and building an ethical AI mindset for the future."
 date: 2026-05-31
 lastmod: 2026-05-31

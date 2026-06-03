@@ -1,7 +1,8 @@
 ---
-title: "15 Best AI Apps for Mobile (Android & iPhone) – Student Guide 2026"
+title: "Best AI Apps for Mobile: Student Guide (2026)"
 description: "The best AI apps for students on mobile. ChatGPT, Claude, Perplexity, AI flashcards, voice assistants, and productivity tools — all tested on Android and iPhone."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: best-ai-apps-mobile-students-2026
 cover:

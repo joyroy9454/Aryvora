@@ -1,5 +1,5 @@
 ---
-title: "What Is Vibe Coding? How to Build Apps Without Being a Developer in 2026"
+title: "What Is Vibe Coding? Build Apps Without Coding (2026)"
 description: "Vibe coding is the hottest trend in tech. Learn what it is, which tools to use, and how to build real apps and websites without writing code manually."
 date: 2026-05-26
 lastmod: 2026-05-30

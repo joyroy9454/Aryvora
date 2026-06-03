@@ -2,6 +2,7 @@
 title: "Data Science Career Guide 2026: Skills, Jobs & Salaries"
 description: "Planning a data science career? This 2026 guide outlines key skills (Python, ML, data analysis), typical salaries, and career paths. Includes a semester-by-semester study plan for students and links to top resources."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 cover:
   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop&q=80"

@@ -1,7 +1,8 @@
 ---
-title: "Best Free AI Image Generators for Students in 2026 (Ranked & Tested)"
+title: "Best Free AI Image Generators for Students (2026)"
 description: "Discover the best free AI image generators for students in 2026. Ranked and tested tools for presentations, projects, and social media."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: best-free-ai-image-generators-students-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-free-ai-image-generators-students-2026/"

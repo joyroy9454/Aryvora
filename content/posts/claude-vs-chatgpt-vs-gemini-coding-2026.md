@@ -1,7 +1,8 @@
 ---
-title: "Claude vs ChatGPT vs Gemini for Coding in 2026: Which AI Should You Actually Use?"
+title: "Claude vs ChatGPT vs Gemini for Coding (2026)"
 description: "Claude vs ChatGPT vs Gemini for coding in 2026 — which AI writes the best code? We tested all three on real programming tasks."
 date: 2026-05-28
+lastmod: 2026-06-02
 draft: false
 slug: claude-vs-chatgpt-vs-gemini-coding-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/claude-vs-chatgpt-vs-gemini-coding-2026/"

@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Is Actually Best in 2026?"
+title: "ChatGPT vs Claude vs Gemini: Best AI in 2026"
 description: "ChatGPT vs Claude vs Gemini — which AI assistant is best in 2026? We compared all three on 10 factors so you don't have to."
 date: 2026-05-26
 lastmod: 2026-05-30

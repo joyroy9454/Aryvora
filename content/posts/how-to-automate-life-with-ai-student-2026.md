@@ -1,7 +1,8 @@
 ---
-title: "How to Automate Your Life with AI as a Student in 2026 (The Ultimate Guide)"
+title: "Automate Your Life with AI: Student Guide (2026)"
 description: "Learn how to automate your life with AI as a student in 2026. 10 powerful automations, tool comparisons, and step-by-step setup guides inside."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: how-to-automate-life-with-ai-student-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-automate-life-with-ai-student-2026/"

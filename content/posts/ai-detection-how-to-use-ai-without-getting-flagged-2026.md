@@ -1,7 +1,8 @@
 ---
-title: "AI Detection: How to Use AI Without Getting Flagged (Student Guide 2026)"
+title: "AI Detection: Use AI Without Getting Flagged (2026)"
 description: "Universities use AI detectors like Turnitin and GPTZero. Learn how AI detection works, what triggers it, how to use AI ethically in your work without getting flagged."
 date: 2026-05-31
+lastmod: 2026-06-02
 draft: false
 slug: ai-detection-how-to-use-ai-without-getting-flagged-2026
 cover:

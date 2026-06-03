@@ -1,7 +1,8 @@
 ---
-title: "How to Use AI to Land Your Internship in 2026 (Complete Strategy Guide)"
+title: "Use AI to Land Your Internship (2026)"
 description: "Learn how to use AI to land internship offers in 2026. Step-by-step strategy covering resumes, cover letters, interviews, LinkedIn, and a 30-day action plan."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: how-to-use-ai-to-land-internship-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-use-ai-to-land-internship-2026/"

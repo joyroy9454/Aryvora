@@ -1,7 +1,8 @@
 ---
-title: "How to Build a Personal Website for Free in 2026 (Step-by-Step Guide)"
+title: "Build a Personal Website for Free (2026)"
 description: "Learn how to build a personal website for free in 2026. Step-by-step guide covering GitHub Pages, Hugo, and other free hosting options for students."
 date: 2026-05-26
+lastmod: 2026-06-02
 draft: false
 slug: how-to-build-personal-website-free-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-build-personal-website-free-2026/"
@@ -287,7 +288,7 @@ Edit the file at `content/about.md`:
 
 ```markdown
 ---
-title: "About Me"
+title: "Build a Personal Website for Free (2026)"
 ---
 
 Hi! I'm [Your Name], a [year] student at [University] studying [major].
@@ -309,7 +310,7 @@ Edit `content/projects.md`:
 
 ```markdown
 ---
-title: "Projects"
+title: "Build a Personal Website for Free (2026)"
 ---
 
 Here are some of my recent projects:
@@ -570,7 +571,7 @@ Every page should have a unique, descriptive title and meta description. In Hugo
 
 ```yaml
 ---
-title: "Your Name - Computer Science Student & Developer"
+title: "Build a Personal Website for Free (2026)"
 description: "Personal portfolio and blog of Your Name, a CS student at XYZ University specializing in web development and machine learning."
 ---
 ```

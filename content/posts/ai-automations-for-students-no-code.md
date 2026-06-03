@@ -1,5 +1,5 @@
 ---
-title: "10 AI Automations Every Student Should Set Up (No Coding Required)"
+title: "10 AI Automations Every Student Should Set Up in 2026"
 description: "Save 10+ hours per week with these AI automations. Connect your email, calendar, notes, and social media — all without writing a single line of code. Step-by-step setup guides included."
 date: 2026-06-02
 lastmod: 2026-06-02

@@ -1,5 +1,5 @@
 ---
-title: "How to Start a Side Hustle with No-Code AI Tools in 2026 (Step-by-Step)"
+title: "Start a Side Hustle with No-Code AI (2026)"
 description: "Learn how to launch a profitable side hustle with no-code AI tools in 2026. No coding required — just smart tools and hustle. Full guide inside."
 date: 2026-05-26
 lastmod: 2026-05-30

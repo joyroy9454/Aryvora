@@ -1,7 +1,8 @@
 ---
-title: "How People Actually Use AI at Work in 2026 — A Student's Guide"
+title: "How People Use AI at Work: Student Guide (2026)"
 description: "Real data on how employees use AI tools at work in 2026. Learn the most common AI workflows, tools, and how to prepare for an AI-powered workplace as a student."
 date: 2026-05-29
+lastmod: 2026-06-02
 draft: false
 slug: how-people-use-ai-at-work-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-people-use-ai-at-work-2026/"

@@ -1,5 +1,5 @@
 ---
-title: "ChatGPT Prompt Engineering: 75+ Proven Prompts for Students (2026 Guide)"
+title: "ChatGPT Prompt Engineering: 75+ Prompts (2026)"
 description: "The ultimate collection of ChatGPT prompts for students. 75+ tested prompts for essays, coding, studying, research, resumes, emails, and more. Copy, customize, and use today."
 date: 2026-05-31
 lastmod: 2026-05-31

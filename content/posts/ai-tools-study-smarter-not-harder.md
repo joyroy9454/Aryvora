@@ -1,6 +1,7 @@
 ---
-title: "7 AI Tools That Actually Help You Study Smarter (Not Harder)"
+title: "7 AI Tools That Actually Help You Study Smarter in 2026"
 date: 2026-05-25
+lastmod: 2026-06-02
 cover:
   image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=630&fit=crop&q=80"
   alt: "Student studying with AI tools"

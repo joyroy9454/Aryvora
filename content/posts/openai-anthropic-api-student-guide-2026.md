@@ -1,5 +1,5 @@
 ---
-title: "How to Use OpenAI API & Anthropic API: Student Developer Guide (2026)"
+title: "OpenAI & Anthropic API: Student Developer Guide (2026)"
 description: "Learn to use the OpenAI and Anthropic APIs to build AI-powered apps. Step-by-step guide with Python code examples, free tier tips, rate limits, and best practices for student developers."
 date: 2026-05-31
 lastmod: 2026-05-31

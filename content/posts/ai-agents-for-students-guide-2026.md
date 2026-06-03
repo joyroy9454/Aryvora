@@ -1,5 +1,5 @@
 ---
-title: "AI Agents for Students: Complete Guide to AutoGPT, CrewAI, Manus & More in 2026"
+title: "AI Agents for Students: Complete Guide (2026)"
 description: "AI agents are the hottest trend in tech. Learn what they are, how they work, and how students can use AutoGPT, CrewAI, Manus, and other AI agents to automate tasks, study smarter, and build real projects."
 date: 2026-05-31
 lastmod: 2026-05-31

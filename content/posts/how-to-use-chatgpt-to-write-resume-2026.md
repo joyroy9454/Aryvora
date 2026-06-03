@@ -1,5 +1,5 @@
 ---
-title: "How to Use ChatGPT to Write a Resume That Gets Interviews in 2026"
+title: "Use ChatGPT to Write a Resume (2026 Guide)"
 description: "Learn how to use ChatGPT to craft a professional resume that passes ATS systems and lands interviews. Step-by-step prompts and templates included."
 date: 2026-05-28
 lastmod: 2026-05-30
