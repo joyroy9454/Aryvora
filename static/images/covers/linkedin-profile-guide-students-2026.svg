@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1120" cy="560" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="1040" cy="490" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="960" cy="420" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="880" cy="350" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="800" cy="280" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="720" cy="210" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="640" cy="140" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="560" cy="70" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="480" cy="0" r="6" fill="#93c5fd" opacity="0.7"/>
+  <circle cx="400" cy="560" r="6" fill="#93c5fd" opacity="0.7"/>
+  <line x1="1120" y1="560" x2="1040" y2="490" stroke="#93c5fd" stroke-width="1.5" opacity="0.2"/>
+  <line x1="1040" y1="490" x2="960" y2="420" stroke="#93c5fd" stroke-width="1.5" opacity="0.23"/>
+  <line x1="960" y1="420" x2="880" y2="350" stroke="#93c5fd" stroke-width="1.5" opacity="0.26"/>
+  <line x1="880" y1="350" x2="800" y2="280" stroke="#93c5fd" stroke-width="1.5" opacity="0.29000000000000004"/>
+  <line x1="800" y1="280" x2="720" y2="210" stroke="#93c5fd" stroke-width="1.5" opacity="0.32"/>
+  <line x1="720" y1="210" x2="640" y2="140" stroke="#93c5fd" stroke-width="1.5" opacity="0.35"/>
+  <line x1="640" y1="140" x2="560" y2="70" stroke="#93c5fd" stroke-width="1.5" opacity="0.38"/>
+  <line x1="560" y1="70" x2="480" y2="0" stroke="#93c5fd" stroke-width="1.5" opacity="0.41000000000000003"/>
+  <line x1="480" y1="0" x2="400" y2="560" stroke="#93c5fd" stroke-width="1.5" opacity="0.44"/>
+
+  <rect x="0" y="450" width="1200" height="180" fill="url(#accent)" opacity="0.3"/>
+  <text x="60" y="550" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="800" fill="white" filter="url(#glow)">LinkedIn Profile Guide</text>
+  <text x="60" y="590" font-family="Inter, system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">Aryvora</text>
+</svg>

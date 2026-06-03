@@ -41,7 +41,9 @@
   {{- else}}
     <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | relURL }}">
   {{- end}}
-{{- else if .IsPage }}
+{{- else if .Params.image -}}
+  <meta property="og:image" content="{{ .Params.image }}">
+{{- else if .IsPage -}}
   {{- $ogImages := partial "_funcs/get-page-images" . }}
   {{- if gt (len $ogImages) 0 }}
     {{- range $ogImages | first 6 }}

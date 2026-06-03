@@ -6,7 +6,7 @@ lastmod: 2026-06-02
 draft: false
 categories: ["Coding"]
 tags: ["python", "learn-python", "beginner", "roadmap", "programming", "coding", "tutorial"]
-image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1200&h=630&fit=crop&q=80"
+image: "images/covers/learn-python-2026-beginner-roadmap.svg"
 ---
 
 ## You Don't Need a CS Degree to Learn Python in 2026
