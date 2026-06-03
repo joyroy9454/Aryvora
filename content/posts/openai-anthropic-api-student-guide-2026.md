@@ -1,8 +1,8 @@
 ---
 title: "OpenAI & Anthropic API: Student Developer Guide (2026)"
-description: "Learn to use the OpenAI and Anthropic APIs to build AI-powered apps. Step-by-step guide with Python code examples, free tier tips, rate limits, and best practices for student developers."
+description: "Complete guide to using OpenAI and Anthropic APIs for student developers. Setup, code examples, pricing comparison, streaming, function calling, error handling, project ideas, and best practices — everything you need to build AI-powered apps."
 date: 2026-05-31
-lastmod: 2026-05-31
+lastmod: 2026-06-03
 draft: false
 slug: openai-anthropic-api-student-guide-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/openai-anthropic-api-student-guide-2026/"
@@ -21,6 +21,10 @@ faq:
     answer: "OpenAI requires a credit card for paid usage but offers free credits without one initially. Anthropic also requires payment info for paid usage, but GitHub Education provides free API credits without a card. University partnerships may provide additional free access."
   - question: "What can I build with these APIs as a student?"
     answer: "Anything AI-powered: chatbots, writing assistants, code generators, research tools, study apps, automation scripts, content generators, data analysis tools, and portfolio-worthy projects. The key limit is your imagination and API budget."
+  - question: "What is the difference between the API and ChatGPT/Claude websites?"
+    answer: "The API gives you programmatic access to the same models, but you control everything: system prompts, conversation history, tool use, and output format. The ChatGPT/Claude websites are consumer interfaces with pre-configured settings."
+  - question: "How do I handle API errors and rate limits?"
+    answer: "Both APIs enforce rate limits per minute, day, and month. Use exponential backoff retry logic for rate limit errors. For production apps, implement proper error handling for timeouts, authentication errors, and content policy violations."
 ---
 
 # How to Use OpenAI API & Anthropic API: Student Developer Guide (2026)
@@ -29,24 +33,28 @@ faq:
 
 That distinction matters. Users consume what others build. Builders create what others use. If you are a CS student (or any student who codes), API development is the single most valuable skill you can add to your resume in 2026.
 
-This guide walks you through everything: setup, authentication, making your first API call, handling responses, managing costs, and building real projects.
+This guide walks you through everything: setup, authentication, making your first API call, handling responses, managing costs, building real projects, and deploying them.
 
-> **📅 Last Updated: June 1, 2026** — All code tested with Python 3.12, OpenAI SDK v1.x, Anthropic SDK v0.x.
+> **📅 Last Updated: June 3, 2026** — All code tested with Python 3.12, OpenAI SDK v1.x, Anthropic SDK v0.x.
 
 ---
 
 ## Table of Contents
 
 1. [Why Learn AI APIs?](#why-apis)
-2. [OpenAI API Setup](#openai-setup)
-3. [Anthropic API Setup](#anthropic-setup)
-4. [Your First API Call (Both Providers)](#first-call)
-5. [Streaming Responses](#streaming)
-6. [Function Calling & Tools](#function-calling)
-7. [Cost Management](#cost-management)
-8. [Building a Real Project](#real-project)
-9. [FAQ](#faq)
-10. [Next Steps](#next-steps)
+2. [OpenAI vs Anthropic: Which Should You Choose?](#comparison)
+3. [OpenAI API Setup](#openai-setup)
+4. [Anthropic API Setup](#anthropic-setup)
+5. [Your First API Call (Both Providers)](#first-call)
+6. [Streaming Responses](#streaming)
+7. [Function Calling & Tools](#function-calling)
+8. [Vision API: Analyzing Images](#vision-api)
+9. [Embeddings: Search and Similarity](#embeddings)
+10. [Error Handling and Rate Limits](#error-handling)
+11. [Cost Management](#cost-management)
+12. [Building Real Projects](#real-project)
+13. [FAQ](#faq)
+14. [Next Steps](#next-steps)
 
 ---
 
@@ -60,6 +68,31 @@ This guide walks you through everything: setup, authentication, making your firs
 
 **Free credits are generous.** Between OpenAI free tier, GitHub Education, and university programs, most students can build and deploy real AI apps without spending money.
 
+**High demand in job market.** Companies are hiring developers who can integrate AI into products. API experience is a resume differentiator.
+
+---
+
+## OpenAI vs Anthropic: Which Should You Choose? {#comparison}
+
+Before diving into setup, here is an honest comparison to help you decide where to start:
+
+| Feature | OpenAI API | Anthropic API |
+|---------|-----------|---------------|
+| **Free tier** | $5 credit (new accounts) | $5-10 via GitHub Education |
+| **Cheapest model** | GPT-4o-mini ($0.15/1M in) | Claude Haiku 3.5 ($0.80/1M in) |
+| **Best model** | GPT-4o ($2.50/1M in) | Claude Sonnet 4 ($3.00/1M in) |
+| **Context window** | 128K tokens | 200K tokens |
+| **Code generation** | Excellent | Very good |
+| **Writing quality** | Very good | Excellent |
+| **Vision support** | Yes (GPT-4o) | Yes (Claude Sonnet 4) |
+| **Function calling** | Yes | Yes (called "tools") |
+| **Documentation** | Extensive | Good, improving |
+| **Community/tutorials** | Largest | Growing |
+| **Rate limits (free)** | 3 req/min, 200/day | 5 req/min, varies |
+| **SDK languages** | Python, JS, Go, more | Python, JS, TypeScript |
+
+**Our recommendation for students:** Start with OpenAI (more tutorials, larger community, cheaper mini model). Add Anthropic once you are comfortable — knowing both makes you more versatile.
+
 ---
 
 ## OpenAI API Setup {#openai-setup}
@@ -68,8 +101,8 @@ This guide walks you through everything: setup, authentication, making your firs
 
 1. Go to [platform.openai.com](https://platform.openai.com)
 2. Sign up and verify your email
-5. Navigate to **Settings → Billing** and add payment method (required for paid usage)
-6. Check your usage at **Settings → Usage**
+3. Navigate to **Settings → Billing** and add payment method (required for paid usage)
+4. Check your usage at **Settings → Usage**
 
 ### Step 2: Get Your API Key
 
@@ -88,7 +121,7 @@ pip install openai python-dotenv
 
 Create a `.env` file:
 ```
-OPENAI_API_KEY=sk-your-key-here
+OPENAI_API_KEY=sk-...
 ```
 
 ---
@@ -116,7 +149,7 @@ pip install anthropic python-dotenv
 
 Add to your `.env`:
 ```
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+ANTHROPIC_API_KEY=sk-ant-...here
 ```
 
 ---
@@ -168,6 +201,16 @@ response = client.messages.create(
 print(response.content[0].text)
 ```
 
+### Key Differences in API Design
+
+**OpenAI** uses a `messages` array where the system prompt is just another message with `role: "system"`.
+
+**Anthropic** separates the `system` parameter from the `messages` array. Only `user` and `assistant` roles are allowed in messages.
+
+**OpenAI** returns `response.choices[0].message.content`.
+
+**Anthropic** returns `response.content[0].text` (content is an array of content blocks).
+
 ---
 
 ## Streaming Responses {#streaming}
@@ -200,11 +243,39 @@ with client.messages.stream(
         print(text, end="", flush=True)
 ```
 
+### Building a Streaming Chat Interface
+
+```python
+def stream_chat_openai(messages, model="gpt-4o-mini"):
+    """Stream a chat response with proper formatting."""
+    stream = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        stream=True
+    )
+    
+    full_response = ""
+    for chunk in stream:
+        if chunk.choices[0].delta.content:
+            token = chunk.choices[0].delta.content
+            print(token, end="", flush=True)
+            full_response += token
+    
+    return full_response
+
+# Usage
+messages = [
+    {"role": "system", "content": "You are a helpful tutor."},
+    {"role": "user", "content": "What is dynamic programming?"}
+]
+response = stream_chat_openai(messages)
+```
+
 ---
 
-## Function Calling {#function-calling}
+## Function Calling & Tools {#function-calling}
 
-Both APIs support function calling — letting the AI use your code as a tool.
+Both APIs support function calling — letting the AI use your code as a tool. This is how AI agents work.
 
 ### OpenAI Function Calling
 
@@ -215,12 +286,68 @@ def get_weather(city: str) -> str:
     """Get current weather for a city (mock implementation)"""
     return f"The weather in {city} is 72°F and sunny."
 
-tools = [{
-    "type": "function",
-    "function": {
+def calculate_tip(bill: float, percentage: float = 15.0) -> str:
+    """Calculate tip amount."""
+    tip = bill * (percentage / 100)
+    return f"Tip: ${tip:.2f} (Total: ${bill + tip:.2f})"
+
+tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_weather",
+            "description": "Get current weather for a city",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {"type": "string", "description": "City name"}
+                },
+                "required": ["city"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "calculate_tip",
+            "description": "Calculate tip for a restaurant bill",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "bill": {"type": "number", "description": "Bill amount in dollars"},
+                    "percentage": {"type": "number", "description": "Tip percentage (default 15%)"}
+                },
+                "required": ["bill"]
+            }
+        }
+    }
+]
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "What's the weather in Tokyo and what's the tip on a $45 bill?"}],
+    tools=tools
+)
+
+# Handle tool calls
+if response.choices[0].message.tool_calls:
+    for tool_call in response.choices[0].message.tool_calls:
+        args = json.loads(tool_call.function.arguments)
+        if tool_call.function.name == "get_weather":
+            result = get_weather(**args)
+        elif tool_call.function.name == "calculate_tip":
+            result = calculate_tip(**args)
+        print(f"Tool: {tool_call.function.name}({args}) → {result}")
+```
+
+### Anthropic Tool Use
+
+```python
+tools = [
+    {
         "name": "get_weather",
         "description": "Get current weather for a city",
-        "parameters": {
+        "input_schema": {
             "type": "object",
             "properties": {
                 "city": {"type": "string", "description": "City name"}
@@ -228,56 +355,279 @@ tools = [{
             "required": ["city"]
         }
     }
-}]
+]
 
-response = client.chat.completions.create(
-    model="gpt-4o",
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=500,
     messages=[{"role": "user", "content": "What's the weather in Tokyo?"}],
     tools=tools
 )
 
-if response.choices[0].message.tool_calls:
-    tool_call = response.choices[0].message.tool_calls[0]
-    args = json.loads(tool_call.function.arguments)
-    result = get_weather(**args)
-    print(f"AI called get_weather({args['city']}) → {result}")
+# Handle tool use
+if response.stop_reason == "tool_use":
+    for block in response.content:
+        if block.type == "tool_use":
+            result = get_weather(block.input["city"])
+            print(f"Tool: {block.name} → {result}")
 ```
+
+---
+
+## Vision API: Analyzing Images {#vision-api}
+
+Both APIs can analyze images — useful for building apps that understand screenshots, diagrams, photos, and documents.
+
+### OpenAI Vision
+
+```python
+import base64
+
+def encode_image(image_path):
+    with open(image_path, "rb") as f:
+        return base64.b64encode(f.read()).decode("utf-8")
+
+base64_image = encode_image("diagram.png")
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "You are a helpful tutor."},
+        {"role": "user", "content": [
+            {"type": "text", "text": "Explain this diagram to a first-year CS student."},
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{base64_image}"}}
+        ]}
+    ],
+    max_tokens=500
+)
+
+print(response.choices[0].message.content)
+```
+
+### Anthropic Vision
+
+```python
+import base64
+
+with open("diagram.png", "rb") as f:
+    base64_image = base64.b64encode(f.read()).decode("utf-8")
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=500,
+    messages=[{"role": "user", "content": [
+        {"type": "text", "text": "Explain this diagram to a first-year CS student."},
+        {"type": "image", "source": {
+            "type": "base64",
+            "media_type": "image/png",
+            "data": base64_image
+        }}
+    ]}]
+)
+
+print(response.content[0].text)
+```
+
+### Vision API Use Cases for Students
+
+- **Homework helper:** Upload a math problem photo, get step-by-step solution
+- **Code review from screenshots:** Upload a screenshot of code, get feedback
+- **Diagram explainer:** Upload architecture diagrams, get explanations
+- **Document analyzer:** Upload PDF pages, extract key information
+- **Accessibility tool:** Describe images for visually impaired users
+
+---
+
+## Embeddings: Search and Similarity {#embeddings}
+
+Embeddings convert text into numerical vectors. Similar texts have similar vectors — enabling semantic search, recommendation systems, and clustering.
+
+### OpenAI Embeddings
+
+```python
+response = client.embeddings.create(
+    input=["Python is a programming language", "JavaScript is used for web development"],
+    model="text-embedding-3-small"
+)
+
+vectors = [item.embedding for item in response.data]
+print(f"Vector dimension: {len(vectors[0])}")  # 1536 for text-embedding-3-small
+```
+
+### Anthropic Embeddings
+
+```python
+# Anthropic doesn't have a separate embedding endpoint
+# Use their messages API with a custom prompt for similarity tasks
+# Or use OpenAI's embedding API alongside Anthropic
+```
+
+### Building a Semantic Search Engine
+
+```python
+import numpy as np
+from openai import OpenAI
+
+client = OpenAI()
+
+def get_embedding(text):
+    response = client.embeddings.create(input=[text], model="text-embedding-3-small")
+    return response.data[0].embedding
+
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+
+# Index your documents
+documents = [
+    "Python is a high-level programming language",
+    "JavaScript runs in web browsers",
+    "Machine learning uses statistical models",
+    "Databases store structured data",
+    "APIs enable communication between software"
+]
+
+index = [(doc, get_embedding(doc)) for doc in documents]
+
+# Search
+query = "How do websites work?"
+query_vec = get_embedding(query)
+
+results = sorted(
+    [(doc, cosine_similarity(query_vec, vec)) for doc, vec in index],
+    key=lambda x: -x[1]
+)
+
+for doc, score in results[:3]:
+    print(f"  {score:.3f} — {doc}")
+```
+
+---
+
+## Error Handling and Rate Limits {#error-handling}
+
+Production apps need proper error handling. Here is a robust pattern:
+
+### Complete Error Handling
+
+```python
+import time
+import logging
+from openai import OpenAI, RateLimitError, APIError, APITimeoutError, AuthenticationError
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+def safe_api_call_openai(messages, model="gpt-4o-mini", max_retries=3):
+    """Make an API call with comprehensive error handling."""
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                max_tokens=500
+            )
+            return response.choices[0].message.content
+            
+        except AuthenticationError:
+            logger.error("Invalid API key. Check your .env file.")
+            raise  # Don't retry — this won't fix itself
+            
+        except RateLimitError as e:
+            wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
+            logger.warning(f"Rate limited. Waiting {wait_time}s... (attempt {attempt+1}/{max_retries})")
+            if attempt < max_retries - 1:
+                time.sleep(wait_time)
+            else:
+                raise
+                
+        except APITimeoutError:
+            logger.warning(f"Request timed out. Retrying... (attempt {attempt+1}/{max_retries})")
+            if attempt < max_retries - 1:
+                time.sleep(1)
+            else:
+                raise
+                
+        except APIError as e:
+            logger.error(f"API error: {e}")
+            if e.code in ["server_error", "service_unavailable"] and attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+            else:
+                raise
+                
+        except Exception as e:
+            logger.error(f"Unexpected error: {e}")
+            raise
+
+    return None  # All retries exhausted
+
+# Usage
+try:
+    response = safe_api_call_openai([
+        {"role": "user", "content": "Explain quicksort"}
+    ])
+    print(response)
+except Exception as e:
+    print(f"Failed after retries: {e}")
+```
+
+### Rate Limits Reference (June 2026)
+
+| Tier | OpenAI | Anthropic |
+|------|--------|-----------|
+| Free | 3 req/min, 200/day | 5 req/min, varies |
+| Tier 1 ($5-10 spent) | 50 req/min, 10K/day | 10 req/min |
+| Tier 2 ($50+ spent) | 100 req/min, 50K/day | 50 req/min |
+| Tier 3 ($100+ spent) | 300 req/min, 150K/day | 100 req/min |
+
+**Tip:** Use `gpt-4o-mini` for development and testing. It is 17x cheaper than GPT-4o and has the same rate limits.
 
 ---
 
 ## Cost Management {#cost-management}
 
-**Pricing (June 2026):**
+### Pricing Comparison (June 2026)
 
-| Model | Input (per 1M tokens) | Output (per 1M tokens) |
-|-------|----------------------|----------------------|
-| GPT-4o | $2.50 | $10.00 |
-| GPT-4o-mini | $0.15 | $0.60 |
-| Claude Sonnet 4 | $3.00 | $15.00 |
-| Claude Haiku 3.5 | $0.80 | $4.00 |
+| Model | Input (per 1M tokens) | Output (per 1M tokens) | Best For |
+|-------|----------------------|----------------------|----------|
+| GPT-4o-mini | $0.15 | $0.60 | Most student projects |
+| GPT-4o | $2.50 | $10.00 | Complex reasoning |
+| GPT-4-turbo | $10.00 | $30.00 | Advanced tasks |
+| Claude Haiku 3.5 | $0.80 | $4.00 | Fast, cheap responses |
+| Claude Sonnet 4 | $3.00 | $15.00 | Best quality/cost balance |
+| Claude Opus 3 | $15.00 | $75.00 | Most capable |
 
-**Cost control tips:**
+### Cost Control Tips
 
 1. **Use GPT-4o-mini for simple tasks** — it is 17x cheaper than GPT-4o and good enough for most student projects
 2. **Set max_tokens** — never leave it unlimited
 3. **Cache responses** — store results locally to avoid repeated API calls
 4. **Batch requests** — combine multiple questions into one API call
 5. **Monitor usage** — both dashboards show real-time spending
+6. **Use streaming** — you can stop generating early if the response is long enough
 
 ```python
-# Set spending limit
+# Cost-effective pattern
 response = client.chat.completions.create(
     model="gpt-4o-mini",  # Use cheaper model
     messages=[{"role": "user", "content": "Short answer please."}],
-    max_tokens=100,  # Limit output length
+    max_tokens=100  # Limit output length
 )
 ```
 
+### Free Credits Available
+
+| Source | Amount | How to Get |
+|--------|--------|------------|
+| OpenAI new account | $5 | Sign up at platform.openai.com |
+| GitHub Education (Anthropic) | $5-10 | Apply at anthropic.com/education |
+| University partnerships | Varies | Check with your CS department |
+| Hackathon prizes | $5-50 | Join AI hackathons |
+
 ---
 
-## Building a Real Project {#real-project}
+## Building Real Projects {#real-project}
 
-### Study Buddy Chatbot (OpenAI API)
+### Project 1: Study Buddy Chatbot
 
 ```python
 import os
@@ -295,7 +645,7 @@ def chat(user_message: str, history: list = None) -> str:
     if history:
         messages.extend(history)
     messages.append({"role": "user", "content": user_message})
-
+    
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=messages,
@@ -316,6 +666,102 @@ while True:
         {"role": "user", "content": user_input},
         {"role": "assistant", "content": response}
     ])
+    # Keep history manageable (last 10 exchanges)
+    if len(history) > 20:
+        history = history[-20:]
+```
+
+### Project 2: Code Review Tool
+
+```python
+def review_code(code: str, language: str = "Python") -> str:
+    """Submit code for AI review."""
+    prompt = f"""Review this {language} code for:
+1. Bugs and potential errors
+2. Code style and readability
+3. Performance improvements
+4. Security concerns
+5. Best practices
+
+Code:
+```{language.lower()}
+{code}
+```
+
+Provide specific, actionable feedback with line numbers where relevant."""
+    
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=800
+    )
+    return response.choices[0].message.content
+
+# Usage
+code = """
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+for i in range(30):
+    print(fibonacci(i))
+"""
+print(review_code(code))
+```
+
+### Project 3: Research Paper Summarizer
+
+```python
+def summarize_paper(text: str) -> dict:
+    """Summarize a research paper into key sections."""
+    prompt = f"""Analyze this research paper and provide:
+1. **Main Contribution** (2-3 sentences)
+2. **Key Methods** (bullet points)
+3. **Main Findings** (bullet points)
+4. **Limitations** (bullet points)
+5. **Future Work** (bullet points)
+6. **Relevance to Students** (1-2 sentences)
+
+Paper:
+{text[:8000]}  # Truncate to fit context window
+"""
+    
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1000
+    )
+    return response.choices[0].message.content
+```
+
+### Project 4: AI Writing Coach
+
+```python
+def writing_coach(essay: str, assignment_type: str = "essay") -> str:
+    """Get feedback on writing from an AI coach."""
+    prompt = f"""You are a writing coach for university students.
+Review this {assignment_type} and provide feedback on:
+
+1. **Thesis/Argument** — Is the main argument clear and well-supported?
+2. **Structure** — Is the organization logical and effective?
+3. **Evidence** — Are claims supported with evidence?
+4. **Clarity** — Is the writing clear and concise?
+5. **Grammar** — Any grammatical issues?
+6. **Suggestions** — 3 specific improvements
+
+Be constructive and encouraging. Point out strengths too.
+
+Essay:
+{essay}
+"""
+    
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1000
+    )
+    return response.choices[0].message.content
 ```
 
 ---
@@ -330,30 +776,25 @@ Start with OpenAI. It has more tutorials, better documentation, and a larger com
 
 Check your institution's policy first. Using the API to learn and experiment is fine. Submitting API-generated code as your own work is typically not allowed. When in doubt, ask your professor.
 
-**What is the difference between the API and ChatGPT website?**
+**What is the difference between the API and ChatGPT/Claude websites?**
 
-The API gives you programmatic access to the same models, but you control everything: system prompts, conversation history, tool use, and output format. The ChatGPT website is a consumer interface with pre-configured settings.
+The API gives you programmatic access to the same models, but you control everything: system prompts, conversation history, tool use, and output format. The ChatGPT/Claude websites are consumer interfaces with pre-configured settings.
 
 **How do I handle API rate limits?**
 
-Both APIs enforce rate limits per minute, day, and month. For OpenAI free tier: 3 requests per minute, 200 per day. Handle rate limits with retry logic:
+Both APIs enforce rate limits per minute, day, and month. For OpenAI free tier: 3 requests per minute, 200 per day. Handle rate limits with exponential backoff retry logic (see Error Handling section above).
 
-```python
-import time
-from openai import RateLimitError
+**Can I use both APIs in the same project?**
 
-def safe_call(messages, max_retries=3):
-    for attempt in range(max_retries):
-        try:
-            return client.chat.completions.create(
-                model="gpt-4o-mini", messages=messages, max_tokens=500
-            )
-        except RateLimitError:
-            if attempt < max_retries - 1:
-                time.sleep(2 ** attempt)
-            else:
-                raise
-```
+Yes. Many developers use OpenAI for code generation and Anthropic for writing/analysis. You can even compare outputs from both to get the best result.
+
+**What happens when I run out of free credits?**
+
+Your API calls will stop working until you add payment info. Both platforms show your remaining balance in the dashboard. Set up billing alerts to avoid unexpected charges.
+
+**Is my API data used for training?**
+
+OpenAI: API data is NOT used for training by default (as of 2024 policy). Anthropic: API data is NOT used for training. Both are safer than the consumer chat products for sensitive data.
 
 ---
 
@@ -366,6 +807,8 @@ You now have everything you need to build AI-powered applications. The next step
 2. **Code review tool** — submit code, get feedback on style, bugs, and improvements
 3. **Research assistant** — upload PDFs, ask questions, get summaries
 4. **AI writing coach** — paste essays, get suggestions for improvement
+5. **Homework helper** — upload problem photos, get step-by-step solutions
+6. **Interview prep bot** — practice technical interviews with AI feedback
 
 **Your action plan:**
 1. Create accounts on both platforms ($5 free credit each)
@@ -382,3 +825,4 @@ You now have everything you need to build AI-powered applications. The next step
 - [Best AI Coding Assistants](/posts/best-ai-coding-assistants-for-students-2026/)
 - [Vibe Coding Guide](/posts/what-is-vibe-coding/)
 - [Run AI Locally](/posts/run-ai-locally-ollama-llama-cpp-guide/)
+- [Best AI Tools for Students](/posts/best-ai-tools-for-students-2026-25-tools-ranked-reviewed/)
