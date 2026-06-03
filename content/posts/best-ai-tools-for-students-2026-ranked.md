@@ -7,7 +7,7 @@ draft: false
 categories: ["AI Tools"]
 tags: ["best-ai-tools", "students", "reviews", "rankings", "free-tools", "chatgpt", "claude", "gemini"]
 cover:
-  image: "images/covers/best-ai-tools-for-students-2026-ranked.svg"
+  image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&h=630&fit=crop&q=80"
 ---
 
 ## We Spent 3 Months Testing AI Tools So You Don't Have To

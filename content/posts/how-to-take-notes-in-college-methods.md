@@ -7,7 +7,7 @@ draft: false
 categories: ["Education"]
 tags: ["note-taking", "college", "study-tips", "productivity", "learning", "students", "organization"]
 cover:
-  image: "images/covers/how-to-take-notes-in-college-methods.svg"
+  image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=630&fit=crop&q=80"
 ---
 
 ## Most Students Take Notes Wrong. Here's How to Fix It.

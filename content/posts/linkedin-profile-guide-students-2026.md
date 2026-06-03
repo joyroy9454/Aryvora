@@ -7,7 +7,7 @@ draft: false
 categories: ["Career"]
 tags: ["linkedin", "career", "students", "job-search", "personal-branding", "resume", "recruiters"]
 cover:
-  image: "images/covers/linkedin-profile-guide-students-2026.svg"
+  image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=630&fit=crop&q=80"
 ---
 
 ## Your LinkedIn Profile Is Your Digital First Impression
