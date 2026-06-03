@@ -6,7 +6,8 @@ lastmod: 2026-06-02
 draft: false
 categories: ["Automation"]
 tags: ["automation", "students", "productivity", "no-code", "zapier", "make", "ai-agents", "time-saving"]
-image: "images/covers/ai-automations-for-students-no-code.svg"
+cover:
+  image: "images/covers/ai-automations-for-students-no-code.svg"
 ---
 
 ## You're Wasting 10 Hours a Week on Tasks a Robot Could Do
