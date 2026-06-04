@@ -8,6 +8,19 @@ categories: ["Coding"]
 tags: ["python", "learn-python", "beginner", "roadmap", "programming", "coding", "tutorial"]
 cover:
   image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&h=630&fit=crop&q=80"
+faq:
+  - question: "How long does it take to learn Python?"
+    answer: "Basic proficiency: 2-3 months of consistent practice (1-2 hours/day). Job-ready: 6-12 months depending on your goals and how much you practice."
+  - question: "Do I need a powerful computer to learn Python?"
+    answer: "No. Any computer from the last 5 years works fine. You can even start with just a browser using Google Colab or Replit."
+  - question: "Should I learn Python 2 or Python 3?"
+    answer: "Python 3. Python 2 is dead. All modern resources teach Python 3."
+  - question: "Is Python enough to get a job?"
+    answer: "For data science and automation roles, yes. For web development, you'll also need HTML/CSS/JavaScript. For machine learning, you'll need math and statistics."
+  - question: "What's the best IDE for Python beginners?"
+    answer: "VS Code with the Python extension. Free, powerful, and what most professionals use. PyCharm Community Edition is also excellent."
+  - question: "How many hours per day should I practice?"
+    answer: "Consistency beats intensity. 1 hour daily is better than 7 hours on weekends. Aim for at least 30 minutes every day."
 ---
 
 ## You Don't Need a CS Degree to Learn Python in 2026

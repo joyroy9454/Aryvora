@@ -8,6 +8,19 @@ categories: ["Education"]
 tags: ["note-taking", "college", "study-tips", "productivity", "learning", "students", "organization"]
 cover:
   image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=630&fit=crop&q=80"
+faq:
+  - question: "Should I take notes by hand or on a laptop?"
+    answer: "Research shows handwriting improves retention, but digital notes are more searchable and shareable. Best approach: write by hand in class, type up the same evening."
+  - question: "What if my professor talks too fast?"
+    answer: "Use the sentence method during class (capture everything you can), then reorganize within 24 hours. Consider asking the professor to slow down or share slides."
+  - question: "How do I take notes during group discussions?"
+    answer: "Focus on decisions made, action items, and key arguments. Use a simple bullet format. Assign one person to be the note-taker if it's a regular meeting."
+  - question: "Is it worth paying for note-taking apps?"
+    answer: "Most students don't need paid plans. Obsidian is completely free for personal use. Notion's free plan includes everything a student needs. OneNote is free with school email."
+  - question: "How do I catch up on notes after missing a class?"
+    answer: "Get notes from a classmate, check if the lecture was recorded, and ask the professor for any handouts. Don't try to recreate the lecture from the textbook alone."
+  - question: "How long should my notes be?"
+    answer: "There's no magic length. Good notes capture understanding, not volume. A one-hour lecture might produce 1-3 pages of Cornell notes. If you're writing more, you're probably transcribing instead of processing."
 ---
 
 ## Most Students Take Notes Wrong. Here's How to Fix It.

@@ -183,6 +183,20 @@ Not sure where to start? Here are five AI project ideas for students, each with 
 
 ---
 
+### Quick Comparison: Which Project Should You Build?
+
+| Project | Difficulty | Time | Best For | Key Tech |
+|---------|-----------|------|----------|----------|
+| AI Chatbot (RAG) | Medium | 2-3 weekends | Full-stack / AI engineering roles | Next.js, OpenAI/Gemini, Pinecone |
+| AI Resume Analyzer | Easy-Medium | 1-2 weekends | Career-focused students, quick win | React, OpenAI, shadcn/ui |
+| AI Study Planner | Medium | 1-2 weekends | Product thinking, prompt engineering | Next.js, Gemini, date-fns |
+| AI Image Generator | Medium | 2 weekends | Visual/creative portfolios | Next.js, Replicate/Hugging Face |
+| AI Sentiment Dashboard | Easy-Medium | 1 weekend | Data science / analytics roles | React, Gemini, Chart.js |
+
+**My recommendation:** If you're applying for AI/engineering roles, build the **RAG chatbot**. If you want something you can finish this weekend, build the **sentiment analyzer** or **resume analyzer**. If you want maximum portfolio impact with reasonable effort, the **study planner** hits the sweet spot.
+
+---
+
 ### Full Walkthrough: Build an AI Study Planner {#full-walkthrough-build-an-ai-study-planner}
 
 This is the project we're going to build together, step by step. By the end, you'll have a fully functional AI study planner deployed to the web that you can link on your resume. Don't worry if you're not an experienced developer — we'll go line by line.

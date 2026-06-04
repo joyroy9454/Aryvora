@@ -8,6 +8,19 @@ categories: ["Career"]
 tags: ["linkedin", "career", "students", "job-search", "personal-branding", "resume", "recruiters"]
 cover:
   image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=630&fit=crop&q=80"
+faq:
+  - question: "How long should my LinkedIn About section be?"
+    answer: "200-500 words. Long enough to tell your story, short enough to keep attention. Use line breaks for readability."
+  - question: "Should I include my GPA on LinkedIn?"
+    answer: "Only if it's 3.5 or above. If it's lower, leave it out and focus on projects and skills instead."
+  - question: "How many connections should I have?"
+    answer: "Quality over quantity. 500+ is a good target for students. Connect with classmates, professors, professionals in your field, and people you meet at events."
+  - question: "Is LinkedIn Premium worth it for students?"
+    answer: "LinkedIn Premium ($30/mo) gives you InMail credits, who's viewed your profile, and LinkedIn Learning. For active job seekers, it can be worth it. Start with the free trial."
+  - question: "How often should I update my profile?"
+    answer: "Every time you complete a project, learn a new skill, or achieve something noteworthy. Set a monthly reminder to review and update."
+  - question: "Can I get hired through LinkedIn alone?"
+    answer: "Yes. Many companies now hire exclusively through LinkedIn. A strong profile + active engagement + strategic applications can land you interviews without ever leaving the platform."
 ---
 
 ## Your LinkedIn Profile Is Your Digital First Impression
