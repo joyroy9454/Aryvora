@@ -2,7 +2,7 @@
 title: "How to Take Notes in College: 7 Methods (2026)"
 description: "The best note-taking methods for college students in 2026. Cornell method, outline method, mind mapping, digital notes with AI — find the system that actually works for your brain."
 date: 2026-06-02
-lastmod: 2026-06-02
+lastmod: 2026-06-03
 draft: false
 categories: ["Education"]
 tags: ["note-taking", "college", "study-tips", "productivity", "learning", "students", "organization"]

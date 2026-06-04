@@ -2,7 +2,7 @@
 title: "Learn Python in 2026: Complete Beginner Roadmap"
 description: "The only Python roadmap you need in 2026. A step-by-step guide for absolute beginners — with free resources, project ideas, AI coding tips, and a realistic timeline."
 date: 2026-06-02
-lastmod: 2026-06-02
+lastmod: 2026-06-03
 draft: false
 categories: ["Coding"]
 tags: ["python", "learn-python", "beginner", "roadmap", "programming", "coding", "tutorial"]
