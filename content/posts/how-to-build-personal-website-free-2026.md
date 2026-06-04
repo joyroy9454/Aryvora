@@ -2,7 +2,7 @@
 title: "Build a Personal Website for Free (2026)"
 description: "Learn how to build a personal website for free in 2026. Step-by-step guide covering GitHub Pages, Hugo, and other free hosting options for students."
 date: 2026-05-26
-lastmod: 2026-06-02
+lastmod: 2026-06-03
 draft: false
 slug: how-to-build-personal-website-free-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/how-to-build-personal-website-free-2026/"
@@ -186,6 +186,45 @@ Google Sites is Google's free website builder. It integrates with Google Drive a
 - Basic functionality
 - Not as professional-looking as other options
 - Limited SEO controls
+
+---
+
+## Quick Comparison: Which Free Website Builder Should You Choose?
+
+Here is a side-by-side comparison to help you pick the right tool:
+
+| Feature | GitHub Pages + Hugo | WordPress.com | Wix | Carrd | Google Sites |
+|---------|-------------------|---------------|-----|-------|-------------|
+| **Cost** | Free | Free (with ads) | Free (with ads) | Free | Free |
+| **Custom domain** | ✅ Yes | ❌ Paid only | ❌ Paid only | ❌ Paid only | ❌ No |
+| **Ads on free plan** | ❌ No | ✅ Yes | ✅ Yes | ❌ No | ❌ No |
+| **Ease of use** | Moderate | Easy | Very easy | Very easy | Very easy |
+| **Design control** | Full | Moderate | High | Low | Low |
+| **Blogging** | ✅ Yes | ✅ Excellent | ✅ Yes | ❌ No | ❌ Basic |
+| **SEO control** | Full | Moderate | Moderate | Low | Low |
+| **Best for** | Tech students | Bloggers | Visual designers | Simple landing pages | Absolute beginners |
+| **Learning curve** | Steep | Gentle | Gentle | Gentle | Gentle |
+
+### By Student Type
+
+| Student Type | Best Option | Why |
+|-------------|------------|-----|
+| **CS / Tech** | GitHub Pages + Hugo | Learn Git, full control, impressive to recruiters |
+| **Design / Visual** | Wix | Best templates, drag-and-drop, visual freedom |
+| **Writer / Blogger** | WordPress.com | Best blogging tools, built-in audience features |
+| **Business / Marketing** | Carrd or Wix | Professional look, easy to update |
+| **Any major (quick setup)** | Google Sites | Fastest setup, no learning curve |
+
+### By Goal
+
+| Goal | Best Option |
+|------|------------|
+| **Portfolio for job applications** | GitHub Pages + Hugo or Wix |
+| **Blog or content site** | WordPress.com |
+| **Simple landing page / link-in-bio** | Carrd |
+| **Collaborative class project site** | Google Sites |
+| **Maximum customization** | GitHub Pages + Hugo |
+| **Fastest setup (under 10 min)** | Google Sites or Carrd |
 
 ---
 
