@@ -2,7 +2,7 @@
 title: "Best AI Tools for Group Projects (2026)"
 description: "Discover the best AI tools for group projects in 2026. Boost teamwork, streamline collaboration, and ace every assignment with these top picks."
 date: 2026-05-26
-lastmod: 2026-05-30
+lastmod: 2026-06-03
 draft: false
 slug: best-ai-tools-group-projects-collaboration-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-ai-tools-group-projects-collaboration-2026/"

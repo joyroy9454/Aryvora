@@ -2,7 +2,7 @@
 title: "AI Safety & Responsible Use: Student Guide"
 description: "How to use AI ethically and responsibly as a student. Covers academic integrity, data privacy, AI bias, deepfakes, and building an ethical AI mindset for the future."
 date: 2026-05-31
-lastmod: 2026-05-31
+lastmod: 2026-06-03
 draft: false
 slug: ai-safety-responsible-use-student-guide-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/ai-safety-responsible-use-student-guide-2026/"

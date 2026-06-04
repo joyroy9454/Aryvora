@@ -2,7 +2,7 @@
 title: "What Is Vibe Coding? Build Apps Without Coding (2026)"
 description: "Vibe coding is the hottest trend in tech. Learn what it is, which tools to use, and how to build real apps and websites without writing code manually."
 date: 2026-05-26
-lastmod: 2026-05-30
+lastmod: 2026-06-03
 draft: false
 slug: what-is-vibe-coding-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/what-is-vibe-coding/"

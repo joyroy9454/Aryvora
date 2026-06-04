@@ -2,7 +2,7 @@
 title: "ChatGPT Prompt Engineering: 75+ Prompts (2026)"
 description: "The ultimate collection of ChatGPT prompts for students. 75+ tested prompts for essays, coding, studying, research, resumes, emails, and more. Copy, customize, and use today."
 date: 2026-05-31
-lastmod: 2026-05-31
+lastmod: 2026-06-03
 draft: false
 slug: chatgpt-prompt-engineering-students-2026
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/chatgpt-prompt-engineering-students-2026/"

@@ -2,7 +2,7 @@
 title: "Best New AI Models 2026: Student Guide"
 description: "A student guide to the best new AI models in 2026 including Claude Opus 4.8, Hy3, DeepSeek V4, and more. Many are completely free."
 date: 2026-05-29
-lastmod: 2026-05-30
+lastmod: 2026-06-03
 draft: false
 slug: best-new-ai-models-2026-student-guide
 canonicalURL: "https://joyroy9454.github.io/ai-blog-factory/posts/best-new-ai-models-2026-student-guide/"
