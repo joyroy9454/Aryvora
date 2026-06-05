@@ -29,6 +29,10 @@ faq:
 
 Let's be honest. You frantically scribbled three pages of notes during yesterday's Psychology 101 lecture, and right now they're sitting in a folder on your desk looking like ancient hieroglyphics. You have no idea what half your own abbreviations mean, you definitely missed the professor's key point about cognitive dissonance, and the idea of reviewing those notes before the final makes you want to crawl under your bed.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/LTMi3dKz6XU?rel=0&modestbranding=1" title="AI Note-Taking Tools for Students — Full Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
 You're not alone. Studies consistently show that students lose up to 70% of lecture content within 48 hours of hearing it, and the average student captures less than what's actually important. Traditional note-taking is broken — it splits your attention, it's slow, and it creates a false sense of security. You wrote it down, so you think you learned it. Spoiler: you didn't.
 
 Here's where **AI note-taking tools** come in. These aren't your grandpa's voice recorders. Modern AI tools don't just capture audio — they transcribe, summarize, organize, highlight key concepts, generate study cards, and even quiz you after class. Some can distinguish between speakers in a group discussion. Others auto-link related concepts across your notes. A few will literally lay out a study schedule based on what it detected was most important in today's lecture.

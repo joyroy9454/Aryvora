@@ -29,6 +29,10 @@ faq:
 
 Let's be real for a second.
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/7qgt-b0Hc9Y?rel=0&modestbranding=1" title="How to Start Freelancing as a Student — AI Skills Edition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
 You're a student. You've got rent (or dorm fees), a ramen budget that's stretched thinner than ever, and a constant itch to earn your own money. But every time you think about freelancing, that inner voice tells you the same thing: *"You don't have enough experience. Businesses want seasoned professionals. You need a degree first. Maybe after a few years…"*
 
 **Here's the truth that voice doesn't want you to hear: 2026 is the single best time in history to start freelancing with AI skills — even if you've never had a single paying client.**

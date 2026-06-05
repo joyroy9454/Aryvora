@@ -29,6 +29,10 @@ faq:
 
 Here's a truth most students figure out too late: **studying longer doesn't mean studying better.**
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/IlU-zDU6aQ0?rel=0&modestbranding=1" title="How to Study Smarter — Evidence-Based Study Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
 You can spend 6 hours re-reading textbooks and retain less than someone who spent 2 hours using the right techniques. The difference isn't effort — it's strategy.
 
 And in 2026, AI tools make smart studying easier than ever.

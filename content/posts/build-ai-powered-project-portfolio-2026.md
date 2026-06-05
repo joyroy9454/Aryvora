@@ -29,6 +29,10 @@ faq:
 
 Here's the thing about landing your first tech job or internship in 2026: everyone has good grades, everyone has a polished resume, and everyone claims to "love problem-solving." But when a hiring manager opens your portfolio, they're not looking for adjectives. They want to *see* something. They want to click a link, interact with a live demo, and think, "Okay, this person actually ships things."
 
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/tNapeTjLKYs?rel=0&modestbranding=1" title="Build an AI Portfolio Project with Python &amp; Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
 The problem? Most students have no idea what to build. You've done class assignments, maybe a to-do app or two, but nothing that makes a recruiter stop scrolling. And honestly, that's not your fault — the bar for what counts as an "impressive" project has skyrocketed.
 
 That's exactly where AI changes everything.
