@@ -198,6 +198,55 @@
 </section>
 {{- end -}}
 
+<!-- ===== READ NEXT: Content Recommendations ===== -->
+{{- if and .IsPage (eq .Section "posts") -}}
+{{- $currentSlug := .Slug -}}
+{{- $related := .Site.RegularPages.Related . | first 6 -}}
+{{- if $related -}}
+<section class="read-next-section">
+  <div class="read-next-header">
+    <h3>📖 Read Next</h3>
+    <span class="read-next-sub">Readers who enjoyed this also read</span>
+  </div>
+  <div class="read-next-grid">
+    {{- range $related -}}
+    <a href="{{ .RelPermalink }}" class="read-next-card">
+      {{- if .Params.cover -}}
+      <div class="read-next-img">
+        <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy" />
+      </div>
+      {{- end -}}
+      <div class="read-next-body">
+        {{- if .Params.categories -}}
+        <span class="read-next-cat">{{ index .Params.categories 0 }}</span>
+        {{- end -}}
+        <h4>{{ .Title }}</h4>
+        <span class="read-next-meta">{{ .ReadingTime }} min read</span>
+      </div>
+    </a>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}
+{{- end -}}
+
+<!-- ===== EXIT INTENT POPUP ===== -->
+<div id="exit-popup" class="exit-popup" style="display:none;">
+  <div class="exit-popup-overlay" onclick="closeExitPopup()"></div>
+  <div class="exit-popup-box">
+    <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+    <div class="exit-popup-icon">🎯</div>
+    <h3>Before you go...</h3>
+    <p>Get the <strong>AI Tools Checklist</strong> — 40+ best tools for students, with prices and our top pick for every type. Free, instant download.</p>
+    <form action="https://buttondown.email/api/emails/embed-subscribe/joyroy5494" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/joyroy5494', 'popupwindow'); closeExitPopup();" class="exit-popup-form">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <input type="hidden" name="tag" value="exit-intent" />
+      <button type="submit" class="btn btn-accent">Get Free Checklist →</button>
+    </form>
+    <span class="exit-popup-note">No spam. Unsubscribe anytime.</span>
+  </div>
+</div>
+
 <!-- Reading Progress Script -->
 <script>
 (function() {
@@ -213,6 +262,34 @@
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
+})();
+
+// Exit intent popup
+(function() {
+  var shown = false;
+  var dismissed = sessionStorage.getItem('exitPopupDismissed');
+  
+  function showPopup() {
+    if (shown || dismissed) return;
+    shown = true;
+    document.getElementById('exit-popup').style.display = 'flex';
+  }
+  
+  window.closeExitPopup = function() {
+    document.getElementById('exit-popup').style.display = 'none';
+    sessionStorage.setItem('exitPopupDismissed', 'true');
+  };
+  
+  // Show on mouse leaving viewport (desktop)
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10) showPopup();
+  });
+  
+  // Show after scrolling 75% of page (mobile fallback)
+  window.addEventListener('scroll', function() {
+    var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+    if (scrollPercent > 75) showPopup();
+  }, { passive: true, once: true });
 })();
 </script>
 

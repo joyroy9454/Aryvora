@@ -6,7 +6,7 @@
       Aryvora
     </a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "start-here/" | relURL }}">Start Here</a>
       <a href="{{ "posts/" | relURL }}">Guides</a>
       <a href="{{ "topics/" | relURL }}">Topics</a>
       <a href="{{ "deals/" | relURL }}">Deals</a>
@@ -22,6 +22,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <button class="mobile-menu-close" aria-label="Close menu" onclick="document.getElementById('mobile-menu').classList.remove('active')">✕</button>
   <a href="{{ .Site.Home.RelPermalink }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🏠 Home</a>
+  <a href="{{ "start-here/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">🎯 Start Here</a>
   <a href="{{ "posts/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📝 All Guides</a>
   <a href="{{ "topics/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">📚 Topic Hubs</a>
   <a href="{{ "deals/" | relURL }}" onclick="document.getElementById('mobile-menu').classList.remove('active')">💰 Deals</a>

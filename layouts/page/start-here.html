@@ -1,0 +1,18 @@
+{{- define "main" -}}
+
+<div class="start-here-page">
+  <div class="container">
+
+    <div class="start-hero">
+      <h1>{{ .Title }}</h1>
+      <p class="start-hero-sub">{{ .Params.description }}</p>
+    </div>
+
+    <div class="start-content">
+      {{ .Content }}
+    </div>
+
+  </div>
+</div>
+
+{{- end -}}
