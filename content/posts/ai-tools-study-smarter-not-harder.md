@@ -29,6 +29,14 @@ faq:
 
 Here's a truth most students figure out too late: **studying longer doesn't mean studying better.**
 
+{{< summary-card >}}
+- **7 AI study tools** that use evidence-backed techniques (spaced repetition, active recall)
+- **Complete study workflow**: record → transcribe → summarize → flashcards → quiz
+- **Free for most students**: NotebookLM, Anki, Wolfram Alpha, Perplexity
+- **Results**: 40% less study time, better exam scores, less pre-exam stress
+- **Ethics guide**: when AI study help is acceptable vs. crossing the line
+{{< /summary-card >}}
+
 <div class="video-embed">
   <iframe src="https://www.youtube.com/embed/IlU-zDU6aQ0?rel=0&modestbranding=1" title="How to Study Smarter — Evidence-Based Study Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>

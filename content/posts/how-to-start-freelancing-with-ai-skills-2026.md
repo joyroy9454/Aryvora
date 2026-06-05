@@ -29,7 +29,15 @@ faq:
 
 Let's be real for a second.
 
-<div class="video-embed">
+{{< summary-card >}}
+- **5 most in-demand AI freelance skills** in 2026 (prompt engineering pays $50-100/hr)
+- **4 core tools** to learn first: ChatGPT, Canva AI, Make/Zapier, Notion AI
+- **Where to find clients**: Upwork, cold outreach, LinkedIn, university network
+- **Realistic earnings**: $500-2,000/month working 10-15 hrs/week
+- **No programming required** for 80% of AI freelance work
+{{< /summary-card >}}
+
+You're a student. You've got rent (or dorm fees), a ramen budget that's stretched thinner than ever, and a constant itch to earn your own money.
   <iframe src="https://www.youtube.com/embed/7qgt-b0Hc9Y?rel=0&modestbranding=1" title="How to Start Freelancing as a Student — AI Skills Edition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 

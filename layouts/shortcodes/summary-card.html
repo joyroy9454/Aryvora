@@ -1,0 +1,14 @@
+<div class="summary-card">
+  <div class="summary-card-header">
+    <span class="summary-card-icon">⚡</span>
+    <span class="summary-card-title">Key Takeaways</span>
+  </div>
+  <ul class="summary-card-list">
+    {{- range (split .Inner "\n") -}}
+    {{- $line := trim . " \t\r\n" -}}
+    {{- if and $line (ne $line "") -}}
+    <li>{{ $line | markdownify }}</li>
+    {{- end -}}
+    {{- end -}}
+  </ul>
+</div>

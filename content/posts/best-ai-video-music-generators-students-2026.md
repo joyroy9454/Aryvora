@@ -29,7 +29,15 @@ Picture this: A college sophomore uploads a short film to TikTok. It's got cinem
 
 This isn't science fiction — it's 2026, and AI video and music generators have completely rewritten the rules of content creation. Whether you're building a portfolio, spicing up a class presentation, launching a YouTube channel, or starting a side hustle, these tools give you Hollywood-level production power at a price tag that fits a student budget (read: free or nearly free).
 
-<div class="video-embed">
+{{< summary-card >}}
+- **10 best AI video generators** ranked by quality, ease of use, and pricing
+- **5 best AI music generators** for original tracks and background music
+- **Free tiers** on every tool — no credit card needed
+- **Commercial rights** breakdown for each platform
+- **Student use cases**: presentations, portfolios, content creation, side hustles
+{{< /summary-card >}}
+
+The best part? You don't need any technical experience.
   <iframe src="https://www.youtube.com/embed/GAgLR9JFFwQ?rel=0&modestbranding=1" title="Best AI Video Generators 2026 — Runway, Pika, Sora Compared" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 

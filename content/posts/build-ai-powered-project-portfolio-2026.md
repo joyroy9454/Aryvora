@@ -29,7 +29,15 @@ faq:
 
 Here's the thing about landing your first tech job or internship in 2026: everyone has good grades, everyone has a polished resume, and everyone claims to "love problem-solving." But when a hiring manager opens your portfolio, they're not looking for adjectives. They want to *see* something. They want to click a link, interact with a live demo, and think, "Okay, this person actually ships things."
 
-<div class="video-embed">
+{{< summary-card >}}
+- **5 project ideas** ranked by difficulty, time, and portfolio impact
+- **Complete code walkthrough** for an AI Study Planner (Next.js + Gemini API)
+- **Free deployment** on Vercel, GitHub Pages, or Hugging Face Spaces
+- **STAR framework** for writing about your project on your portfolio
+- **Common mistakes** that make student projects look amateur
+{{< /summary-card >}}
+
+The problem? Most students have no idea what to build.
   <iframe src="https://www.youtube.com/embed/tNapeTjLKYs?rel=0&modestbranding=1" title="Build an AI Portfolio Project with Python &amp; Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 

@@ -29,7 +29,15 @@ faq:
 
 Let's be honest. You frantically scribbled three pages of notes during yesterday's Psychology 101 lecture, and right now they're sitting in a folder on your desk looking like ancient hieroglyphics. You have no idea what half your own abbreviations mean, you definitely missed the professor's key point about cognitive dissonance, and the idea of reviewing those notes before the final makes you want to crawl under your bed.
 
-<div class="video-embed">
+{{< summary-card >}}
+- **Students lose 70% of lecture content** within 48 hours — AI fixes this
+- **5 best AI note-taking tools**: OneNote Copilot, Obsidian, Otter.ai, Notability, Mindgrasp
+- **AI workflow**: record → transcribe → summarize → flashcards → quiz
+- **Free for most students** (OneNote Copilot included with school email)
+- **Hybrid approach**: take notes manually in class, use AI to review after
+{{< /summary-card >}}
+
+You're not alone. Studies consistently show that students lose up to 70% of lecture content within 48 hours of hearing it,
   <iframe src="https://www.youtube.com/embed/LTMi3dKz6XU?rel=0&modestbranding=1" title="AI Note-Taking Tools for Students — Full Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 
