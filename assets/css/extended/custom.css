@@ -1695,6 +1695,18 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-primary); letter-spacing: -0.02em; }
   margin-top: 0.4rem;
 }
 
+/* ===== LAST UPDATED DATE ===== */
+.post-lastmod {
+  color: var(--text-muted, #64748b);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+  .post-lastmod {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .read-next-grid {
     grid-template-columns: 1fr;

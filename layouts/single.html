@@ -41,6 +41,8 @@
       <span class="post-meta-sep">·</span>
       <span>{{ .ReadingTime }} min read</span>
       <span class="post-meta-sep">·</span>
+      <span class="post-lastmod">Updated {{ .Lastmod.Format "Jan 2, 2006" }}</span>
+      <span class="post-meta-sep">·</span>
       <span>{{ .WordCount }} words</span>
       {{- if .Params.categories }}
       <span class="post-meta-sep">·</span>
