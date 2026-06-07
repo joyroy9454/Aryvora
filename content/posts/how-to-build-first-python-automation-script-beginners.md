@@ -1,7 +1,7 @@
 ---
 title: "How to Build Your First Python Automation Script in 2026"
 date: 2026-05-25
-lastmod: 2026-06-02
+lastmod: 2026-06-05
 cover:
   image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=630&fit=crop&q=80"
   alt: "Python automation code on screen"
@@ -826,5 +826,14 @@ The key is to **start small, start today, and build consistently.** You don't ne
 - [What Is Vibe Coding](/posts/what-is-vibe-coding/)
 
 ---
+
+## New Guides You Might Like
+
+We've published several new guides since this post was written:
+
+- [Best AI Tools for Data Science Students](/posts/best-ai-tools-data-science-students-2026/)
+- [Complete Guide to AI APIs](/posts/complete-guide-ai-apis-for-students-2026/)
+
+
 
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*

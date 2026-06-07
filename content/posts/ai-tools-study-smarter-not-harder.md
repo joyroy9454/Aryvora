@@ -1,7 +1,7 @@
 ---
 title: "7 AI Tools That Actually Help You Study Smarter in 2026"
 date: 2026-05-25
-lastmod: 2026-06-02
+lastmod: 2026-06-05
 cover:
   image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=630&fit=crop&q=80"
   alt: "Student studying with AI tools"
@@ -629,5 +629,14 @@ Start with NotebookLM and Anki. Those two alone will transform how you study. Ad
 - [best AI productivity apps](/posts/best-ai-productivity-apps-students-2026/)
 
 ---
+
+## New Guides You Might Like
+
+We've published several new guides since this post was written:
+
+- [AI for Academic Research](/posts/ai-for-academic-research-students-guide-2026/)
+- [AI Ethics in Academia](/posts/ai-ethics-in-academia-students-responsible-use-guide-2026/)
+
+
 
 *This article may contain links to products and services. Some of these links may be affiliate links, meaning we may earn a small commission if you sign up or make a purchase through them — at no extra cost to you. We only recommend tools and services we genuinely believe will help you. Our editorial content is not influenced by affiliate partnerships.*
